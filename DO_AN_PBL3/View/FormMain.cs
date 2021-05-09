@@ -16,6 +16,7 @@ namespace DO_AN_PBL3
     public partial class FormMain : Form
     {
         private HANGHOA hangHoa;
+        private HANGHOA hangHoa1;
         public FormMain()
         {
             InitializeComponent();
@@ -97,6 +98,7 @@ namespace DO_AN_PBL3
             foreach (HANGHOA item in list)
             {
                 ListViewItem lsvItem = new ListViewItem(item.Ten_HH);
+
                 lsvItem.SubItems.Add(item.Gia.ToString());
                 lsvItem.Tag = item;
 
@@ -104,11 +106,31 @@ namespace DO_AN_PBL3
             }
         }
 
+        private void lsvHH_MouseClick(object sender, MouseEventArgs e)
+        {
+            hangHoa = (HANGHOA)lsvHH.SelectedItems[0].Tag;
+        }
+
         private void button1_Click_1(object sender, EventArgs e)
         {
             if(hangHoa != null)
             {
+                foreach (ListViewItem item in lsvTemp.Items)
+                {
+                    if (item.SubItems[0].Text.Equals(hangHoa.Ten_HH))
+                    {
+                        int soLuong = Convert.ToInt32(item.SubItems[1].Text) + (int)nmrsoLuong.Value;
+                        item.SubItems[1].Text = soLuong.ToString();
+                        item.SubItems[3].Text = (hangHoa.Gia * soLuong).ToString();
+                        hangHoa = null;
+                        nmrsoLuong.Value = 1;
+
+                        return;
+                    }
+                }
+
                 ListViewItem lsvItem = new ListViewItem(hangHoa.Ten_HH);
+
                 lsvItem.SubItems.Add(nmrsoLuong.Value.ToString());
                 lsvItem.SubItems.Add(hangHoa.Gia.ToString());
                 lsvItem.SubItems.Add((Convert.ToDouble(hangHoa.Gia.Value.ToString()) * (int)nmrsoLuong.Value).ToString());
@@ -116,16 +138,12 @@ namespace DO_AN_PBL3
 
                 lsvTemp.Items.Add(lsvItem);
                 hangHoa = null;
+                nmrsoLuong.Value = 1;
             }
             else
             {
                 MessageBox.Show("Bạn chưa chọn món");
             }
-        }
-
-        private void lsvHH_MouseClick(object sender, MouseEventArgs e)
-        {
-            hangHoa = (HANGHOA)lsvHH.SelectedItems[0].Tag;
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
@@ -136,6 +154,37 @@ namespace DO_AN_PBL3
         private void ghiChúToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panelSotien.Hide();
+        }
+
+        private void lsvTemp_MouseClick(object sender, MouseEventArgs e)
+        {
+            hangHoa1 = (HANGHOA)lsvTemp.SelectedItems[0].Tag;
+        }
+
+        private void btnGiam_Click(object sender, EventArgs e)
+        {
+            if(hangHoa1 != null)
+            {
+                foreach (ListViewItem item in lsvTemp.Items)
+                {
+                    if (item.SubItems[0].Text.Equals(hangHoa1.Ten_HH))
+                    {
+                        int soLuong = Convert.ToInt32(item.SubItems[1].Text) - (int)nmrsoLuong.Value;
+                        if(soLuong <= 0)
+                        {
+                            lsvTemp.Items.Remove(item);
+                            hangHoa1 = null;
+                            nmrsoLuong.Value = 1;
+
+                            break;
+                        }
+                        item.SubItems[1].Text = soLuong.ToString();
+                        item.SubItems[3].Text = (hangHoa1.Gia * soLuong).ToString();
+                        hangHoa1 = null;
+                        nmrsoLuong.Value = 1;
+                    }
+                }
+            }
         }
     }
 }

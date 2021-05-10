@@ -69,19 +69,17 @@ namespace DO_AN_PBL3
             this.button2 = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.lsvTemp = new System.Windows.Forms.ListView();
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.lsvHH = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnreset = new System.Windows.Forms.Button();
-            this.txbreset = new System.Windows.Forms.TextBox();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lsvTemp = new System.Windows.Forms.ListView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -301,9 +299,7 @@ namespace DO_AN_PBL3
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.txbreset);
             this.panel3.Controls.Add(this.btnTachBan);
-            this.panel3.Controls.Add(this.btnreset);
             this.panel3.Controls.Add(this.btnChuyenBan);
             this.panel3.Controls.Add(this.nmrsoLuong);
             this.panel3.Controls.Add(this.panel5);
@@ -508,42 +504,6 @@ namespace DO_AN_PBL3
             this.label2.TabIndex = 6;
             this.label2.Text = "Số lượng";
             // 
-            // lsvTemp
-            // 
-            this.lsvTemp.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6});
-            this.lsvTemp.FullRowSelect = true;
-            this.lsvTemp.HideSelection = false;
-            this.lsvTemp.Location = new System.Drawing.Point(339, 86);
-            this.lsvTemp.Name = "lsvTemp";
-            this.lsvTemp.Size = new System.Drawing.Size(429, 400);
-            this.lsvTemp.TabIndex = 4;
-            this.lsvTemp.UseCompatibleStateImageBehavior = false;
-            this.lsvTemp.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Mặt hàng";
-            this.columnHeader3.Width = 130;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Số lượng";
-            this.columnHeader4.Width = 86;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Đơn giá";
-            this.columnHeader5.Width = 110;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Thành tiền";
-            this.columnHeader6.Width = 99;
-            // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
@@ -598,22 +558,41 @@ namespace DO_AN_PBL3
             this.label1.TabIndex = 0;
             this.label1.Text = "Lọc: ";
             // 
-            // btnreset
+            // columnHeader3
             // 
-            this.btnreset.Location = new System.Drawing.Point(477, 355);
-            this.btnreset.Name = "btnreset";
-            this.btnreset.Size = new System.Drawing.Size(75, 23);
-            this.btnreset.TabIndex = 0;
-            this.btnreset.Text = "Reset";
-            this.btnreset.UseVisualStyleBackColor = true;
-            this.btnreset.Click += new System.EventHandler(this.btnreset_Click);
+            this.columnHeader3.Text = "Mặt hàng";
+            this.columnHeader3.Width = 130;
             // 
-            // txbreset
+            // columnHeader4
             // 
-            this.txbreset.Location = new System.Drawing.Point(408, 413);
-            this.txbreset.Name = "txbreset";
-            this.txbreset.Size = new System.Drawing.Size(187, 26);
-            this.txbreset.TabIndex = 1;
+            this.columnHeader4.Text = "Số lượng";
+            this.columnHeader4.Width = 86;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Đơn giá";
+            this.columnHeader5.Width = 110;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Thành tiền";
+            this.columnHeader6.Width = 99;
+            // 
+            // lsvTemp
+            // 
+            this.lsvTemp.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
+            this.lsvTemp.FullRowSelect = true;
+            this.lsvTemp.HideSelection = false;
+            this.lsvTemp.Location = new System.Drawing.Point(339, 86);
+            this.lsvTemp.Name = "lsvTemp";
+            this.lsvTemp.Size = new System.Drawing.Size(429, 400);
+            this.lsvTemp.TabIndex = 4;
+            this.lsvTemp.UseCompatibleStateImageBehavior = false;
+            this.lsvTemp.View = System.Windows.Forms.View.Details;
             // 
             // FormMain
             // 
@@ -684,11 +663,6 @@ namespace DO_AN_PBL3
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel5;
-        public System.Windows.Forms.ColumnHeader columnHeader3;
-        public System.Windows.Forms.ColumnHeader columnHeader4;
-        public System.Windows.Forms.ColumnHeader columnHeader5;
-        public System.Windows.Forms.ColumnHeader columnHeader6;
-        protected internal System.Windows.Forms.ListView lsvTemp;
         private System.Windows.Forms.NumericUpDown nmrsoLuong;
         private System.Windows.Forms.Button btnTachBan;
         private System.Windows.Forms.Button btnChuyenBan;
@@ -702,7 +676,10 @@ namespace DO_AN_PBL3
         private System.Windows.Forms.Panel panelGhichu;
         private System.Windows.Forms.TextBox txtGhiChu;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox txbreset;
-        private System.Windows.Forms.Button btnreset;
+        protected internal System.Windows.Forms.ListView lsvTemp;
+        public System.Windows.Forms.ColumnHeader columnHeader3;
+        public System.Windows.Forms.ColumnHeader columnHeader4;
+        public System.Windows.Forms.ColumnHeader columnHeader5;
+        public System.Windows.Forms.ColumnHeader columnHeader6;
     }
 }

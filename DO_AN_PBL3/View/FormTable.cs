@@ -36,9 +36,16 @@ namespace DO_AN_PBL3
                 if (item.TinhTrang == false) btn.BackColor = Color.Red;
                 btn.Text = item.Tenban;
                 btn.Tag = item;
+                btn.Click += Btn_Click;
+
                 flpTable.Controls.Add(btn);
             }
             
+        }
+
+        private void Btn_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }

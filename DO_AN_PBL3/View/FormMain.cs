@@ -17,12 +17,20 @@ namespace DO_AN_PBL3
     {
         private HANGHOA hangHoa;
         private HANGHOA hangHoa1;
+        private BAN ban;
+        public delegate void MyDel(BAN table);
+        private MyDel d;
+
+        public MyDel D { get => d; set => d = value; }
         public FormMain()
         {
             InitializeComponent();
+            D += ShowBill;
             button1_Click(new object(), new EventArgs());
             SetGUI();
         }
+
+        #region Method
 
         private Form activeForm = null;
         private void OpenChildForm(Form childForm)
@@ -41,8 +49,36 @@ namespace DO_AN_PBL3
             childForm.Show();
         }
 
+
+        void SetGUI()
+        {
+            List<Loai_HANGHOA> list = Category_Merchandise_BLL.Instance.GetLHH_BLL();
+            Loai_HANGHOA hh = new Loai_HANGHOA
+            {
+                ID_LHH = -1,
+                Ten_LHH = "Tất cả"
+            };
+            listBox1.Items.Add(hh);
+            foreach (Loai_HANGHOA item in list)
+            {
+                listBox1.Items.Add(item);
+            }
+            listBox1.DisplayMember = "Ten_LHH";
+        }
+
+        void ShowBill(BAN table)
+        {
+            ban = table; 
+            
+        }
+
+        #endregion
+
+        #region Event
+
         private void button1_Click(object sender, EventArgs e)
         {
+
             OpenChildForm(new FormTable());
         }
 
@@ -74,21 +110,6 @@ namespace DO_AN_PBL3
             this.Close();
         }
 
-        void SetGUI()
-        {
-            List<Loai_HANGHOA> list = Category_Merchandise_BLL.Instance.GetLHH_BLL();
-            Loai_HANGHOA hh = new Loai_HANGHOA {
-                ID_LHH = -1,
-                Ten_LHH = "Tất cả"
-            };
-            listBox1.Items.Add(hh);
-            foreach (Loai_HANGHOA item in list)
-            {
-                listBox1.Items.Add(item);
-            }
-            listBox1.DisplayMember = "Ten_LHH";
-        }
-
         private void listBox1_MouseClick(object sender, MouseEventArgs e)
         {
             Loai_HANGHOA lhh = (Loai_HANGHOA)listBox1.SelectedItem;
@@ -113,7 +134,7 @@ namespace DO_AN_PBL3
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if(hangHoa != null)
+            if(hangHoa != null && ban != null)
             {
                 foreach (ListViewItem item in lsvTemp.Items)
                 {
@@ -142,7 +163,7 @@ namespace DO_AN_PBL3
             }
             else
             {
-                MessageBox.Show("Bạn chưa chọn món");
+                MessageBox.Show("Bạn chưa chọn món, chọn bàn");
             }
         }
 
@@ -186,5 +207,23 @@ namespace DO_AN_PBL3
                 }
             }
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if(hangHoa1 != null)
+            {
+                foreach (ListViewItem item in lsvTemp.Items)
+                {
+                    if (item.SubItems[0].Text.Equals(hangHoa1.Ten_HH))
+                    {
+                        lsvTemp.Items.Remove(item);
+                        return;
+                    }
+                }
+            }
+            
+        }
+
+        #endregion
     }
 }

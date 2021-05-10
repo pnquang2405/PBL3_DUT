@@ -14,6 +14,7 @@ namespace DO_AN_PBL3
 {
     public partial class FormTable : Form
     {
+        
         public FormTable()
         {
             InitializeComponent();
@@ -45,7 +46,9 @@ namespace DO_AN_PBL3
 
         private void Btn_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            BAN table = (sender as Button).Tag as BAN;
+            FormMain f = new FormMain();
+            f.D(table);
         }
     }
 }

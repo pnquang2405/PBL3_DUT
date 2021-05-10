@@ -80,6 +80,8 @@ namespace DO_AN_PBL3
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnreset = new System.Windows.Forms.Button();
+            this.txbreset = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -299,7 +301,9 @@ namespace DO_AN_PBL3
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.txbreset);
             this.panel3.Controls.Add(this.btnTachBan);
+            this.panel3.Controls.Add(this.btnreset);
             this.panel3.Controls.Add(this.btnChuyenBan);
             this.panel3.Controls.Add(this.nmrsoLuong);
             this.panel3.Controls.Add(this.panel5);
@@ -594,6 +598,23 @@ namespace DO_AN_PBL3
             this.label1.TabIndex = 0;
             this.label1.Text = "Lọc: ";
             // 
+            // btnreset
+            // 
+            this.btnreset.Location = new System.Drawing.Point(477, 355);
+            this.btnreset.Name = "btnreset";
+            this.btnreset.Size = new System.Drawing.Size(75, 23);
+            this.btnreset.TabIndex = 0;
+            this.btnreset.Text = "Reset";
+            this.btnreset.UseVisualStyleBackColor = true;
+            this.btnreset.Click += new System.EventHandler(this.btnreset_Click);
+            // 
+            // txbreset
+            // 
+            this.txbreset.Location = new System.Drawing.Point(408, 413);
+            this.txbreset.Name = "txbreset";
+            this.txbreset.Size = new System.Drawing.Size(187, 26);
+            this.txbreset.TabIndex = 1;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -681,5 +702,7 @@ namespace DO_AN_PBL3
         private System.Windows.Forms.Panel panelGhichu;
         private System.Windows.Forms.TextBox txtGhiChu;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txbreset;
+        private System.Windows.Forms.Button btnreset;
     }
 }

@@ -169,5 +169,15 @@ namespace DO_AN_PBL3
         {
 
         }
+
+        private void btnreset_Click(object sender, EventArgs e)
+        {
+            if (BLL.Account_BLL.Instance.Login_BLL(1, txbreset.Text, 1))
+                MessageBox.Show("Thay doi thanh cong");
+            else
+            {
+                MessageBox.Show("That bai!!");
+            }
+        }
     }
 }

@@ -25,7 +25,7 @@ namespace DO_AN_PBL3.BLL
 
             }
         }
-       public bool Login_BLL(int username, string password)
+       public bool Login_BLL(int username, string password,int type)
         {
             byte[] tempt = ASCIIEncoding.ASCII.GetBytes(password);
             byte[] hashData = new MD5CryptoServiceProvider().ComputeHash(tempt);
@@ -34,9 +34,16 @@ namespace DO_AN_PBL3.BLL
             {
                 hashpass += item;
             }
-            return DAL.Account_DAL.Instance.Login_DAL(username, hashpass);
+            if (type == 0)
+            {
+                return DAL.Account_DAL.Instance.Login_DAL(username, hashpass);
+            }
+            else
+            {
+                return DAL.Account_DAL.Instance.ResetPassword_DAL(username, hashpass);
+            }
         }
-        public bool ResetPassword(int username, string newpassword)
+       /* public bool ResetPassword(int username, string newpassword)
         {
 
             byte[] tempt = ASCIIEncoding.ASCII.GetBytes(newpassword);
@@ -47,7 +54,7 @@ namespace DO_AN_PBL3.BLL
                 hashpass += item;
             }
             return DAL.Account_DAL.Instance.ResetPassword_DAL(username, hashpass);
-        }
+        }*/
        
     }
 }

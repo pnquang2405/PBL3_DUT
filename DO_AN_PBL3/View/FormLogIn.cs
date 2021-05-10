@@ -23,9 +23,9 @@ namespace DO_AN_PBL3
         {
            int username = Convert.ToInt32(txtUserName.Text);
             string password = txtPassword.Text;
-            if (BLL.Account_BLL.Instance.Login_BLL(username,password))
+            if (BLL.Account_BLL.Instance.Login_BLL(username,password,0))
             {
-                this.Hide();
+               // this.Hide();
                 FormMain f = new FormMain();
                 f.ShowDialog();
             }

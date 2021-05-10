@@ -32,10 +32,11 @@ namespace DO_AN_PBL3
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnAdmin = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnFullScreen = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbSearch = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnMenu = new System.Windows.Forms.Button();
@@ -48,17 +49,25 @@ namespace DO_AN_PBL3
             this.btnDoanhThu = new System.Windows.Forms.Button();
             this.btnHangHoa = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnTachBan = new System.Windows.Forms.Button();
+            this.btnChuyenBan = new System.Windows.Forms.Button();
             this.nmrsoLuong = new System.Windows.Forms.NumericUpDown();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panelGhichu = new System.Windows.Forms.Panel();
+            this.panelSotien = new System.Windows.Forms.Panel();
+            this.txtThanhTien = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.nmrDiscount = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtTienhang = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ghiChúToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lsvTemp = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -71,44 +80,43 @@ namespace DO_AN_PBL3
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panelSotien = new System.Windows.Forms.Panel();
-            this.btnChuyenBan = new System.Windows.Forms.Button();
-            this.btnTachBan = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtTienhang = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.nmrDiscount = new System.Windows.Forms.NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtThanhTien = new System.Windows.Forms.TextBox();
-            this.panelGhichu = new System.Windows.Forms.Panel();
-            this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panelAdmin.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmrsoLuong)).BeginInit();
             this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.panelGhichu.SuspendLayout();
             this.panelSotien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmrDiscount)).BeginInit();
-            this.panelGhichu.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.btnAdmin);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.btnFullScreen);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txbSearch);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1396, 62);
             this.panel1.TabIndex = 1;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(646, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(8, 8);
+            this.dataGridView1.TabIndex = 7;
             // 
             // btnAdmin
             // 
@@ -150,13 +158,14 @@ namespace DO_AN_PBL3
             this.btnFullScreen.TabIndex = 4;
             this.btnFullScreen.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // txbSearch
             // 
-            this.textBox1.Location = new System.Drawing.Point(69, 9);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(333, 38);
-            this.textBox1.TabIndex = 1;
+            this.txbSearch.Location = new System.Drawing.Point(69, 9);
+            this.txbSearch.Multiline = true;
+            this.txbSearch.Name = "txbSearch";
+            this.txbSearch.Size = new System.Drawing.Size(333, 38);
+            this.txbSearch.TabIndex = 1;
+            this.txbSearch.TextChanged += new System.EventHandler(this.txbSearch_TextChanged);
             // 
             // pictureBox1
             // 
@@ -252,7 +261,7 @@ namespace DO_AN_PBL3
             this.btnAccount.Name = "btnAccount";
             this.btnAccount.Size = new System.Drawing.Size(218, 31);
             this.btnAccount.TabIndex = 2;
-            this.btnAccount.Text = "Quản lý Tài khoản";
+            this.btnAccount.Text = "Quản lý nhân viên";
             this.btnAccount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAccount.UseVisualStyleBackColor = false;
             // 
@@ -299,7 +308,7 @@ namespace DO_AN_PBL3
             this.panel3.Controls.Add(this.button4);
             this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.btnThem);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.lsvTemp);
             this.panel3.Controls.Add(this.listBox1);
@@ -310,6 +319,24 @@ namespace DO_AN_PBL3
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(768, 644);
             this.panel3.TabIndex = 5;
+            // 
+            // btnTachBan
+            // 
+            this.btnTachBan.Location = new System.Drawing.Point(248, 17);
+            this.btnTachBan.Name = "btnTachBan";
+            this.btnTachBan.Size = new System.Drawing.Size(85, 73);
+            this.btnTachBan.TabIndex = 15;
+            this.btnTachBan.Text = "Tách bàn";
+            this.btnTachBan.UseVisualStyleBackColor = true;
+            // 
+            // btnChuyenBan
+            // 
+            this.btnChuyenBan.Location = new System.Drawing.Point(248, 104);
+            this.btnChuyenBan.Name = "btnChuyenBan";
+            this.btnChuyenBan.Size = new System.Drawing.Size(85, 73);
+            this.btnChuyenBan.TabIndex = 14;
+            this.btnChuyenBan.Text = "Chuyển bàn";
+            this.btnChuyenBan.UseVisualStyleBackColor = true;
             // 
             // nmrsoLuong
             // 
@@ -332,41 +359,94 @@ namespace DO_AN_PBL3
             this.panel5.Size = new System.Drawing.Size(395, 146);
             this.panel5.TabIndex = 1;
             // 
+            // panelGhichu
+            // 
+            this.panelGhichu.Controls.Add(this.panelSotien);
+            this.panelGhichu.Controls.Add(this.txtGhiChu);
+            this.panelGhichu.Location = new System.Drawing.Point(6, 0);
+            this.panelGhichu.Name = "panelGhichu";
+            this.panelGhichu.Size = new System.Drawing.Size(386, 143);
+            this.panelGhichu.TabIndex = 16;
+            // 
+            // panelSotien
+            // 
+            this.panelSotien.Controls.Add(this.txtThanhTien);
+            this.panelSotien.Controls.Add(this.label5);
+            this.panelSotien.Controls.Add(this.nmrDiscount);
+            this.panelSotien.Controls.Add(this.label4);
+            this.panelSotien.Controls.Add(this.txtTienhang);
+            this.panelSotien.Controls.Add(this.label3);
+            this.panelSotien.Location = new System.Drawing.Point(3, 3);
+            this.panelSotien.Name = "panelSotien";
+            this.panelSotien.Size = new System.Drawing.Size(392, 140);
+            this.panelSotien.TabIndex = 0;
+            // 
+            // txtThanhTien
+            // 
+            this.txtThanhTien.BackColor = System.Drawing.Color.LemonChiffon;
+            this.txtThanhTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtThanhTien.Location = new System.Drawing.Point(124, 89);
+            this.txtThanhTien.Name = "txtThanhTien";
+            this.txtThanhTien.Size = new System.Drawing.Size(181, 19);
+            this.txtThanhTien.TabIndex = 5;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(22, 89);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(97, 20);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Thành tiền: ";
+            // 
+            // nmrDiscount
+            // 
+            this.nmrDiscount.Location = new System.Drawing.Point(124, 47);
+            this.nmrDiscount.Name = "nmrDiscount";
+            this.nmrDiscount.Size = new System.Drawing.Size(120, 26);
+            this.nmrDiscount.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(22, 49);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(86, 20);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Giảm giá: ";
+            // 
+            // txtTienhang
+            // 
+            this.txtTienhang.BackColor = System.Drawing.Color.White;
+            this.txtTienhang.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTienhang.Location = new System.Drawing.Point(124, 9);
+            this.txtTienhang.Name = "txtTienhang";
+            this.txtTienhang.Size = new System.Drawing.Size(181, 19);
+            this.txtTienhang.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(22, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 20);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Tiền Hàng: ";
+            // 
+            // txtGhiChu
+            // 
+            this.txtGhiChu.Location = new System.Drawing.Point(3, 3);
+            this.txtGhiChu.Multiline = true;
+            this.txtGhiChu.Name = "txtGhiChu";
+            this.txtGhiChu.Size = new System.Drawing.Size(380, 140);
+            this.txtGhiChu.TabIndex = 0;
+            // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.menuStrip1);
             this.panel4.Location = new System.Drawing.Point(336, 492);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(426, 149);
             this.panel4.TabIndex = 12;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.ghiChúToolStripMenuItem});
-            this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table;
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(426, 125);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.TextDirection = System.Windows.Forms.ToolStripTextDirection.Vertical270;
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(34, 59);
-            this.toolStripMenuItem1.Text = "Số tiền";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
-            // ghiChúToolStripMenuItem
-            // 
-            this.ghiChúToolStripMenuItem.Name = "ghiChúToolStripMenuItem";
-            this.ghiChúToolStripMenuItem.Size = new System.Drawing.Size(34, 62);
-            this.ghiChúToolStripMenuItem.Text = "Ghi chú";
-            this.ghiChúToolStripMenuItem.Click += new System.EventHandler(this.ghiChúToolStripMenuItem_Click);
             // 
             // button5
             // 
@@ -404,15 +484,15 @@ namespace DO_AN_PBL3
             this.button2.Text = "<< Giảm";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnThem
             // 
-            this.button1.Location = new System.Drawing.Point(248, 272);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 28);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Thêm >>";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnThem.Location = new System.Drawing.Point(248, 272);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(85, 28);
+            this.btnThem.TabIndex = 7;
+            this.btnThem.Text = "Thêm >>";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label2
             // 
@@ -483,6 +563,7 @@ namespace DO_AN_PBL3
             this.lsvHH.TabIndex = 2;
             this.lsvHH.UseCompatibleStateImageBehavior = false;
             this.lsvHH.View = System.Windows.Forms.View.Details;
+            this.lsvHH.SelectedIndexChanged += new System.EventHandler(this.lsvHH_SelectedIndexChanged);
             this.lsvHH.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lsvHH_MouseClick);
             // 
             // columnHeader1
@@ -513,106 +594,6 @@ namespace DO_AN_PBL3
             this.label1.TabIndex = 0;
             this.label1.Text = "Lọc: ";
             // 
-            // panelSotien
-            // 
-            this.panelSotien.Controls.Add(this.txtThanhTien);
-            this.panelSotien.Controls.Add(this.label5);
-            this.panelSotien.Controls.Add(this.nmrDiscount);
-            this.panelSotien.Controls.Add(this.label4);
-            this.panelSotien.Controls.Add(this.txtTienhang);
-            this.panelSotien.Controls.Add(this.label3);
-            this.panelSotien.Location = new System.Drawing.Point(3, 3);
-            this.panelSotien.Name = "panelSotien";
-            this.panelSotien.Size = new System.Drawing.Size(392, 140);
-            this.panelSotien.TabIndex = 0;
-            // 
-            // btnChuyenBan
-            // 
-            this.btnChuyenBan.Location = new System.Drawing.Point(248, 104);
-            this.btnChuyenBan.Name = "btnChuyenBan";
-            this.btnChuyenBan.Size = new System.Drawing.Size(85, 73);
-            this.btnChuyenBan.TabIndex = 14;
-            this.btnChuyenBan.Text = "Chuyển bàn";
-            this.btnChuyenBan.UseVisualStyleBackColor = true;
-            // 
-            // btnTachBan
-            // 
-            this.btnTachBan.Location = new System.Drawing.Point(248, 17);
-            this.btnTachBan.Name = "btnTachBan";
-            this.btnTachBan.Size = new System.Drawing.Size(85, 73);
-            this.btnTachBan.TabIndex = 15;
-            this.btnTachBan.Text = "Tách bàn";
-            this.btnTachBan.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 20);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Tiền Hàng: ";
-            // 
-            // txtTienhang
-            // 
-            this.txtTienhang.BackColor = System.Drawing.Color.White;
-            this.txtTienhang.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTienhang.Location = new System.Drawing.Point(124, 9);
-            this.txtTienhang.Name = "txtTienhang";
-            this.txtTienhang.Size = new System.Drawing.Size(181, 19);
-            this.txtTienhang.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 49);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 20);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Giảm giá: ";
-            // 
-            // nmrDiscount
-            // 
-            this.nmrDiscount.Location = new System.Drawing.Point(124, 47);
-            this.nmrDiscount.Name = "nmrDiscount";
-            this.nmrDiscount.Size = new System.Drawing.Size(120, 26);
-            this.nmrDiscount.TabIndex = 3;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 89);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 20);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Thành tiền: ";
-            // 
-            // txtThanhTien
-            // 
-            this.txtThanhTien.BackColor = System.Drawing.Color.LemonChiffon;
-            this.txtThanhTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtThanhTien.Location = new System.Drawing.Point(124, 89);
-            this.txtThanhTien.Name = "txtThanhTien";
-            this.txtThanhTien.Size = new System.Drawing.Size(181, 19);
-            this.txtThanhTien.TabIndex = 5;
-            // 
-            // panelGhichu
-            // 
-            this.panelGhichu.Controls.Add(this.panelSotien);
-            this.panelGhichu.Controls.Add(this.txtGhiChu);
-            this.panelGhichu.Location = new System.Drawing.Point(6, 0);
-            this.panelGhichu.Name = "panelGhichu";
-            this.panelGhichu.Size = new System.Drawing.Size(386, 143);
-            this.panelGhichu.TabIndex = 16;
-            // 
-            // txtGhiChu
-            // 
-            this.txtGhiChu.Location = new System.Drawing.Point(3, 3);
-            this.txtGhiChu.Multiline = true;
-            this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(380, 140);
-            this.txtGhiChu.TabIndex = 0;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -633,6 +614,7 @@ namespace DO_AN_PBL3
             this.Text = "Form2";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panelAdmin.ResumeLayout(false);
@@ -640,15 +622,11 @@ namespace DO_AN_PBL3
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmrsoLuong)).EndInit();
             this.panel5.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.panelGhichu.ResumeLayout(false);
+            this.panelGhichu.PerformLayout();
             this.panelSotien.ResumeLayout(false);
             this.panelSotien.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmrDiscount)).EndInit();
-            this.panelGhichu.ResumeLayout(false);
-            this.panelGhichu.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -656,7 +634,7 @@ namespace DO_AN_PBL3
         #endregion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbSearch;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Button btnTable;
@@ -678,15 +656,12 @@ namespace DO_AN_PBL3
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ToolStripMenuItem ghiChúToolStripMenuItem;
         private System.Windows.Forms.Panel panel5;
         public System.Windows.Forms.ColumnHeader columnHeader3;
         public System.Windows.Forms.ColumnHeader columnHeader4;
@@ -705,5 +680,6 @@ namespace DO_AN_PBL3
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panelGhichu;
         private System.Windows.Forms.TextBox txtGhiChu;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

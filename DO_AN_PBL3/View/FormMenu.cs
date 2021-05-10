@@ -30,6 +30,7 @@ namespace DO_AN_PBL3.View
             {
                 PictureBox pic = new PictureBox { Width = 100, Height = 100 };
                 MemoryStream stream = new MemoryStream(item.picture.ToArray());
+            
                 Image image = Image.FromStream(stream);
                 pic.Image = image;
                 pic.SizeMode = PictureBoxSizeMode.StretchImage;

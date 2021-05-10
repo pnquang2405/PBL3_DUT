@@ -103,26 +103,6 @@ namespace DO_AN_PBL3
                 lsvHH.Items.Add(lsvItem);
             }
         }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            if(hangHoa != null)
-            {
-                ListViewItem lsvItem = new ListViewItem(hangHoa.Ten_HH);
-                lsvItem.SubItems.Add(nmrsoLuong.Value.ToString());
-                lsvItem.SubItems.Add(hangHoa.Gia.ToString());
-                lsvItem.SubItems.Add((Convert.ToDouble(hangHoa.Gia.Value.ToString()) * (int)nmrsoLuong.Value).ToString());
-                lsvItem.Tag = hangHoa;
-
-                lsvTemp.Items.Add(lsvItem);
-                hangHoa = null;
-            }
-            else
-            {
-                MessageBox.Show("Bạn chưa chọn món");
-            }
-        }
-
         private void lsvHH_MouseClick(object sender, MouseEventArgs e)
         {
             hangHoa = (HANGHOA)lsvHH.SelectedItems[0].Tag;
@@ -136,6 +116,58 @@ namespace DO_AN_PBL3
         private void ghiChúToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panelSotien.Hide();
+        }
+
+        private void txbSearch_TextChanged(object sender, EventArgs e)
+        {
+            
+            Loai_HANGHOA lhh = (Loai_HANGHOA)listBox1.SelectedItem;
+            List<HANGHOA> list = null;
+            if (listBox1.SelectedIndex < 1)
+            {
+                list = Merchandise_BLL.Instance.GetList(-1);
+            }
+            else
+            {
+                int a = lhh.ID_LHH;
+                list = Merchandise_BLL.Instance.GetList(lhh.ID_LHH);
+            }
+                var search = (from x in list where x.Ten_HH.ToLower().Contains(txbSearch.Text) select x).ToList();
+            lsvHH.Items.Clear();
+            foreach (HANGHOA x in search)
+                    {
+                        ListViewItem lsvItem = new ListViewItem(x.Ten_HH);
+                        lsvItem.SubItems.Add(x.Gia.ToString());
+                        lsvItem.Tag = x;
+                        if (lsvHH.Items.Contains(lsvItem) == false)
+                        {
+                            lsvHH.Items.Add(lsvItem);
+                        }
+                    }
+                }
+      
+       private void btnThem_Click(object sender, EventArgs e)
+        {
+
+            if (hangHoa != null)
+            {
+                ListViewItem lsvItem = new ListViewItem(hangHoa.Ten_HH);
+                lsvItem.SubItems.Add(nmrsoLuong.Value.ToString());
+                lsvItem.SubItems.Add(hangHoa.Gia.ToString());
+                lsvItem.SubItems.Add((Convert.ToDouble(hangHoa.Gia.Value.ToString()) * (int)nmrsoLuong.Value).ToString());
+                lsvItem.Tag = hangHoa;
+                lsvTemp.Items.Add(lsvItem);
+                hangHoa = null;
+            }
+            else
+            {
+                MessageBox.Show("Bạn chưa chọn món");
+            }
+        }
+
+        private void lsvHH_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

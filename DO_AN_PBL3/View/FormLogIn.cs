@@ -17,15 +17,27 @@ namespace DO_AN_PBL3
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        
+
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+           int username = Convert.ToInt32(txtUserName.Text);
+            string password = txtPassword.Text;
+            if (BLL.Account_BLL.Instance.Login_BLL(username,password))
+            {
+                this.Hide();
+                FormMain f = new FormMain();
+                f.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Sai tai khoan!!!!!!!");
+            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
-            FormMain f = new FormMain();
-            f.ShowDialog();
+            Application.Exit();
         }
     }
 }

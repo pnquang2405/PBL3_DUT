@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PBL3_CNPMDataSet" targetNamespace="http://tempuri.org/PBL3_CNPMDataSet.xsd" xmlns:mstns="http://tempuri.org/PBL3_CNPMDataSet.xsd" xmlns="http://tempuri.org/PBL3_CNPMDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PBL3_CNPMConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PBL3_CNPMConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DO_AN_PBL3.Properties.Settings.GlobalReference.Default.PBL3_CNPMConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="HANGHOATableAdapter" GeneratorDataComponentClassName="HANGHOATableAdapter" Name="HANGHOA" UserDataComponentName="HANGHOATableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PBL3_CNPMConnectionString (Settings)" DbObjectName="PBL3_CNPM.dbo.HANGHOA" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Ten_HH, Gia FROM dbo.HANGHOA</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Ten_HH" DataSetColumn="Ten_HH" />
+              <Mapping SourceColumn="Gia" DataSetColumn="Gia" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PBL3_CNPMDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="PBL3_CNPMDataSet" msprop:Generator_UserDSName="PBL3_CNPMDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="HANGHOA" msprop:Generator_TableClassName="HANGHOADataTable" msprop:Generator_TableVarName="tableHANGHOA" msprop:Generator_TablePropName="HANGHOA" msprop:Generator_RowDeletingName="HANGHOARowDeleting" msprop:Generator_RowChangingName="HANGHOARowChanging" msprop:Generator_RowEvHandlerName="HANGHOARowChangeEventHandler" msprop:Generator_RowDeletedName="HANGHOARowDeleted" msprop:Generator_UserTableName="HANGHOA" msprop:Generator_RowChangedName="HANGHOARowChanged" msprop:Generator_RowEvArgName="HANGHOARowChangeEvent" msprop:Generator_RowClassName="HANGHOARow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Ten_HH" msprop:Generator_ColumnVarNameInTable="columnTen_HH" msprop:Generator_ColumnPropNameInRow="Ten_HH" msprop:Generator_ColumnPropNameInTable="Ten_HHColumn" msprop:Generator_UserColumnName="Ten_HH">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Gia" msprop:Generator_ColumnVarNameInTable="columnGia" msprop:Generator_ColumnPropNameInRow="Gia" msprop:Generator_ColumnPropNameInTable="GiaColumn" msprop:Generator_UserColumnName="Gia" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

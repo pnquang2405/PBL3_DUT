@@ -26,9 +26,7 @@ namespace DO_AN_PBL3.BLL
 
             }
         }
-
-
-        public void Add(HANGHOA hh)
+       public void Add(HANGHOA hh)
         {
             Merchandise_DAL.Instance.Add(hh);
             Merchandise_DAL.Instance.Sync();

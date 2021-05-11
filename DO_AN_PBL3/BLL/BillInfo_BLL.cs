@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 
 namespace DO_AN_PBL3.BLL
 {
-    class Table_BLL
+    class BillInfo_BLL
     {
-        private static Table_BLL _Instance;
-        public static Table_BLL Instance
+        private static BillInfo_BLL _Instance;
+        public static BillInfo_BLL Instance
         {
             get
             {
                 if (_Instance == null)
                 {
-                    _Instance = new Table_BLL();
+                    _Instance = new BillInfo_BLL();
                 }
                 return _Instance;
             }
@@ -27,15 +27,10 @@ namespace DO_AN_PBL3.BLL
             }
         }
 
-        public List<BAN> GetTable()
+        public List<Entity.BillInfo> GetList(BAN table)
         {
-            return Table_DAL.Instance.GetList();
+            return BillInfo_DAL.Instance.GetBillInfo(table);
         }
 
-        public void update(int id, bool tinhTrang)
-        {
-            Table_DAL.Instance.Update(id, tinhTrang);
-            Table_DAL.Instance.Sync();
-        }
     }
 }

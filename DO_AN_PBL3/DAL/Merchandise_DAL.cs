@@ -59,6 +59,13 @@ namespace DO_AN_PBL3.DAL
             throw new NotImplementedException();
         }
 
+        public int GetIDByName(String name)
+        {
+            HANGHOA hh = db.HANGHOAs.First(p => p.Ten_HH == name);
+
+            return hh.ID_HH;
+        }
+
         public void Sync()
         {
             db.SaveChanges();

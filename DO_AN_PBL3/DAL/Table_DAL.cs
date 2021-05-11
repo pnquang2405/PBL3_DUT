@@ -43,7 +43,10 @@ namespace DO_AN_PBL3.DAL
 
         public List<BAN> GetList()
         {
-            return db.BANs.ToList();
+            List<BAN> list = (from p in db.BANs
+                       select p).ToList();
+
+            return list;
         }
 
         public List<BAN> GetList(int key)
@@ -51,14 +54,19 @@ namespace DO_AN_PBL3.DAL
             throw new NotImplementedException();
         }
 
-        public void Update(BAN before, BAN after)
+        public void Update(int id, bool tinhTrang)
         {
-            throw new NotImplementedException();
+            BAN ban = db.BANs.First(p => p.ID_BAN == id);
+            ban.TinhTrang = tinhTrang;
+
+            List<BAN> list = db.BANs.ToList();
+
+            Console.WriteLine("123");
         }
 
         public void Sync()
         {
-            throw new NotImplementedException();
+            db.SaveChanges();
         }
     }
 }

@@ -65,11 +65,11 @@ namespace DO_AN_PBL3
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ghiChúToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnThanhToan = new System.Windows.Forms.Button();
+            this.btnInCheBien = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
             this.btnGiam = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lsvTemp = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -295,11 +295,11 @@ namespace DO_AN_PBL3
             this.panel3.Controls.Add(this.nmrsoLuong);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.button5);
-            this.panel3.Controls.Add(this.button4);
-            this.panel3.Controls.Add(this.button3);
+            this.panel3.Controls.Add(this.btnThanhToan);
+            this.panel3.Controls.Add(this.btnInCheBien);
+            this.panel3.Controls.Add(this.btnXoa);
             this.panel3.Controls.Add(this.btnGiam);
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.btnThem);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.lsvTemp);
             this.panel3.Controls.Add(this.listBox1);
@@ -468,32 +468,33 @@ namespace DO_AN_PBL3
             this.ghiChúToolStripMenuItem.Text = "Ghi chú";
             this.ghiChúToolStripMenuItem.Click += new System.EventHandler(this.ghiChúToolStripMenuItem_Click);
             // 
-            // button5
+            // btnThanhToan
             // 
-            this.button5.Location = new System.Drawing.Point(248, 521);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(85, 102);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "Thanh toán";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnThanhToan.Location = new System.Drawing.Point(248, 521);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(85, 102);
+            this.btnThanhToan.TabIndex = 11;
+            this.btnThanhToan.Text = "Thanh toán";
+            this.btnThanhToan.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnInCheBien
             // 
-            this.button4.Location = new System.Drawing.Point(248, 413);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(85, 73);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "In chế biến";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnInCheBien.Location = new System.Drawing.Point(248, 413);
+            this.btnInCheBien.Name = "btnInCheBien";
+            this.btnInCheBien.Size = new System.Drawing.Size(85, 73);
+            this.btnInCheBien.TabIndex = 10;
+            this.btnInCheBien.Text = "In chế biến";
+            this.btnInCheBien.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnXoa
             // 
-            this.button3.Location = new System.Drawing.Point(248, 350);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(85, 28);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Xóa";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnXoa.Location = new System.Drawing.Point(248, 350);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(85, 28);
+            this.btnXoa.TabIndex = 9;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnGiam
             // 
@@ -505,15 +506,15 @@ namespace DO_AN_PBL3
             this.btnGiam.UseVisualStyleBackColor = true;
             this.btnGiam.Click += new System.EventHandler(this.btnGiam_Click);
             // 
-            // button1
+            // btnThem
             // 
-            this.button1.Location = new System.Drawing.Point(248, 272);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 28);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Thêm >>";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnThem.Location = new System.Drawing.Point(248, 272);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(85, 28);
+            this.btnThem.TabIndex = 7;
+            this.btnThem.Text = "Thêm >>";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label2
             // 
@@ -682,11 +683,11 @@ namespace DO_AN_PBL3
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnThanhToan;
+        private System.Windows.Forms.Button btnInCheBien;
+        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnGiam;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripMenuItem ghiChúToolStripMenuItem;
         private System.Windows.Forms.Panel panel5;

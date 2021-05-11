@@ -14,7 +14,7 @@ namespace DO_AN_PBL3
 {
     public partial class FormTable : Form
     {
-        
+        public Action<BAN> getTable;
         public FormTable()
         {
             InitializeComponent();
@@ -48,7 +48,7 @@ namespace DO_AN_PBL3
         {
             BAN table = (sender as Button).Tag as BAN;
             FormMain f = new FormMain();
-            f.D(table);
+            getTable.Invoke(table);
         }
     }
 }

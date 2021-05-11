@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,14 +19,9 @@ namespace DO_AN_PBL3
         private HANGHOA hangHoa;
         private HANGHOA hangHoa1;
         private BAN ban;
-        public delegate void MyDel(BAN table);
-        private MyDel d;
-
-        public MyDel D { get => d; set => d = value; }
         public FormMain()
         {
             InitializeComponent();
-            D += ShowBill;
             button1_Click(new object(), new EventArgs());
             SetGUI();
         }
@@ -68,8 +64,24 @@ namespace DO_AN_PBL3
 
         void ShowBill(BAN table)
         {
-            ban = table; 
+            this.ban = table;
+            lsvTemp.Items.Clear();
+            CultureInfo culture = new CultureInfo("vi-VN");
+            List<BillInfo> listBillInfo = BillInfo_BLL.Instance.GetList(ban);
+            double thanhTien = 0;
+            foreach (BillInfo item in listBillInfo)
+            {
+                ListViewItem lsvItem = new ListViewItem(item.MatHang);
+                lsvItem.SubItems.Add(item.SoLuong.ToString());
+                lsvItem.SubItems.Add(item.DonGia.ToString("c", culture));
+                lsvItem.SubItems.Add(item.TongTien.ToString("c", culture));
+                thanhTien += item.TongTien;
+
+                lsvTemp.Items.Add(lsvItem);
+            }
             
+            txtTienhang.Text = thanhTien.ToString("c", culture);
+            txtThanhTien.Text = (thanhTien - thanhTien * (int)nmrDiscount.Value).ToString();
         }
 
         #endregion
@@ -78,13 +90,14 @@ namespace DO_AN_PBL3
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            OpenChildForm(new FormTable());
+            FormTable f = new FormTable();
+            f.getTable = ShowBill;
+            OpenChildForm(f);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormMenu());
+            OpenChildForm(new FormMenu());                                                                                                                      
         }
 
         private void button1_MouseHover(object sender, EventArgs e)
@@ -136,6 +149,13 @@ namespace DO_AN_PBL3
         {
             if(hangHoa != null && ban != null)
             {
+                if (HOA_DON_BLL.Instance.checkHoaDon(ban.ID_BAN) == false) 
+                {
+                    HOA_DON_BLL.Instance.InsertHOADON(ban.ID_BAN, null, 0);
+                    button1_Click(new object(), new EventArgs());
+                }
+
+                int idBill = HOA_DON_BLL.Instance.GetIdByTable(ban.ID_BAN);
                 foreach (ListViewItem item in lsvTemp.Items)
                 {
                     if (item.SubItems[0].Text.Equals(hangHoa.Ten_HH))
@@ -146,6 +166,8 @@ namespace DO_AN_PBL3
                         hangHoa = null;
                         nmrsoLuong.Value = 1;
 
+                        CHI_TIET_HOA_DON_BLL.Instance.update(idBill, item.SubItems[0].Text, soLuong);
+                        
                         return;
                     }
                 }
@@ -156,6 +178,7 @@ namespace DO_AN_PBL3
                 lsvItem.SubItems.Add(hangHoa.Gia.ToString());
                 lsvItem.SubItems.Add((Convert.ToDouble(hangHoa.Gia.Value.ToString()) * (int)nmrsoLuong.Value).ToString());
                 lsvItem.Tag = hangHoa;
+                CHI_TIET_HOA_DON_BLL.Instance.insert(idBill, hangHoa.Ten_HH, (int)nmrsoLuong.Value);
 
                 lsvTemp.Items.Add(lsvItem);
                 hangHoa = null;

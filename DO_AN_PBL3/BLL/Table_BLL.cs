@@ -32,9 +32,9 @@ namespace DO_AN_PBL3.BLL
             return Table_DAL.Instance.GetList();
         }
 
-        public void update(int id)
+        public void update(int id, bool tinhTrang)
         {
-            Table_DAL.Instance.Update(id);
+            Table_DAL.Instance.Update(id, tinhTrang);
             Table_DAL.Instance.Sync();
         }
     }

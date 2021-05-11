@@ -158,7 +158,7 @@ namespace DO_AN_PBL3
                 if (HOA_DON_BLL.Instance.checkHoaDon(ban.ID_BAN) == false) 
                 {
                     HOA_DON_BLL.Instance.InsertHOADON(ban.ID_BAN, null, 0);
-                    Table_BLL.Instance.update(ban.ID_BAN);
+                    Table_BLL.Instance.update(ban.ID_BAN, false);
 
                     button1_Click(new object(), new EventArgs());
                 }
@@ -229,6 +229,8 @@ namespace DO_AN_PBL3
                             hangHoa1 = null;
                             nmrsoLuong.Value = 1;
                             CHI_TIET_HOA_DON_BLL.Instance.delete(idBill, item.SubItems[0].Text, Convert.ToInt32(item.SubItems[1].Text));
+                            Table_BLL.Instance.update(ban.ID_BAN, true);
+                            button1_Click(new object(), new EventArgs());
 
                             break;
                         }
@@ -254,6 +256,8 @@ namespace DO_AN_PBL3
                         int idBill = HOA_DON_BLL.Instance.GetIdByTable(ban.ID_BAN);
                         lsvTemp.Items.Remove(item);
                         CHI_TIET_HOA_DON_BLL.Instance.delete(idBill, item.SubItems[0].Text, Convert.ToInt32(item.SubItems[1].Text));
+                        Table_BLL.Instance.update(ban.ID_BAN, true);
+                        button1_Click(new object(), new EventArgs());
 
                         return;
                     }

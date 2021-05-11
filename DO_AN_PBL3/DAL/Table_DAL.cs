@@ -54,10 +54,10 @@ namespace DO_AN_PBL3.DAL
             throw new NotImplementedException();
         }
 
-        public void Update(int id)
+        public void Update(int id, bool tinhTrang)
         {
             BAN ban = db.BANs.First(p => p.ID_BAN == id);
-            ban.TinhTrang = false;
+            ban.TinhTrang = tinhTrang;
 
             List<BAN> list = db.BANs.ToList();
 

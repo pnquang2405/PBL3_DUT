@@ -10,7 +10,7 @@ namespace DO_AN_PBL3.DAL
 {
     class HOA_DON_DAL:IGeneral<HOA_DON>
     {
-        private StoreEntity db;
+        private PBL3_QLTraSuaEntities db;
         private static HOA_DON_DAL _Instance;
         public static HOA_DON_DAL Instance
         {
@@ -29,7 +29,7 @@ namespace DO_AN_PBL3.DAL
         }
         public HOA_DON_DAL()
         {
-            db = new StoreEntity();
+            db = new PBL3_QLTraSuaEntities();
         }
 
         public List<HOA_DON> GetList()

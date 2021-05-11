@@ -10,7 +10,7 @@ namespace DO_AN_PBL3.DAL
 {
     class Table_DAL : IGeneral<BAN>
     {
-        private StoreEntity db;
+        private PBL3_QLTraSuaEntities db;
         private static Table_DAL _Instance;
         public static Table_DAL Instance
         {
@@ -29,7 +29,7 @@ namespace DO_AN_PBL3.DAL
         }
         public Table_DAL()
         {
-            db = new StoreEntity();
+            db = new PBL3_QLTraSuaEntities();
         }
         public void Add(BAN temp)
         {

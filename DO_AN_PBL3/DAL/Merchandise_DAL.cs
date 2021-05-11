@@ -10,7 +10,7 @@ namespace DO_AN_PBL3.DAL
 {
     class Merchandise_DAL : IGeneral<HANGHOA>
     {
-        private StoreEntity db;
+        private PBL3_QLTraSuaEntities db;
         private static Merchandise_DAL _Instance;
         public static Merchandise_DAL Instance
         {
@@ -29,7 +29,7 @@ namespace DO_AN_PBL3.DAL
         }
         public Merchandise_DAL()
         {
-            db = new StoreEntity();
+            db = new PBL3_QLTraSuaEntities();
         }
 
         public void Add(HANGHOA temp)

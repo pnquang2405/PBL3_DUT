@@ -9,7 +9,7 @@ namespace DO_AN_PBL3.DAL
 {
     class BillInfo_DAL
     {
-        private StoreEntity db;
+        private PBL3_QLTraSuaEntities db;
         private static BillInfo_DAL _Instance;
         public static BillInfo_DAL Instance
         {
@@ -28,7 +28,7 @@ namespace DO_AN_PBL3.DAL
         }
         public BillInfo_DAL()
         {
-            db = new StoreEntity();
+            db = new PBL3_QLTraSuaEntities();
         }
 
         public List<BillInfo> GetBillInfo(BAN table)

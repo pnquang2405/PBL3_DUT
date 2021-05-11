@@ -24,8 +24,25 @@ namespace DO_AN_PBL3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormMain f = new FormMain();
-            f.ShowDialog();
+            if(txtPassword.Text != "" && txtUserName.Text != "")
+            {
+                int username = Convert.ToInt32(txtUserName.Text);
+                string password = txtPassword.Text;
+                if (BLL.Account_BLL.Instance.Login_BLL(username, password, 0))
+                {
+
+                    FormMain f = new FormMain();
+                    f.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Sai tai khoan!!!!!!!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("VUi long nhap day du thong tin");
+            }
         }
     }
 }

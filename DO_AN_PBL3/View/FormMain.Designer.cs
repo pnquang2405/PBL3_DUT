@@ -35,7 +35,7 @@ namespace DO_AN_PBL3
             this.btnAdmin = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnFullScreen = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbSearch = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnMenu = new System.Windows.Forms.Button();
@@ -102,7 +102,7 @@ namespace DO_AN_PBL3
             this.panel1.Controls.Add(this.btnAdmin);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.btnFullScreen);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txbSearch);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -150,13 +150,14 @@ namespace DO_AN_PBL3
             this.btnFullScreen.TabIndex = 4;
             this.btnFullScreen.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // txbSearch
             // 
-            this.textBox1.Location = new System.Drawing.Point(69, 9);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(333, 38);
-            this.textBox1.TabIndex = 1;
+            this.txbSearch.Location = new System.Drawing.Point(69, 9);
+            this.txbSearch.Multiline = true;
+            this.txbSearch.Name = "txbSearch";
+            this.txbSearch.Size = new System.Drawing.Size(333, 38);
+            this.txbSearch.TabIndex = 1;
+            this.txbSearch.TextChanged += new System.EventHandler(this.txbSearch_TextChanged);
             // 
             // pictureBox1
             // 
@@ -659,7 +660,7 @@ namespace DO_AN_PBL3
         #endregion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbSearch;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Button btnTable;

@@ -266,6 +266,36 @@ namespace DO_AN_PBL3
             
         }
 
+
+        private void txbSearch_TextChanged(object sender, EventArgs e)
+        {
+
+            Loai_HANGHOA lhh = (Loai_HANGHOA)listBox1.SelectedItem;
+            List<HANGHOA> list = null;
+            if (listBox1.SelectedIndex < 1)
+            {
+                list = Merchandise_BLL.Instance.GetList(-1);
+            }
+            else
+            {
+                int a = lhh.ID_LHH;
+                list = Merchandise_BLL.Instance.GetList(lhh.ID_LHH);
+            }
+            var search = (from x in list where x.Ten_HH.ToLower().Contains(txbSearch.Text) select x).ToList();
+            lsvHH.Items.Clear();
+            foreach (HANGHOA x in search)
+            {
+                ListViewItem lsvItem = new ListViewItem(x.Ten_HH);
+                lsvItem.SubItems.Add(x.Gia.ToString());
+                lsvItem.Tag = x;
+                if (lsvHH.Items.Contains(lsvItem) == false)
+                {
+                    lsvHH.Items.Add(lsvItem);
+                }
+            }
+        }
+
+
         #endregion
     }
 }

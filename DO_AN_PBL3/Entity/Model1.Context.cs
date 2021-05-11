@@ -15,9 +15,9 @@ namespace DO_AN_PBL3.Entity
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class StoreEntity : DbContext
+    public partial class PBL3_QLTraSuaEntities : DbContext
     {
-        public StoreEntity()
+        public PBL3_QLTraSuaEntities()
             : base("name=StoreEntity")
         {
         }

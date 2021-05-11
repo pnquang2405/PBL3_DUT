@@ -11,7 +11,7 @@ namespace DO_AN_PBL3.DAL
     class Account_DAL
     {
 
-        private StoreEntity db;
+        private PBL3_QLTraSuaEntities db;
         private static Account_DAL _Instance;
         public static Account_DAL Instance
         {
@@ -30,7 +30,7 @@ namespace DO_AN_PBL3.DAL
         }
         public Account_DAL()
         {
-            db = new StoreEntity();
+            db = new PBL3_QLTraSuaEntities();
         }
         public bool Login_DAL(int username, string password)
         {
@@ -41,7 +41,7 @@ namespace DO_AN_PBL3.DAL
         public bool ResetPassword_DAL(int username, string newpassword)
         {
 
-            db = new StoreEntity();
+            db = new PBL3_QLTraSuaEntities();
             var s = db.NHANVIENs.Where(p => p.ID_NV == username).FirstOrDefault();
             s.password = newpassword;
             try

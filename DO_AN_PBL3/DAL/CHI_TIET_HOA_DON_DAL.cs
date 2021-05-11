@@ -10,7 +10,7 @@ namespace DO_AN_PBL3.DAL
 {
     class CHI_TIET_HOA_DON_DAL:IGeneral<CHI_TIET_HOA_DON>
     {
-        private StoreEntity db;
+        private PBL3_QLTraSuaEntities db;
         private static CHI_TIET_HOA_DON_DAL _Instance;
         public static CHI_TIET_HOA_DON_DAL Instance
         {
@@ -29,7 +29,7 @@ namespace DO_AN_PBL3.DAL
         }
         public CHI_TIET_HOA_DON_DAL()
         {
-            db = new StoreEntity();
+            db = new PBL3_QLTraSuaEntities();
         }
 
         public List<CHI_TIET_HOA_DON> GetList()

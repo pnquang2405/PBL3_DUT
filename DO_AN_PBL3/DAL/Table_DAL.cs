@@ -43,7 +43,9 @@ namespace DO_AN_PBL3.DAL
 
         public List<BAN> GetList()
         {
-            return db.BANs.ToList();
+            var list = (from p in db.BANs
+                       select p).ToList();
+            return list;
         }
 
         public List<BAN> GetList(int key)

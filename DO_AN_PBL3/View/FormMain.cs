@@ -183,6 +183,8 @@ namespace DO_AN_PBL3
                 lsvTemp.Items.Add(lsvItem);
                 hangHoa = null;
                 nmrsoLuong.Value = 1;
+                FormTable f = new FormTable();
+                f.Show();
             }
             else
             {

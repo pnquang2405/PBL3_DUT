@@ -47,13 +47,16 @@ namespace DO_AN_PBL3.BLL
             CHI_TIET_HOA_DON_DAL.Instance.Sync();
         }
 
-        public void delete(int idBill, String tenHH)
+        public void delete(int idBill, String tenHH, int soLuong)
         {
             int idHH = Merchandise_DAL.Instance.GetIDByName(tenHH);
+            int idCTHD = CHI_TIET_HOA_DON_DAL.Instance.GetID(idBill, idHH);
             CHI_TIET_HOA_DON chitiet = new CHI_TIET_HOA_DON
             {
+                ID_CTHD = idCTHD,
                 ID_HD = idBill,
                 ID_HH = idHH,
+                soluong = soLuong,
             };
             CHI_TIET_HOA_DON_DAL.Instance.Delete(chitiet);
             CHI_TIET_HOA_DON_DAL.Instance.Sync();

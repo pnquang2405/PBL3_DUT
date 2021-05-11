@@ -76,6 +76,12 @@ namespace DO_AN_PBL3
                 lsvItem.SubItems.Add(item.DonGia.ToString("c", culture));
                 lsvItem.SubItems.Add(item.TongTien.ToString("c", culture));
                 thanhTien += item.TongTien;
+                HANGHOA hh = new HANGHOA
+                {
+                    Ten_HH = item.MatHang,
+                    Gia = Convert.ToDecimal(item.DonGia),
+                };
+                lsvItem.Tag = hh;
 
                 lsvTemp.Items.Add(lsvItem);
             }
@@ -222,7 +228,7 @@ namespace DO_AN_PBL3
                             lsvTemp.Items.Remove(item);
                             hangHoa1 = null;
                             nmrsoLuong.Value = 1;
-                            CHI_TIET_HOA_DON_BLL.Instance.delete(idBill, item.SubItems[0].Text);
+                            CHI_TIET_HOA_DON_BLL.Instance.delete(idBill, item.SubItems[0].Text, Convert.ToInt32(item.SubItems[1].Text));
 
                             break;
                         }
@@ -245,7 +251,10 @@ namespace DO_AN_PBL3
                 {
                     if (item.SubItems[0].Text.Equals(hangHoa1.Ten_HH))
                     {
+                        int idBill = HOA_DON_BLL.Instance.GetIdByTable(ban.ID_BAN);
                         lsvTemp.Items.Remove(item);
+                        CHI_TIET_HOA_DON_BLL.Instance.delete(idBill, item.SubItems[0].Text, Convert.ToInt32(item.SubItems[1].Text));
+
                         return;
                     }
                 }

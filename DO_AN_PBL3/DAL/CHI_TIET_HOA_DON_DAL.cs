@@ -47,9 +47,16 @@ namespace DO_AN_PBL3.DAL
             db.CHI_TIET_HOA_DON.Add(temp);
         }
 
+        public int GetID(int idBill, int idHH)
+        {
+            CHI_TIET_HOA_DON chitiet = db.CHI_TIET_HOA_DON.First(p => p.ID_HD == idBill && p.ID_HH == idHH);
+            return chitiet.ID_CTHD;
+        }
+
         public void Delete(CHI_TIET_HOA_DON temp)
         {
-            db.CHI_TIET_HOA_DON.Remove(temp);
+            CHI_TIET_HOA_DON chitiet = db.CHI_TIET_HOA_DON.First(p => p.ID_CTHD == temp.ID_CTHD);
+            db.CHI_TIET_HOA_DON.Remove(chitiet);
         }
 
         public void Update(int idBill, String TenHH, int soLuong)

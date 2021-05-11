@@ -256,7 +256,9 @@ namespace DO_AN_PBL3
                         int idBill = HOA_DON_BLL.Instance.GetIdByTable(ban.ID_BAN);
                         lsvTemp.Items.Remove(item);
                         CHI_TIET_HOA_DON_BLL.Instance.delete(idBill, item.SubItems[0].Text, Convert.ToInt32(item.SubItems[1].Text));
-                        Table_BLL.Instance.update(ban.ID_BAN, true);
+
+                        if(lsvTemp.Items.Count == 0) { Table_BLL.Instance.update(ban.ID_BAN, true); }
+
                         button1_Click(new object(), new EventArgs());
 
                         return;

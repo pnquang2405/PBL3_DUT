@@ -12,10 +12,10 @@ namespace DO_AN_PBL3.DAL
     {
         private PBL3_QLTraSuaEntities db;
         private static Table_DAL _Instance;
-        public static Table_DAL Instance
-        {
-            get
-            {
+        public static Table_DAL Instance 
+        { 
+            get{
+        
                 if (_Instance == null)
                 {
                     _Instance = new Table_DAL();

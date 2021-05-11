@@ -11,7 +11,8 @@ namespace DO_AN_PBL3.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class NHANVIEN
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -25,6 +26,8 @@ namespace DO_AN_PBL3.Entity
         public Nullable<bool> Gender { get; set; }
         public string PhoneNumber { get; set; }
         public bool Phanquyen { get; set; }
+
+        [MaxLength(50), MinLength(5)]
         public string password { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

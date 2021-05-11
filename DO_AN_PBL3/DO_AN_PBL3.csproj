@@ -55,12 +55,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\Account_BLL.cs" />
     <Compile Include="BLL\BillInfo_BLL.cs" />
     <Compile Include="BLL\Category_Merchandise_BLL.cs" />
     <Compile Include="BLL\CHI_TIET_HOA_DON_BLL.cs" />
     <Compile Include="BLL\HOA_DON_BLL.cs" />
     <Compile Include="BLL\Merchandise_BLL.cs" />
     <Compile Include="BLL\Table_BLL.cs" />
+    <Compile Include="DAL\Account_DAL.cs" />
     <Compile Include="DAL\BillInfo_DAL.cs" />
     <Compile Include="DAL\Category_Merchandise_DAL.cs" />
     <Compile Include="DAL\CHI_TIET_HOA_DON_DAL.cs" />

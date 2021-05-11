@@ -47,7 +47,7 @@ namespace DO_AN_PBL3
         private void Btn_Click(object sender, EventArgs e)
         {
             BAN table = (sender as Button).Tag as BAN;
-            FormMain f = new FormMain();
+            FormMain f = new FormMain(0);
             getTable.Invoke(table);
         }
     }

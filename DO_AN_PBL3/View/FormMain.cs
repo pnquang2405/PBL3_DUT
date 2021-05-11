@@ -19,8 +19,10 @@ namespace DO_AN_PBL3
         private HANGHOA hangHoa;
         private HANGHOA hangHoa1;
         private BAN ban;
-        public FormMain()
+        public int user;
+        public FormMain(int username)
         {
+            user = username;
             InitializeComponent();
             button1_Click(new object(), new EventArgs());
             SetGUI();
@@ -157,7 +159,7 @@ namespace DO_AN_PBL3
             {
                 if (HOA_DON_BLL.Instance.checkHoaDon(ban.ID_BAN) == false) 
                 {
-                    HOA_DON_BLL.Instance.InsertHOADON(ban.ID_BAN, null, 0);
+                    HOA_DON_BLL.Instance.InsertHOADON(ban.ID_BAN, null, user);
                     Table_BLL.Instance.update(ban.ID_BAN, false);
 
                     button1_Click(new object(), new EventArgs());

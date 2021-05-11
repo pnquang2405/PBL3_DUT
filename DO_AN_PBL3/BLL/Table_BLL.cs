@@ -31,5 +31,11 @@ namespace DO_AN_PBL3.BLL
         {
             return Table_DAL.Instance.GetList();
         }
+
+        public void update(int id)
+        {
+            Table_DAL.Instance.Update(id);
+            Table_DAL.Instance.Sync();
+        }
     }
 }

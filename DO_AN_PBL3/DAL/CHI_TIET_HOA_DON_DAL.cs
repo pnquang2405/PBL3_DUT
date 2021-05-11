@@ -49,7 +49,7 @@ namespace DO_AN_PBL3.DAL
 
         public void Delete(CHI_TIET_HOA_DON temp)
         {
-            throw new NotImplementedException();
+            db.CHI_TIET_HOA_DON.Remove(temp);
         }
 
         public void Update(int idBill, String TenHH, int soLuong)

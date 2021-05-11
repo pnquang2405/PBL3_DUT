@@ -152,6 +152,8 @@ namespace DO_AN_PBL3
                 if (HOA_DON_BLL.Instance.checkHoaDon(ban.ID_BAN) == false) 
                 {
                     HOA_DON_BLL.Instance.InsertHOADON(ban.ID_BAN, null, 0);
+                    Table_BLL.Instance.update(ban.ID_BAN);
+
                     button1_Click(new object(), new EventArgs());
                 }
 
@@ -183,8 +185,6 @@ namespace DO_AN_PBL3
                 lsvTemp.Items.Add(lsvItem);
                 hangHoa = null;
                 nmrsoLuong.Value = 1;
-                FormTable f = new FormTable();
-                f.Show();
             }
             else
             {
@@ -211,6 +211,7 @@ namespace DO_AN_PBL3
         {
             if(hangHoa1 != null)
             {
+                int idBill = HOA_DON_BLL.Instance.GetIdByTable(ban.ID_BAN);
                 foreach (ListViewItem item in lsvTemp.Items)
                 {
                     if (item.SubItems[0].Text.Equals(hangHoa1.Ten_HH))
@@ -221,6 +222,7 @@ namespace DO_AN_PBL3
                             lsvTemp.Items.Remove(item);
                             hangHoa1 = null;
                             nmrsoLuong.Value = 1;
+                            CHI_TIET_HOA_DON_BLL.Instance.delete(idBill, item.SubItems[0].Text);
 
                             break;
                         }
@@ -228,6 +230,8 @@ namespace DO_AN_PBL3
                         item.SubItems[3].Text = (hangHoa1.Gia * soLuong).ToString();
                         hangHoa1 = null;
                         nmrsoLuong.Value = 1;
+
+                        CHI_TIET_HOA_DON_BLL.Instance.update(idBill, item.SubItems[0].Text, soLuong);
                     }
                 }
             }

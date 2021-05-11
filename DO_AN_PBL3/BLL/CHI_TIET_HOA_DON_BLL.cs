@@ -46,5 +46,19 @@ namespace DO_AN_PBL3.BLL
             CHI_TIET_HOA_DON_DAL.Instance.Add(chitietHD);
             CHI_TIET_HOA_DON_DAL.Instance.Sync();
         }
+
+        public void delete(int idBill, String tenHH)
+        {
+            int idHH = Merchandise_DAL.Instance.GetIDByName(tenHH);
+            CHI_TIET_HOA_DON chitiet = new CHI_TIET_HOA_DON
+            {
+                ID_HD = idBill,
+                ID_HH = idHH,
+            };
+            CHI_TIET_HOA_DON_DAL.Instance.Delete(chitiet);
+            CHI_TIET_HOA_DON_DAL.Instance.Sync();
+        }
+
     }
+
 }

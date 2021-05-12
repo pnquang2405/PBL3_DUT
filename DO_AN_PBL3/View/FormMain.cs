@@ -101,6 +101,7 @@ namespace DO_AN_PBL3
             FormTable f = new FormTable();
             f.getTable = ShowBill;
             OpenChildForm(f);
+            //dsdsds
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -299,5 +300,33 @@ namespace DO_AN_PBL3
 
 
         #endregion
+
+        private void btnTamThanhToan_Click(object sender, EventArgs e)
+        {
+            if(ban != null&& BLL.HOA_DON_BLL.Instance.checkHoaDon(ban.ID_BAN))
+            {
+                BILL bill = new BILL(BLL.HOA_DON_BLL.Instance.GetIdByTable(ban.ID_BAN),0);
+
+                bill.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Chua chon ban can thanh toan hoac ban khong co du lieu!!!");
+            }
+        }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            if (ban != null && BLL.HOA_DON_BLL.Instance.checkHoaDon(ban.ID_BAN))
+            {
+                BILL bill = new BILL(BLL.HOA_DON_BLL.Instance.GetIdByTable(ban.ID_BAN), 1);
+
+                bill.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Chua chon ban can thanh toan hoac ban khong co du lieu!!!");
+            }
+        }
     }
 }

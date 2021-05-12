@@ -45,7 +45,11 @@ namespace DO_AN_PBL3.DAL
          
             return list;
         }
-
+        public HOA_DON getHoadonbayID(int idhoadon)
+        {
+            db = new PBL3_QLTraSuaEntities();
+            return db.HOA_DON.FirstOrDefault(p => p.ID_HD == idhoadon);
+        }
 
         public void Add(HOA_DON temp)
         {

@@ -48,6 +48,7 @@ namespace DO_AN_PBL3
             this.btnDoanhThu = new System.Windows.Forms.Button();
             this.btnHangHoa = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnTamThanhToan = new System.Windows.Forms.Button();
             this.btnTachBan = new System.Windows.Forms.Button();
             this.btnChuyenBan = new System.Windows.Forms.Button();
             this.nmrsoLuong = new System.Windows.Forms.NumericUpDown();
@@ -59,13 +60,13 @@ namespace DO_AN_PBL3
             this.nmrDiscount = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.txtTienhang = new System.Windows.Forms.TextBox();
+            this.btnThanhToan = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ghiChúToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnThanhToan = new System.Windows.Forms.Button();
             this.btnInCheBien = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnGiam = new System.Windows.Forms.Button();
@@ -291,12 +292,12 @@ namespace DO_AN_PBL3
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.btnTamThanhToan);
             this.panel3.Controls.Add(this.btnTachBan);
             this.panel3.Controls.Add(this.btnChuyenBan);
             this.panel3.Controls.Add(this.nmrsoLuong);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.btnThanhToan);
             this.panel3.Controls.Add(this.btnInCheBien);
             this.panel3.Controls.Add(this.btnXoa);
             this.panel3.Controls.Add(this.btnGiam);
@@ -311,6 +312,16 @@ namespace DO_AN_PBL3
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(768, 644);
             this.panel3.TabIndex = 5;
+            // 
+            // btnTamThanhToan
+            // 
+            this.btnTamThanhToan.Location = new System.Drawing.Point(251, 516);
+            this.btnTamThanhToan.Name = "btnTamThanhToan";
+            this.btnTamThanhToan.Size = new System.Drawing.Size(82, 77);
+            this.btnTamThanhToan.TabIndex = 16;
+            this.btnTamThanhToan.Text = "Tạm Thanh Toán";
+            this.btnTamThanhToan.UseVisualStyleBackColor = true;
+            this.btnTamThanhToan.Click += new System.EventHandler(this.btnTamThanhToan_Click);
             // 
             // btnTachBan
             // 
@@ -367,6 +378,7 @@ namespace DO_AN_PBL3
             this.panelSotien.Controls.Add(this.nmrDiscount);
             this.panelSotien.Controls.Add(this.label4);
             this.panelSotien.Controls.Add(this.txtTienhang);
+            this.panelSotien.Controls.Add(this.btnThanhToan);
             this.panelSotien.Controls.Add(this.label3);
             this.panelSotien.Location = new System.Drawing.Point(3, 3);
             this.panelSotien.Name = "panelSotien";
@@ -415,6 +427,16 @@ namespace DO_AN_PBL3
             this.txtTienhang.Name = "txtTienhang";
             this.txtTienhang.Size = new System.Drawing.Size(181, 19);
             this.txtTienhang.TabIndex = 1;
+            // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.Location = new System.Drawing.Point(292, 31);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(85, 56);
+            this.btnThanhToan.TabIndex = 11;
+            this.btnThanhToan.Text = "Thanh toán";
+            this.btnThanhToan.UseVisualStyleBackColor = true;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // label3
             // 
@@ -468,15 +490,6 @@ namespace DO_AN_PBL3
             this.ghiChúToolStripMenuItem.Size = new System.Drawing.Size(34, 62);
             this.ghiChúToolStripMenuItem.Text = "Ghi chú";
             this.ghiChúToolStripMenuItem.Click += new System.EventHandler(this.ghiChúToolStripMenuItem_Click);
-            // 
-            // btnThanhToan
-            // 
-            this.btnThanhToan.Location = new System.Drawing.Point(248, 521);
-            this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(85, 102);
-            this.btnThanhToan.TabIndex = 11;
-            this.btnThanhToan.Text = "Thanh toán";
-            this.btnThanhToan.UseVisualStyleBackColor = true;
             // 
             // btnInCheBien
             // 
@@ -709,5 +722,6 @@ namespace DO_AN_PBL3
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panelGhichu;
         private System.Windows.Forms.TextBox txtGhiChu;
+        private System.Windows.Forms.Button btnTamThanhToan;
     }
 }

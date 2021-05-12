@@ -51,6 +51,10 @@ namespace DO_AN_PBL3.BLL
             HOA_DON_DAL.Instance.Add(hoadon);
             HOA_DON_DAL.Instance.Sync();
         }
+        public HOA_DON getHOADONbyID(int ID_HOADON)
+        {
+            return HOA_DON_DAL.Instance.getHoadonbayID(ID_HOADON);
+        }
 
         public int GetIdByTable(int idTable)
         {

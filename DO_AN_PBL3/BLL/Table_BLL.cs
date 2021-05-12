@@ -31,7 +31,16 @@ namespace DO_AN_PBL3.BLL
         {
             return Table_DAL.Instance.GetList();
         }
-
+        public BAN gettable(int idban)
+        {
+            return Table_DAL.Instance.gettable(idban);
+        }
+        public string GetnameTable(int idban)
+        {
+          
+            return Table_DAL.Instance.getNameTable(idban);
+        }
+      
         public void update(int id, bool tinhTrang)
         {
             Table_DAL.Instance.Update(id, tinhTrang);

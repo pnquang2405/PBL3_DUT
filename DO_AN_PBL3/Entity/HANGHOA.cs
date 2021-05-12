@@ -29,6 +29,5 @@ namespace DO_AN_PBL3.Entity
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CHI_TIET_HOA_DON> CHI_TIET_HOA_DON { get; set; }
         public virtual Loai_HANGHOA Loai_HANGHOA { get; set; }
-
     }
 }

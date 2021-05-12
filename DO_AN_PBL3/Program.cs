@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DO_AN_PBL3.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,8 @@ namespace DO_AN_PBL3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormLogIn());
+            Application.Run(new FormStaff());
+
         }
     }
 }

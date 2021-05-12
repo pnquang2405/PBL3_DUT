@@ -107,7 +107,7 @@ namespace DO_AN_PBL3
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1396, 62);
+            this.panel1.Size = new System.Drawing.Size(1384, 62);
             this.panel1.TabIndex = 1;
             // 
             // btnAdmin
@@ -333,7 +333,7 @@ namespace DO_AN_PBL3
             // 
             this.nmrsoLuong.Location = new System.Drawing.Point(248, 229);
             this.nmrsoLuong.Name = "nmrsoLuong";
-            this.nmrsoLuong.Size = new System.Drawing.Size(85, 26);
+            this.nmrsoLuong.Size = new System.Drawing.Size(85, 23);
             this.nmrsoLuong.TabIndex = 13;
             this.nmrsoLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nmrsoLuong.Value = new decimal(new int[] {
@@ -378,7 +378,7 @@ namespace DO_AN_PBL3
             this.txtThanhTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtThanhTien.Location = new System.Drawing.Point(124, 89);
             this.txtThanhTien.Name = "txtThanhTien";
-            this.txtThanhTien.Size = new System.Drawing.Size(181, 19);
+            this.txtThanhTien.Size = new System.Drawing.Size(181, 16);
             this.txtThanhTien.TabIndex = 5;
             // 
             // label5
@@ -386,7 +386,7 @@ namespace DO_AN_PBL3
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(22, 89);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 20);
+            this.label5.Size = new System.Drawing.Size(84, 17);
             this.label5.TabIndex = 4;
             this.label5.Text = "Thành tiền: ";
             // 
@@ -394,7 +394,7 @@ namespace DO_AN_PBL3
             // 
             this.nmrDiscount.Location = new System.Drawing.Point(124, 47);
             this.nmrDiscount.Name = "nmrDiscount";
-            this.nmrDiscount.Size = new System.Drawing.Size(120, 26);
+            this.nmrDiscount.Size = new System.Drawing.Size(120, 23);
             this.nmrDiscount.TabIndex = 3;
             // 
             // label4
@@ -402,7 +402,7 @@ namespace DO_AN_PBL3
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(22, 49);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 20);
+            this.label4.Size = new System.Drawing.Size(72, 17);
             this.label4.TabIndex = 2;
             this.label4.Text = "Giảm giá: ";
             // 
@@ -412,7 +412,7 @@ namespace DO_AN_PBL3
             this.txtTienhang.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTienhang.Location = new System.Drawing.Point(124, 9);
             this.txtTienhang.Name = "txtTienhang";
-            this.txtTienhang.Size = new System.Drawing.Size(181, 19);
+            this.txtTienhang.Size = new System.Drawing.Size(181, 16);
             this.txtTienhang.TabIndex = 1;
             // 
             // label3
@@ -420,7 +420,7 @@ namespace DO_AN_PBL3
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(22, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 20);
+            this.label3.Size = new System.Drawing.Size(82, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "Tiền Hàng: ";
             // 
@@ -449,7 +449,7 @@ namespace DO_AN_PBL3
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(426, 125);
+            this.menuStrip1.Size = new System.Drawing.Size(426, 103);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.TextDirection = System.Windows.Forms.ToolStripTextDirection.Vertical270;
@@ -457,14 +457,14 @@ namespace DO_AN_PBL3
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(34, 59);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(27, 47);
             this.toolStripMenuItem1.Text = "Số tiền";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // ghiChúToolStripMenuItem
             // 
             this.ghiChúToolStripMenuItem.Name = "ghiChúToolStripMenuItem";
-            this.ghiChúToolStripMenuItem.Size = new System.Drawing.Size(34, 62);
+            this.ghiChúToolStripMenuItem.Size = new System.Drawing.Size(27, 52);
             this.ghiChúToolStripMenuItem.Text = "Ghi chú";
             this.ghiChúToolStripMenuItem.Click += new System.EventHandler(this.ghiChúToolStripMenuItem_Click);
             // 
@@ -521,7 +521,7 @@ namespace DO_AN_PBL3
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(260, 203);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 18);
+            this.label2.Size = new System.Drawing.Size(56, 15);
             this.label2.TabIndex = 6;
             this.label2.Text = "Số lượng";
             // 
@@ -565,7 +565,7 @@ namespace DO_AN_PBL3
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
+            this.listBox1.ItemHeight = 16;
             this.listBox1.Location = new System.Drawing.Point(7, 38);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(235, 164);
@@ -603,7 +603,7 @@ namespace DO_AN_PBL3
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(56, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(186, 28);
+            this.comboBox1.Size = new System.Drawing.Size(186, 24);
             this.comboBox1.TabIndex = 1;
             // 
             // label1
@@ -611,16 +611,16 @@ namespace DO_AN_PBL3
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 20);
+            this.label1.Size = new System.Drawing.Size(39, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Lọc: ";
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1396, 737);
+            this.ClientSize = new System.Drawing.Size(1370, 737);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panelAdmin);
             this.Controls.Add(this.PanelChildForm);

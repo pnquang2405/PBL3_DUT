@@ -55,8 +55,6 @@ namespace DO_AN_PBL3.View
             d.Columns.Add(col6);
 
             d.DataSource = staffList;
-            dgvStaff.Columns.Add(col6);
-
             dgvStaff.DataSource = staffList;
 
         }

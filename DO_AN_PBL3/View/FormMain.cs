@@ -20,7 +20,7 @@ namespace DO_AN_PBL3
         private HANGHOA hangHoa1;
         private BAN ban;
         private int user;
-
+        //Thanhthanda sửa
         public FormMain(int username)
         {
             InitializeComponent();

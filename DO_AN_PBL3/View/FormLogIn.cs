@@ -31,7 +31,7 @@ namespace DO_AN_PBL3
                 if (BLL.Account_BLL.Instance.Login_BLL(username, password, 0))
                 {
 
-                    FormMain f = new FormMain();
+                    FormMain f = new FormMain(username);
                     f.ShowDialog();
                 }
                 else

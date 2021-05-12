@@ -15,10 +15,12 @@ namespace DO_AN_PBL3
     public partial class FormTable : Form
     {
         public Action<BAN> getTable;
-        public FormTable()
+        private int user;
+        public FormTable(int username)
         {
             InitializeComponent();
             LoadTable();
+            user = username;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -47,7 +49,7 @@ namespace DO_AN_PBL3
         private void Btn_Click(object sender, EventArgs e)
         {
             BAN table = (sender as Button).Tag as BAN;
-            FormMain f = new FormMain();
+            FormMain f = new FormMain(user);
             getTable.Invoke(table);
         }
     }

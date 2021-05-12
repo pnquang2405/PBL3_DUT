@@ -82,9 +82,12 @@ namespace DO_AN_PBL3
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnTamThanhToan = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.PanelChildForm.SuspendLayout();
             this.panelAdmin.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmrsoLuong)).BeginInit();
@@ -207,6 +210,7 @@ namespace DO_AN_PBL3
             // 
             // PanelChildForm
             // 
+            this.PanelChildForm.Controls.Add(this.button1);
             this.PanelChildForm.Location = new System.Drawing.Point(786, 133);
             this.PanelChildForm.Name = "PanelChildForm";
             this.PanelChildForm.Size = new System.Drawing.Size(598, 580);
@@ -362,6 +366,7 @@ namespace DO_AN_PBL3
             // 
             // panelSotien
             // 
+            this.panelSotien.Controls.Add(this.btnTamThanhToan);
             this.panelSotien.Controls.Add(this.txtThanhTien);
             this.panelSotien.Controls.Add(this.label5);
             this.panelSotien.Controls.Add(this.nmrDiscount);
@@ -477,6 +482,7 @@ namespace DO_AN_PBL3
             this.btnThanhToan.TabIndex = 11;
             this.btnThanhToan.Text = "Thanh toán";
             this.btnThanhToan.UseVisualStyleBackColor = true;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click_1);
             // 
             // btnInCheBien
             // 
@@ -617,6 +623,25 @@ namespace DO_AN_PBL3
             this.label1.TabIndex = 0;
             this.label1.Text = "Lọc: ";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(114, 67);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(8, 8);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnTamThanhToan
+            // 
+            this.btnTamThanhToan.Location = new System.Drawing.Point(299, 39);
+            this.btnTamThanhToan.Name = "btnTamThanhToan";
+            this.btnTamThanhToan.Size = new System.Drawing.Size(90, 83);
+            this.btnTamThanhToan.TabIndex = 6;
+            this.btnTamThanhToan.Text = "Tạm Thanh Toán";
+            this.btnTamThanhToan.UseVisualStyleBackColor = true;
+            this.btnTamThanhToan.Click += new System.EventHandler(this.btnTamThanhToan_Click_1);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -639,6 +664,7 @@ namespace DO_AN_PBL3
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.PanelChildForm.ResumeLayout(false);
             this.panelAdmin.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -709,5 +735,7 @@ namespace DO_AN_PBL3
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panelGhichu;
         private System.Windows.Forms.TextBox txtGhiChu;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnTamThanhToan;
     }
 }

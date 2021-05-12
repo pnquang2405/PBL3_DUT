@@ -48,7 +48,18 @@ namespace DO_AN_PBL3.DAL
 
             return list;
         }
-
+        public BAN gettable(int idban)
+        {
+            db = new PBL3_QLTraSuaEntities();
+            return db.BANs.FirstOrDefault(p => p.ID_BAN == idban);
+        }
+        public string getNameTable(int IDBAN)
+        {
+            db = new PBL3_QLTraSuaEntities();
+            BAN ban = db.BANs.FirstOrDefault(p => p.ID_BAN == IDBAN);
+            if (ban == null) return "";
+            else return ban.Tenban;
+        }
         public List<BAN> GetList(int key)
         {
             throw new NotImplementedException();

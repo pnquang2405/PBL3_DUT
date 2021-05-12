@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="QuanLyQuanTSModelStoreContainer" CdmEntityContainer="StoreEntity">
+  <EntityContainerMapping StorageEntityContainer="PBL3_QLTraSuaModelStoreContainer" CdmEntityContainer="PBL3_QLTraSuaEntities">
     <EntitySetMapping Name="BANs">
-      <EntityTypeMapping TypeName="QuanLyQuanTSModel.BAN">
+      <EntityTypeMapping TypeName="PBL3_QLTraSuaModel.BAN">
         <MappingFragment StoreEntitySet="BAN">
           <ScalarProperty Name="ID_BAN" ColumnName="ID_BAN" />
           <ScalarProperty Name="ID_KV" ColumnName="ID_KV" />
@@ -12,7 +12,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CHI_TIET_HOA_DON">
-      <EntityTypeMapping TypeName="QuanLyQuanTSModel.CHI_TIET_HOA_DON">
+      <EntityTypeMapping TypeName="PBL3_QLTraSuaModel.CHI_TIET_HOA_DON">
         <MappingFragment StoreEntitySet="CHI_TIET_HOA_DON">
           <ScalarProperty Name="ID_CTHD" ColumnName="ID_CTHD" />
           <ScalarProperty Name="ID_HD" ColumnName="ID_HD" />
@@ -22,7 +22,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="HANGHOAs">
-      <EntityTypeMapping TypeName="QuanLyQuanTSModel.HANGHOA">
+      <EntityTypeMapping TypeName="PBL3_QLTraSuaModel.HANGHOA">
         <MappingFragment StoreEntitySet="HANGHOA">
           <ScalarProperty Name="ID_HH" ColumnName="ID_HH" />
           <ScalarProperty Name="ID_LHH" ColumnName="ID_LHH" />
@@ -33,7 +33,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="HOA_DON">
-      <EntityTypeMapping TypeName="QuanLyQuanTSModel.HOA_DON">
+      <EntityTypeMapping TypeName="PBL3_QLTraSuaModel.HOA_DON">
         <MappingFragment StoreEntitySet="HOA_DON">
           <ScalarProperty Name="ID_HD" ColumnName="ID_HD" />
           <ScalarProperty Name="ID_BAN" ColumnName="ID_BAN" />
@@ -48,7 +48,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="KHACHHANGs">
-      <EntityTypeMapping TypeName="QuanLyQuanTSModel.KHACHHANG">
+      <EntityTypeMapping TypeName="PBL3_QLTraSuaModel.KHACHHANG">
         <MappingFragment StoreEntitySet="KHACHHANG">
           <ScalarProperty Name="ID_KH" ColumnName="ID_KH" />
           <ScalarProperty Name="ID_LKH" ColumnName="ID_LKH" />
@@ -60,7 +60,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="KHU_VUC">
-      <EntityTypeMapping TypeName="QuanLyQuanTSModel.KHU_VUC">
+      <EntityTypeMapping TypeName="PBL3_QLTraSuaModel.KHU_VUC">
         <MappingFragment StoreEntitySet="KHU_VUC">
           <ScalarProperty Name="ID_KV" ColumnName="ID_KV" />
           <ScalarProperty Name="Ten_KV" ColumnName="Ten_KV" />
@@ -69,7 +69,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Loai_HANGHOA">
-      <EntityTypeMapping TypeName="QuanLyQuanTSModel.Loai_HANGHOA">
+      <EntityTypeMapping TypeName="PBL3_QLTraSuaModel.Loai_HANGHOA">
         <MappingFragment StoreEntitySet="Loai_HANGHOA">
           <ScalarProperty Name="ID_LHH" ColumnName="ID_LHH" />
           <ScalarProperty Name="Ten_LHH" ColumnName="Ten_LHH" />
@@ -77,7 +77,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="LOAI_KHACH_HANG">
-      <EntityTypeMapping TypeName="QuanLyQuanTSModel.LOAI_KHACH_HANG">
+      <EntityTypeMapping TypeName="PBL3_QLTraSuaModel.LOAI_KHACH_HANG">
         <MappingFragment StoreEntitySet="LOAI_KHACH_HANG">
           <ScalarProperty Name="ID_LKH" ColumnName="ID_LKH" />
           <ScalarProperty Name="Ten_LKH" ColumnName="Ten_LKH" />
@@ -86,7 +86,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="NHANVIENs">
-      <EntityTypeMapping TypeName="QuanLyQuanTSModel.NHANVIEN">
+      <EntityTypeMapping TypeName="PBL3_QLTraSuaModel.NHANVIEN">
         <MappingFragment StoreEntitySet="NHANVIEN">
           <ScalarProperty Name="ID_NV" ColumnName="ID_NV" />
           <ScalarProperty Name="Ten_NV" ColumnName="Ten_NV" />
@@ -98,7 +98,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="QuanLyQuanTSModel.sysdiagram">
+      <EntityTypeMapping TypeName="PBL3_QLTraSuaModel.sysdiagram">
         <MappingFragment StoreEntitySet="sysdiagrams">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -108,29 +108,5 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="QuanLyQuanTSModel.Store.sp_alterdiagram" />
-    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="QuanLyQuanTSModel.Store.sp_creatediagram" />
-    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="QuanLyQuanTSModel.Store.sp_dropdiagram" />
-    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="QuanLyQuanTSModel.Store.sp_helpdiagramdefinition">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="QuanLyQuanTSModel.sp_helpdiagramdefinition_Result">
-          <ScalarProperty Name="version" ColumnName="version" />
-          <ScalarProperty Name="definition" ColumnName="definition" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="QuanLyQuanTSModel.Store.sp_helpdiagrams">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="QuanLyQuanTSModel.sp_helpdiagrams_Result">
-          <ScalarProperty Name="Database" ColumnName="Database" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="Owner" ColumnName="Owner" />
-          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="QuanLyQuanTSModel.Store.sp_renamediagram" />
-    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="QuanLyQuanTSModel.Store.sp_upgraddiagrams" />
   </EntityContainerMapping>
 </Mapping>

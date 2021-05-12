@@ -229,7 +229,11 @@ namespace DO_AN_PBL3
                             hangHoa1 = null;
                             nmrsoLuong.Value = 1;
                             CHI_TIET_HOA_DON_BLL.Instance.delete(idBill, item.SubItems[0].Text, Convert.ToInt32(item.SubItems[1].Text));
-                            Table_BLL.Instance.update(ban.ID_BAN, true);
+                            if (lsvTemp.Items.Count == 0)
+                            {
+                                Table_BLL.Instance.update(ban.ID_BAN, true);
+                                HOA_DON_BLL.Instance.delete(idBill);
+                            }
                             button1_Click(new object(), new EventArgs());
 
                             break;
@@ -257,7 +261,11 @@ namespace DO_AN_PBL3
                         lsvTemp.Items.Remove(item);
                         CHI_TIET_HOA_DON_BLL.Instance.delete(idBill, item.SubItems[0].Text, Convert.ToInt32(item.SubItems[1].Text));
 
-                        if(lsvTemp.Items.Count == 0) { Table_BLL.Instance.update(ban.ID_BAN, true); }
+                        if(lsvTemp.Items.Count == 0) 
+                        { 
+                            Table_BLL.Instance.update(ban.ID_BAN, true);
+                            HOA_DON_BLL.Instance.delete(idBill);
+                        }
 
                         button1_Click(new object(), new EventArgs());
 

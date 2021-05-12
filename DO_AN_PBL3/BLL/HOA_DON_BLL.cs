@@ -58,5 +58,13 @@ namespace DO_AN_PBL3.BLL
             return id;
         }
 
+        public void delete(int idBill)
+        {
+            HOA_DON hoadon = HOA_DON_DAL.Instance.Get_HOA_DON(idBill);
+
+            HOA_DON_DAL.Instance.Delete(hoadon);
+            HOA_DON_DAL.Instance.Sync();
+        }
+
     }
 }

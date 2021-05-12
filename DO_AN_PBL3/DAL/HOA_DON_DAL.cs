@@ -46,6 +46,12 @@ namespace DO_AN_PBL3.DAL
             return list;
         }
 
+        public HOA_DON Get_HOA_DON(int id)
+        {
+            HOA_DON hoadon = db.HOA_DON.First(p => p.ID_HD == id);
+
+            return hoadon;
+        }
 
         public void Add(HOA_DON temp)
         {
@@ -54,7 +60,7 @@ namespace DO_AN_PBL3.DAL
 
         public void Delete(HOA_DON temp)
         {
-            throw new NotImplementedException();
+            db.HOA_DON.Remove(temp);
         }
 
         public void Update(HOA_DON before, HOA_DON after)

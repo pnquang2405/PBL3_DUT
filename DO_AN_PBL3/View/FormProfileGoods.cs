@@ -84,7 +84,8 @@ namespace DO_AN_PBL3.View
                         ID_LHH = ((CBBItem)cbLHH.SelectedItem).Value,
                         Ten_HH = txtNameGoods.Text,
                         picture = stream.ToArray(),
-                        Gia = Convert.ToDecimal(txtPrice.Text)
+                        Gia = Convert.ToDecimal(txtPrice.Text),
+                        tinhTrang = 1
                     };
                     if (hh == "")
                     {

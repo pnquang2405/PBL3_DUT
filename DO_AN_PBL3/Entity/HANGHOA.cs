@@ -25,10 +25,10 @@ namespace DO_AN_PBL3.Entity
         public string Ten_HH { get; set; }
         public byte[] picture { get; set; }
         public Nullable<decimal> Gia { get; set; }
+        public Nullable<int> tinhTrang { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CHI_TIET_HOA_DON> CHI_TIET_HOA_DON { get; set; }
         public virtual Loai_HANGHOA Loai_HANGHOA { get; set; }
-
     }
 }

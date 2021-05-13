@@ -106,5 +106,15 @@ namespace DO_AN_PBL3.View
             f.D += new FormProfileGoods.MyDel(Load_DL);
             f.Show();
         }
+
+        private void xóaMónNàyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            String Ten_HH = dtgvGoods.SelectedRows[0].Cells[1].Value.ToString();
+            HANGHOA hanghoa = Merchandise_BLL.Instance.GetHHByName(Ten_HH);
+            Merchandise_BLL.Instance.delete(hanghoa);
+
+
+            Load_DL((int)((CBBItem)cbLHH.SelectedItem).Value);
+        }
     }
 }

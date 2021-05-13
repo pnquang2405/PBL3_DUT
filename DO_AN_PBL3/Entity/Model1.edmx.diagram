@@ -4,12 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Diagram DiagramId="ac9242468de948178ac490d1bee2d20c" Name="Diagram1">
-=======
-      <Diagram DiagramId="12d675abf0e3479d82ec0b125a6103bc" Name="Diagram1">
->>>>>>> Quang
+      <Diagram DiagramId="9461bf38c90949f793372b60867f8a69" Name="Diagram1">
         <EntityTypeShape EntityType="QuanLyQuanTSModel.BAN" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyQuanTSModel.CHI_TIET_HOA_DON" Width="1.5" PointX="7.5" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyQuanTSModel.HANGHOA" Width="1.5" PointX="5.25" PointY="13.5" IsExpanded="true" />
@@ -28,27 +23,6 @@
         <AssociationConnector Association="QuanLyQuanTSModel.FK__HOA_DON__ID_KH__3493CFA7" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLyQuanTSModel.FK__HOA_DON__ID_NV__339FAB6E" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLyQuanTSModel.FK__KHACHHANG__ID_LK__22751F6C" ManuallyRouted="false" />
-=======
-      <Diagram DiagramId="c0fae396b990489f829707c526378617" Name="Diagram1">
-        <EntityTypeShape EntityType="PBL3_QLTraSuaModel.BAN" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="PBL3_QLTraSuaModel.CHI_TIET_HOA_DON" Width="1.5" PointX="7.5" PointY="1.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="PBL3_QLTraSuaModel.HANGHOA" Width="1.5" PointX="5.25" PointY="12.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="PBL3_QLTraSuaModel.HOA_DON" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="PBL3_QLTraSuaModel.KHACHHANG" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="PBL3_QLTraSuaModel.KHU_VUC" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="PBL3_QLTraSuaModel.Loai_HANGHOA" Width="1.5" PointX="3" PointY="13" IsExpanded="true" />
-        <EntityTypeShape EntityType="PBL3_QLTraSuaModel.LOAI_KHACH_HANG" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="PBL3_QLTraSuaModel.NHANVIEN" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="PBL3_QLTraSuaModel.sysdiagram" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
-        <AssociationConnector Association="PBL3_QLTraSuaModel.FK__BAN__ID_KV__5BE2A6F2" ManuallyRouted="false" />
-        <AssociationConnector Association="PBL3_QLTraSuaModel.FK__HOA_DON__ID_BAN__5FB337D6" ManuallyRouted="false" />
-        <AssociationConnector Association="PBL3_QLTraSuaModel.FK__CHI_TIET___ID_HD__656C112C" ManuallyRouted="false" />
-        <AssociationConnector Association="PBL3_QLTraSuaModel.FK__CHI_TIET___ID_HH__66603565" ManuallyRouted="false" />
-        <AssociationConnector Association="PBL3_QLTraSuaModel.FK__HANGHOA__ID_LHH__4D94879B" ManuallyRouted="false" />
-        <AssociationConnector Association="PBL3_QLTraSuaModel.FK__HOA_DON__ID_KH__619B8048" ManuallyRouted="false" />
-        <AssociationConnector Association="PBL3_QLTraSuaModel.FK__HOA_DON__ID_NV__60A75C0F" ManuallyRouted="false" />
-        <AssociationConnector Association="PBL3_QLTraSuaModel.FK__KHACHHANG__ID_LK__440B1D61" ManuallyRouted="false" />
->>>>>>> c804cb99f6c460ad143cda1a885c522ac46f890b
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

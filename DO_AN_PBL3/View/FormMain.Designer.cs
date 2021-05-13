@@ -85,12 +85,9 @@ namespace DO_AN_PBL3
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnTamThanhToan = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            this.PanelChildForm.SuspendLayout();
             this.panelAdmin.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmrsoLuong)).BeginInit();
@@ -114,7 +111,7 @@ namespace DO_AN_PBL3
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1422, 62);
+            this.panel1.Size = new System.Drawing.Size(1418, 62);
             this.panel1.TabIndex = 1;
             // 
             // btnAdmin
@@ -181,9 +178,9 @@ namespace DO_AN_PBL3
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.Controls.Add(this.btnMenu);
             this.panel2.Controls.Add(this.btnTable);
-            this.panel2.Location = new System.Drawing.Point(819, 66);
+            this.panel2.Location = new System.Drawing.Point(805, 65);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(595, 58);
+            this.panel2.Size = new System.Drawing.Size(605, 58);
             this.panel2.TabIndex = 2;
             // 
             // btnMenu
@@ -191,7 +188,7 @@ namespace DO_AN_PBL3
             this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(139)))), ((int)(((byte)(116)))));
             this.btnMenu.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMenu.ForeColor = System.Drawing.Color.LightGray;
-            this.btnMenu.Location = new System.Drawing.Point(291, 0);
+            this.btnMenu.Location = new System.Drawing.Point(301, 0);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(304, 58);
             this.btnMenu.TabIndex = 1;
@@ -215,19 +212,10 @@ namespace DO_AN_PBL3
             // 
             // PanelChildForm
             // 
-<<<<<<< HEAD
-<<<<<<< HEAD
-            this.PanelChildForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PanelChildForm.Location = new System.Drawing.Point(779, 133);
-=======
-            this.PanelChildForm.Controls.Add(this.button1);
-            this.PanelChildForm.Location = new System.Drawing.Point(786, 133);
->>>>>>> c804cb99f6c460ad143cda1a885c522ac46f890b
-=======
-            this.PanelChildForm.Location = new System.Drawing.Point(816, 124);
->>>>>>> Quang
+            this.PanelChildForm.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PanelChildForm.Location = new System.Drawing.Point(805, 121);
             this.PanelChildForm.Name = "PanelChildForm";
-            this.PanelChildForm.Size = new System.Drawing.Size(598, 580);
+            this.PanelChildForm.Size = new System.Drawing.Size(605, 580);
             this.PanelChildForm.TabIndex = 3;
             // 
             // panelAdmin
@@ -310,8 +298,7 @@ namespace DO_AN_PBL3
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.Controls.Add(this.btnTachBan);
             this.panel3.Controls.Add(this.btnChuyenBan);
             this.panel3.Controls.Add(this.nmrsoLuong);
@@ -330,7 +317,7 @@ namespace DO_AN_PBL3
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(12, 69);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(799, 644);
+            this.panel3.Size = new System.Drawing.Size(787, 644);
             this.panel3.TabIndex = 5;
             // 
             // btnTachBan
@@ -369,7 +356,7 @@ namespace DO_AN_PBL3
             this.panel5.Controls.Add(this.panelGhichu);
             this.panel5.Location = new System.Drawing.Point(373, 492);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(395, 146);
+            this.panel5.Size = new System.Drawing.Size(408, 146);
             this.panel5.TabIndex = 1;
             // 
             // panelGhichu
@@ -397,9 +384,9 @@ namespace DO_AN_PBL3
             // 
             // btnTamThanhToan
             // 
-            this.btnTamThanhToan.Location = new System.Drawing.Point(302, 34);
+            this.btnTamThanhToan.Location = new System.Drawing.Point(290, 30);
             this.btnTamThanhToan.Name = "btnTamThanhToan";
-            this.btnTamThanhToan.Size = new System.Drawing.Size(81, 83);
+            this.btnTamThanhToan.Size = new System.Drawing.Size(90, 83);
             this.btnTamThanhToan.TabIndex = 6;
             this.btnTamThanhToan.Text = "Tạm Thanh Toán";
             this.btnTamThanhToan.UseVisualStyleBackColor = true;
@@ -462,7 +449,7 @@ namespace DO_AN_PBL3
             this.txtGhiChu.Location = new System.Drawing.Point(3, 3);
             this.txtGhiChu.Multiline = true;
             this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(380, 140);
+            this.txtGhiChu.Size = new System.Drawing.Size(392, 140);
             this.txtGhiChu.TabIndex = 0;
             // 
             // panel4
@@ -470,7 +457,7 @@ namespace DO_AN_PBL3
             this.panel4.Controls.Add(this.menuStrip1);
             this.panel4.Location = new System.Drawing.Point(336, 492);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(426, 149);
+            this.panel4.Size = new System.Drawing.Size(441, 149);
             this.panel4.TabIndex = 12;
             // 
             // menuStrip1
@@ -482,7 +469,7 @@ namespace DO_AN_PBL3
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(426, 125);
+            this.menuStrip1.Size = new System.Drawing.Size(441, 125);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.TextDirection = System.Windows.Forms.ToolStripTextDirection.Vertical270;
@@ -569,9 +556,9 @@ namespace DO_AN_PBL3
             this.columnHeader6});
             this.lsvTemp.FullRowSelect = true;
             this.lsvTemp.HideSelection = false;
-            this.lsvTemp.Location = new System.Drawing.Point(339, 86);
+            this.lsvTemp.Location = new System.Drawing.Point(336, 86);
             this.lsvTemp.Name = "lsvTemp";
-            this.lsvTemp.Size = new System.Drawing.Size(429, 400);
+            this.lsvTemp.Size = new System.Drawing.Size(441, 400);
             this.lsvTemp.TabIndex = 4;
             this.lsvTemp.UseCompatibleStateImageBehavior = false;
             this.lsvTemp.View = System.Windows.Forms.View.Details;
@@ -650,32 +637,13 @@ namespace DO_AN_PBL3
             this.label1.TabIndex = 0;
             this.label1.Text = "Lọc: ";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(114, 67);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(8, 8);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnTamThanhToan
-            // 
-            this.btnTamThanhToan.Location = new System.Drawing.Point(299, 39);
-            this.btnTamThanhToan.Name = "btnTamThanhToan";
-            this.btnTamThanhToan.Size = new System.Drawing.Size(90, 83);
-            this.btnTamThanhToan.TabIndex = 6;
-            this.btnTamThanhToan.Text = "Tạm Thanh Toán";
-            this.btnTamThanhToan.UseVisualStyleBackColor = true;
-            this.btnTamThanhToan.Click += new System.EventHandler(this.btnTamThanhToan_Click_1);
-            // 
             // FormMain
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1422, 728);
+            this.ClientSize = new System.Drawing.Size(1418, 728);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panelAdmin);
             this.Controls.Add(this.PanelChildForm);
@@ -692,7 +660,6 @@ namespace DO_AN_PBL3
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.PanelChildForm.ResumeLayout(false);
             this.panelAdmin.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -709,16 +676,6 @@ namespace DO_AN_PBL3
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
-        }
-
-        private void BtnTamThanhToan_Click_1(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void BtnThanhToan_Click_1(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
         #endregion
@@ -773,10 +730,6 @@ namespace DO_AN_PBL3
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panelGhichu;
         private System.Windows.Forms.TextBox txtGhiChu;
-<<<<<<< HEAD
-        private System.Windows.Forms.Button button1;
-=======
->>>>>>> Quang
         private System.Windows.Forms.Button btnTamThanhToan;
     }
 }

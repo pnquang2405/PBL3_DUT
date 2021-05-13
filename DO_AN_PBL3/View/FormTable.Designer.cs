@@ -37,14 +37,14 @@ namespace DO_AN_PBL3
             this.flpTable.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.flpTable.Location = new System.Drawing.Point(12, 12);
             this.flpTable.Name = "flpTable";
-            this.flpTable.Size = new System.Drawing.Size(598, 580);
+            this.flpTable.Size = new System.Drawing.Size(605, 580);
             this.flpTable.TabIndex = 0;
             // 
             // FormTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(621, 580);
+            this.ClientSize = new System.Drawing.Size(628, 601);
             this.Controls.Add(this.flpTable);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormTable";

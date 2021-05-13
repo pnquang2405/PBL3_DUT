@@ -155,18 +155,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
     <Compile Include="View\Form_QLGoods.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Form_QLGoods.Designer.cs">
       <DependentUpon>Form_QLGoods.cs</DependentUpon>
     </Compile>
-=======
     <EmbeddedResource Include="View\BILL.resx">
       <DependentUpon>BILL.cs</DependentUpon>
     </EmbeddedResource>
->>>>>>> c804cb99f6c460ad143cda1a885c522ac46f890b
     <EmbeddedResource Include="View\FormLogIn.resx">
       <DependentUpon>FormLogIn.cs</DependentUpon>
     </EmbeddedResource>

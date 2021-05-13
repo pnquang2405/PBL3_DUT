@@ -41,3 +41,4 @@ D:\PBL3_CNPM1\QuanLyTraSua\DO_AN_PBL3\obj\Debug\DO_AN_PBL3.csproj.CopyComplete
 D:\PBL3_CNPM1\QuanLyTraSua\DO_AN_PBL3\obj\Debug\DO_AN_PBL3.exe
 D:\PBL3_CNPM1\QuanLyTraSua\DO_AN_PBL3\obj\Debug\DO_AN_PBL3.pdb
 >>>>>>> c804cb99f6c460ad143cda1a885c522ac46f890b
+D:\WinformC#\DO_AN_PBL3\DO_AN_PBL3\obj\Debug\DO_AN_PBL3.View.BILL.resources

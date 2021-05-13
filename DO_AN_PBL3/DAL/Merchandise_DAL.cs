@@ -39,24 +39,25 @@ namespace DO_AN_PBL3.DAL
 
         public void Delete(HANGHOA temp)
         {
-            throw new NotImplementedException();
+            HANGHOA current = db.HANGHOAs.First(p => p.ID_HH == temp.ID_HH);
+            current.tinhTrang = 0;
         }
 
         public List<HANGHOA> GetList()
         {
-            return db.HANGHOAs.ToList();
+            return db.HANGHOAs.Where(p=>p.tinhTrang == 1).ToList();
         }
 
         public List<HANGHOA> GetList(int key)
         {
-            var l2 = db.HANGHOAs.Where(p => p.ID_LHH == key);
-
+            var l2 = db.HANGHOAs.Where(p => p.ID_LHH == key && p.tinhTrang == 1);
+            
             return l2.ToList();
         }
 
         public void Update(HANGHOA hanghoaThayDoi, String name)
         {
-            HANGHOA current = db.HANGHOAs.First(p => p.Ten_HH == name);
+            HANGHOA current = db.HANGHOAs.First(p => p.Ten_HH == name && p.tinhTrang == 1);
             current.Ten_HH = hanghoaThayDoi.Ten_HH;
             current.picture = hanghoaThayDoi.picture;
             current.ID_LHH = hanghoaThayDoi.ID_LHH;
@@ -65,14 +66,14 @@ namespace DO_AN_PBL3.DAL
 
         public int GetIDByName(String name)
         {
-            HANGHOA hh = db.HANGHOAs.First(p => p.Ten_HH == name);
+            HANGHOA hh = db.HANGHOAs.First(p => p.Ten_HH == name && p.tinhTrang == 1);
 
             return hh.ID_HH;
         }
 
         public HANGHOA GetHHByName(String name)
         {
-            HANGHOA hh = db.HANGHOAs.FirstOrDefault(p => p.Ten_HH == name);
+            HANGHOA hh = db.HANGHOAs.FirstOrDefault(p => p.Ten_HH == name && p.tinhTrang == 1);
 
             return hh;
         }

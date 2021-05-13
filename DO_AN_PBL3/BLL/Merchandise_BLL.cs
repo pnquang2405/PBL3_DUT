@@ -58,5 +58,11 @@ namespace DO_AN_PBL3.BLL
             Merchandise_DAL.Instance.Update(hh, name);
             Merchandise_DAL.Instance.Sync();
         }
+
+        public void delete(HANGHOA hh)
+        {
+            Merchandise_DAL.Instance.Delete(hh);
+            Merchandise_DAL.Instance.Sync();
+        }
     }
 }

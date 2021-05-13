@@ -136,6 +136,7 @@ namespace DO_AN_PBL3.View
             this.xóaMónNàyToolStripMenuItem.Name = "xóaMónNàyToolStripMenuItem";
             this.xóaMónNàyToolStripMenuItem.Size = new System.Drawing.Size(250, 24);
             this.xóaMónNàyToolStripMenuItem.Text = "Xóa món đang được chọn";
+            this.xóaMónNàyToolStripMenuItem.Click += new System.EventHandler(this.xóaMónNàyToolStripMenuItem_Click);
             // 
             // lbTotal
             // 

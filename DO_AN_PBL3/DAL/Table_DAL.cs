@@ -71,8 +71,6 @@ namespace DO_AN_PBL3.DAL
             ban.TinhTrang = tinhTrang;
 
             List<BAN> list = db.BANs.ToList();
-
-            Console.WriteLine("123");
         }
 
         public void Sync()

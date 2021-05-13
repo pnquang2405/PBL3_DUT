@@ -5,7 +5,11 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Diagram DiagramId="ac9242468de948178ac490d1bee2d20c" Name="Diagram1">
+=======
+      <Diagram DiagramId="12d675abf0e3479d82ec0b125a6103bc" Name="Diagram1">
+>>>>>>> Quang
         <EntityTypeShape EntityType="QuanLyQuanTSModel.BAN" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyQuanTSModel.CHI_TIET_HOA_DON" Width="1.5" PointX="7.5" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyQuanTSModel.HANGHOA" Width="1.5" PointX="5.25" PointY="13.5" IsExpanded="true" />

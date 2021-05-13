@@ -315,6 +315,7 @@ namespace DO_AN_PBL3
 
         #endregion
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         
 =======
@@ -335,6 +336,23 @@ namespace DO_AN_PBL3
             }
         }
 
+=======
+        private void btnThanhToan_Click_1(object sender, EventArgs e)
+        {
+
+            if (ban != null && BLL.HOA_DON_BLL.Instance.checkHoaDon(ban.ID_BAN))
+            {
+                BILL bill = new BILL(BLL.HOA_DON_BLL.Instance.GetIdByTable(ban.ID_BAN), 1);
+
+                bill.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Chua chon ban can thanh toan hoac ban khong co du lieu!!!");
+            }
+        }
+
+>>>>>>> Quang
         private void btnTamThanhToan_Click_1(object sender, EventArgs e)
         {
             if (ban != null && BLL.HOA_DON_BLL.Instance.checkHoaDon(ban.ID_BAN))
@@ -348,6 +366,9 @@ namespace DO_AN_PBL3
                 MessageBox.Show("Chua chon ban can thanh toan hoac ban khong co du lieu!!!");
             }
         }
+<<<<<<< HEAD
 >>>>>>> c804cb99f6c460ad143cda1a885c522ac46f890b
+=======
+>>>>>>> Quang
     }
 }

@@ -307,8 +307,14 @@ namespace DO_AN_PBL3
                 }
             }
         }
-
+        private void btnHangHoa_Click(object sender, EventArgs e)
+        {
+            Form_QLGoods f = new Form_QLGoods();
+            f.ShowDialog();
+        }
 
         #endregion
+
+        
     }
 }

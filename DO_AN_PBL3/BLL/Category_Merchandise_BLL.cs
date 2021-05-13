@@ -45,5 +45,7 @@ namespace DO_AN_PBL3.BLL
         {
             return Category_Merchandise_DAL.Instance.GetList();
         }
+        
+
     }
 }

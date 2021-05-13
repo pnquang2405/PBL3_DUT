@@ -54,9 +54,13 @@ namespace DO_AN_PBL3.DAL
             return l2.ToList();
         }
 
-        public void Update(HANGHOA before, HANGHOA after)
+        public void Update(HANGHOA hanghoaThayDoi, String name)
         {
-            throw new NotImplementedException();
+            HANGHOA current = db.HANGHOAs.First(p => p.Ten_HH == name);
+            current.Ten_HH = hanghoaThayDoi.Ten_HH;
+            current.picture = hanghoaThayDoi.picture;
+            current.ID_LHH = hanghoaThayDoi.ID_LHH;
+            current.Gia = hanghoaThayDoi.Gia;
         }
 
         public int GetIDByName(String name)
@@ -64,6 +68,13 @@ namespace DO_AN_PBL3.DAL
             HANGHOA hh = db.HANGHOAs.First(p => p.Ten_HH == name);
 
             return hh.ID_HH;
+        }
+
+        public HANGHOA GetHHByName(String name)
+        {
+            HANGHOA hh = db.HANGHOAs.FirstOrDefault(p => p.Ten_HH == name);
+
+            return hh;
         }
 
         public void Sync()

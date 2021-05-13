@@ -319,7 +319,10 @@ namespace DO_AN_PBL3
             {
                 BILL bill = new BILL(BLL.HOA_DON_BLL.Instance.GetIdByTable(ban.ID_BAN), 1);
 
-                bill.ShowDialog();
+                Table_BLL.Instance.update(ban.ID_BAN, true);
+                lsvTemp.Items.Clear();
+
+                 bill.ShowDialog();
             }
             else
             {
@@ -339,6 +342,6 @@ namespace DO_AN_PBL3
             {
                 MessageBox.Show("Chua chon ban can thanh toan hoac ban khong co du lieu!!!");
             }
-        }
+        }//
     }
 }

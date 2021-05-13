@@ -111,10 +111,6 @@ namespace DO_AN_PBL3.View
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
             // ptrGoods
             // 
             this.ptrGoods.Location = new System.Drawing.Point(381, 27);
@@ -139,6 +135,7 @@ namespace DO_AN_PBL3.View
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbLHH);
             this.Name = "FormProfileGoods";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormProfileGoods";
             ((System.ComponentModel.ISupportInitialize)(this.ptrGoods)).EndInit();
             this.ResumeLayout(false);

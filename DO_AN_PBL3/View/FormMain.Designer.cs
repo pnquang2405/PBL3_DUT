@@ -98,16 +98,17 @@ namespace DO_AN_PBL3
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
             this.panel1.Controls.Add(this.btnAdmin);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.btnFullScreen);
             this.panel1.Controls.Add(this.txbSearch);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1396, 62);
+            this.panel1.Size = new System.Drawing.Size(1389, 62);
             this.panel1.TabIndex = 1;
             // 
             // btnAdmin
@@ -171,9 +172,10 @@ namespace DO_AN_PBL3
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.btnMenu);
             this.panel2.Controls.Add(this.btnTable);
-            this.panel2.Location = new System.Drawing.Point(779, 69);
+            this.panel2.Location = new System.Drawing.Point(772, 69);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(605, 58);
             this.panel2.TabIndex = 2;
@@ -207,7 +209,8 @@ namespace DO_AN_PBL3
             // 
             // PanelChildForm
             // 
-            this.PanelChildForm.Location = new System.Drawing.Point(786, 133);
+            this.PanelChildForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PanelChildForm.Location = new System.Drawing.Point(779, 133);
             this.PanelChildForm.Name = "PanelChildForm";
             this.PanelChildForm.Size = new System.Drawing.Size(598, 580);
             this.PanelChildForm.TabIndex = 3;
@@ -288,9 +291,12 @@ namespace DO_AN_PBL3
             this.btnHangHoa.Text = "Quản lý hàng hóa";
             this.btnHangHoa.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnHangHoa.UseVisualStyleBackColor = false;
+            this.btnHangHoa.Click += new System.EventHandler(this.btnHangHoa_Click);
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Controls.Add(this.btnTachBan);
             this.panel3.Controls.Add(this.btnChuyenBan);
             this.panel3.Controls.Add(this.nmrsoLuong);
@@ -309,7 +315,7 @@ namespace DO_AN_PBL3
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(12, 69);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(768, 644);
+            this.panel3.Size = new System.Drawing.Size(766, 644);
             this.panel3.TabIndex = 5;
             // 
             // btnTachBan
@@ -619,10 +625,11 @@ namespace DO_AN_PBL3
             // 
             // FormMain
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1396, 737);
+            this.ClientSize = new System.Drawing.Size(1389, 750);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panelAdmin);
             this.Controls.Add(this.PanelChildForm);

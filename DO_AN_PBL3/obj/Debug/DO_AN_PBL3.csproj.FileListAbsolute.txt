@@ -17,3 +17,4 @@ D:\WinformC#\DO_AN_PBL3\DO_AN_PBL3\bin\Debug\EntityFramework.SqlServer.xml
 D:\WinformC#\DO_AN_PBL3\DO_AN_PBL3\obj\Debug\DO_AN_PBL3.csproj.CopyComplete
 D:\WinformC#\DO_AN_PBL3\DO_AN_PBL3\obj\Debug\DO_AN_PBL3.View.FormMenu.resources
 D:\WinformC#\DO_AN_PBL3\DO_AN_PBL3\obj\Debug\DO_AN_PBL3.View.FormProfileGoods.resources
+D:\WinformC#\DO_AN_PBL3\DO_AN_PBL3\obj\Debug\DO_AN_PBL3.View.Form_QLGoods.resources

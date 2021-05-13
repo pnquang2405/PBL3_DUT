@@ -150,6 +150,7 @@ namespace DO_AN_PBL3
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(204, 24);
             this.txtUserName.TabIndex = 9;
+            this.txtUserName.Text = "3";
             // 
             // txtPassword
             // 
@@ -161,6 +162,7 @@ namespace DO_AN_PBL3
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(204, 24);
             this.txtPassword.TabIndex = 10;
+            this.txtPassword.Text = "1";
             // 
             // FormLogIn
             // 

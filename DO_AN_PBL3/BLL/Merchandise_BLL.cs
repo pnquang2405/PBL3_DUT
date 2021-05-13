@@ -47,5 +47,16 @@ namespace DO_AN_PBL3.BLL
             }
             return Merchandise_DAL.Instance.GetList(id);
         }
+
+        public HANGHOA GetHHByName(String name)
+        {
+            return Merchandise_DAL.Instance.GetHHByName(name);
+        }
+
+        public void update(HANGHOA hh, String name)
+        {
+            Merchandise_DAL.Instance.Update(hh, name);
+            Merchandise_DAL.Instance.Sync();
+        }
     }
 }

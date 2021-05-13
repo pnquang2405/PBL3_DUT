@@ -51,6 +51,7 @@ namespace DO_AN_PBL3.DAL
             throw new NotImplementedException();
         }
 
+
         public void Update(Loai_HANGHOA before, Loai_HANGHOA after)
         {
             throw new NotImplementedException();

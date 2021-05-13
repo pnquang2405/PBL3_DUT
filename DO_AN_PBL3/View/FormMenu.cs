@@ -45,7 +45,7 @@ namespace DO_AN_PBL3.View
 
         private void btnAddGoods_Click(object sender, EventArgs e)
         {
-            FormProfileGoods f = new FormProfileGoods();
+            FormProfileGoods f = new FormProfileGoods("");
             f.Show();
         }
     }

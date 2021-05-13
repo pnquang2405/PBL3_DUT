@@ -66,14 +66,14 @@ namespace DO_AN_PBL3.DAL
 
         public int GetIDByName(String name)
         {
-            HANGHOA hh = db.HANGHOAs.First(p => p.Ten_HH == name && p.tinhTrang == 1);
+            HANGHOA hh = db.HANGHOAs.First(p => p.Ten_HH == name);
 
             return hh.ID_HH;
         }
 
         public HANGHOA GetHHByName(String name)
         {
-            HANGHOA hh = db.HANGHOAs.FirstOrDefault(p => p.Ten_HH == name && p.tinhTrang == 1);
+            HANGHOA hh = db.HANGHOAs.FirstOrDefault(p => p.Ten_HH == name);
 
             return hh;
         }

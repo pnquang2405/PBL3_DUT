@@ -117,6 +117,12 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Interface\IGeneral.cs" />
+    <Compile Include="View\BILL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BILL.Designer.cs">
+      <DependentUpon>BILL.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormLogIn.cs">
       <SubType>Form</SubType>
     </Compile>

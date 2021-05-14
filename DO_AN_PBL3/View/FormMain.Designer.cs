@@ -556,7 +556,7 @@ namespace DO_AN_PBL3
             this.columnHeader6});
             this.lsvTemp.FullRowSelect = true;
             this.lsvTemp.HideSelection = false;
-            this.lsvTemp.Location = new System.Drawing.Point(336, 86);
+            this.lsvTemp.Location = new System.Drawing.Point(340, 86);
             this.lsvTemp.Name = "lsvTemp";
             this.lsvTemp.Size = new System.Drawing.Size(441, 400);
             this.lsvTemp.TabIndex = 4;

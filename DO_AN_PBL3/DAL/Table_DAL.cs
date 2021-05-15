@@ -69,7 +69,7 @@ namespace DO_AN_PBL3.DAL
         {
             BAN ban = db.BANs.First(p => p.ID_BAN == id);
             ban.TinhTrang = tinhTrang;
-
+            Sync();
             List<BAN> list = db.BANs.ToList();
         }
 

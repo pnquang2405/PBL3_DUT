@@ -20,7 +20,6 @@ namespace DO_AN_PBL3
         private HANGHOA hangHoa1;
         private BAN ban;
         private int user;
-      
         public FormMain(int username)
         {
             InitializeComponent();
@@ -158,8 +157,8 @@ namespace DO_AN_PBL3
         {
             if(hangHoa != null && ban != null)
             {
-                if (HOA_DON_BLL.Instance.checkHoaDon(ban.ID_BAN) == false) 
-                {
+                if (HOA_DON_BLL.Instance.checkHoaDon(ban.ID_BAN) == false)
+                {           
                     HOA_DON_BLL.Instance.InsertHOADON(ban.ID_BAN, null, user);
                     Table_BLL.Instance.update(ban.ID_BAN, false);
 
@@ -318,11 +317,10 @@ namespace DO_AN_PBL3
             if (ban != null && BLL.HOA_DON_BLL.Instance.checkHoaDon(ban.ID_BAN))
             {
                 BILL bill = new BILL(BLL.HOA_DON_BLL.Instance.GetIdByTable(ban.ID_BAN), 1);
-
-                Table_BLL.Instance.update(ban.ID_BAN, true);
-                lsvTemp.Items.Clear();
-
-                 bill.ShowDialog();
+           
+                HOA_DON_BLL.Instance.Thanhtoan(HOA_DON_BLL.Instance.GetIdByTable(ban.ID_BAN), Convert.ToDecimal(txtThanhTien.Text));
+                button1_Click(new object(), new EventArgs());
+                bill.ShowDialog();
             }
             else
             {
@@ -342,6 +340,6 @@ namespace DO_AN_PBL3
             {
                 MessageBox.Show("Chua chon ban can thanh toan hoac ban khong co du lieu!!!");
             }
-        }//
+        }
     }
 }

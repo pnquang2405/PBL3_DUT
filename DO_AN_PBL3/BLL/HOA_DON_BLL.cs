@@ -68,6 +68,10 @@ namespace DO_AN_PBL3.BLL
             HOA_DON_DAL.Instance.Delete(hoadon);
             HOA_DON_DAL.Instance.Sync();
         }
+        public void Thanhtoan(int idbill, decimal tongtien)
+        {
+            HOA_DON_DAL.Instance.Thanhtoan(idbill, tongtien);
+        }
 
     }
 }

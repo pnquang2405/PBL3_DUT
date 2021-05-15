@@ -44,19 +44,20 @@ namespace DO_AN_PBL3.DAL
 
             List<BillInfo> listBillIn = new List<BillInfo>();
 
-            foreach (var item in list)
-            {
-                BillInfo temp = new BillInfo
+                foreach (var item in list)
                 {
-                    MatHang = item.Ten_HH,
-                    SoLuong = (int)item.soluong,
-                    DonGia = (double)item.Gia,
-                    TongTien = (double)item.tongTien
-                };
-                listBillIn.Add(temp);
-            }
+                    BillInfo temp = new BillInfo
+                    {
+                        MatHang = item.Ten_HH,
+                        SoLuong = (int)item.soluong,
+                        DonGia = (double)item.Gia,
+                        TongTien = (double)item.tongTien
+                    };
+                    listBillIn.Add(temp);
+                }
 
-            return listBillIn;
+                return listBillIn;
+            
 
         }
 

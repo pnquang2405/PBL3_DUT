@@ -313,13 +313,16 @@ namespace DO_AN_PBL3
             f.ShowDialog();
         }
 
-        #endregion
+
         private void btnThanhToan_Click_1(object sender, EventArgs e)
         {
 
             if (ban != null && BLL.HOA_DON_BLL.Instance.checkHoaDon(ban.ID_BAN))
             {
                 BILL bill = new BILL(BLL.HOA_DON_BLL.Instance.GetIdByTable(ban.ID_BAN), 1);
+
+                HOA_DON_BLL.Instance.Thanhtoan(HOA_DON_BLL.Instance.GetIdByTable(ban.ID_BAN), Convert.ToDecimal(txtThanhTien.Text));
+                button1_Click(new object(), new EventArgs());
 
                 bill.ShowDialog();
             }
@@ -341,5 +344,9 @@ namespace DO_AN_PBL3
                 MessageBox.Show("Chua chon ban can thanh toan hoac ban khong co du lieu!!!");
             }
         }
+
+
+        #endregion
+       
     }
 }

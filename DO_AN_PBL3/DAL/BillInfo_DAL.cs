@@ -39,6 +39,7 @@ namespace DO_AN_PBL3.DAL
                        where hanghoa.ID_HH == hoadonChitiet.ID_HH
                        where hoadon.ID_HD == hoadonChitiet.ID_HD
                        where hoadon.ID_BAN == table.ID_BAN
+                       where hoadon.Gio_di == null
                        let tongTien = hoadonChitiet.soluong * (double)hanghoa.Gia
                        select new { hanghoa.Ten_HH, hoadonChitiet.soluong, hanghoa.Gia, tongTien};
 
@@ -59,6 +60,8 @@ namespace DO_AN_PBL3.DAL
             return listBillIn;
 
         }
+
+
 
     }
 }

@@ -29,18 +29,20 @@ namespace DO_AN_PBL3.View
         private void SETGUI()
         {
             if (type == 0)
-
                 lbBill.Text = "Tạm Thanh Toán";
             else lbBill.Text = "Thanh Toán";
 
             HOA_DON hd = HOA_DON_BLL.Instance.getHOADONbyID(ID_BAN);
+
             txbID.Text = ID_BAN.ToString();
             txbBan.Text = Table_BLL.Instance.GetnameTable(hd.ID_BAN.Value);
             txbNV.Text = "NHAP";
             txbthoigian.Text = DateTime.Now.ToString();
+
             CultureInfo culture = new CultureInfo("vi-VN");
             List<BillInfo> listbillinfo = BillInfo_BLL.Instance.GetList(Table_BLL.Instance.gettable(hd.ID_BAN.Value));
             double tongcong = 0;
+
             foreach (BillInfo item in listbillinfo)
             {
                 ListViewItem lsvItem = new ListViewItem(item.MatHang);
@@ -57,15 +59,12 @@ namespace DO_AN_PBL3.View
 
                 lsvbill.Items.Add(lsvItem);
             }
+
             txbTongcong.Text = tongcong.ToString();
             txbchietkhau.Text = hd.discount.ToString();
             txbThanhtien.Text = (tongcong - (tongcong * (double)hd.discount.Value) / 100).ToString();
 
         }
-
-
-
-
     }
 
 }

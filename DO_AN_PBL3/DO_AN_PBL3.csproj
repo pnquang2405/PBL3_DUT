@@ -147,6 +147,12 @@
     <Compile Include="View\FormProfileGoods.Designer.cs">
       <DependentUpon>FormProfileGoods.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormRevenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormRevenue.Designer.cs">
+      <DependentUpon>FormRevenue.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormTable.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormProfileGoods.resx">
       <DependentUpon>FormProfileGoods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormRevenue.resx">
+      <DependentUpon>FormRevenue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormTable.resx">
       <DependentUpon>FormTable.cs</DependentUpon>

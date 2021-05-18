@@ -347,6 +347,11 @@ namespace DO_AN_PBL3
 
 
         #endregion
-       
+
+        private void btnDoanhThu_Click(object sender, EventArgs e)
+        {
+            FormRevenue f = new FormRevenue();
+            f.Show();
+        }
     }
 }

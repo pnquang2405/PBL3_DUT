@@ -80,7 +80,7 @@ namespace DO_AN_PBL3.View
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Location = new System.Drawing.Point(12, 323);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(97, 52);
+            this.btnThoat.Size = new System.Drawing.Size(103, 52);
             this.btnThoat.TabIndex = 5;
             this.btnThoat.Text = "<<<Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;

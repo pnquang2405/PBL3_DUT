@@ -31,7 +31,6 @@ namespace DO_AN_PBL3.View
         {
             this.components = new System.ComponentModel.Container();
             this.flpMenu = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnAddGoods = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.SuspendLayout();
             // 
@@ -44,16 +43,6 @@ namespace DO_AN_PBL3.View
             this.flpMenu.Size = new System.Drawing.Size(598, 580);
             this.flpMenu.TabIndex = 0;
             // 
-            // btnAddGoods
-            // 
-            this.btnAddGoods.Location = new System.Drawing.Point(372, 456);
-            this.btnAddGoods.Name = "btnAddGoods";
-            this.btnAddGoods.Size = new System.Drawing.Size(104, 35);
-            this.btnAddGoods.TabIndex = 1;
-            this.btnAddGoods.Text = "Thêm";
-            this.btnAddGoods.UseVisualStyleBackColor = true;
-            this.btnAddGoods.Click += new System.EventHandler(this.btnAddGoods_Click);
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -65,7 +54,6 @@ namespace DO_AN_PBL3.View
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(618, 598);
-            this.Controls.Add(this.btnAddGoods);
             this.Controls.Add(this.flpMenu);
             this.Name = "FormMenu";
             this.Text = "FormMenu";
@@ -76,7 +64,6 @@ namespace DO_AN_PBL3.View
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flpMenu;
-        private System.Windows.Forms.Button btnAddGoods;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

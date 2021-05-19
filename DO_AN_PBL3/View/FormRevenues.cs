@@ -107,5 +107,21 @@ namespace DO_AN_PBL3.View
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dtpkFrom_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime dateFrom = dtpkFrom.Value;
+            LoadListBillByDate(dateFrom, dtpkTo.Value);
+        }
+
+        private void dtpkTo_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime dateFrom = dtpkTo.Value;
+            LoadListBillByDate(dtpkFrom.Value, dateFrom);
+        }
     }
 }

@@ -178,7 +178,7 @@ namespace DO_AN_PBL3
                         nmrsoLuong.Value = 1;
 
                         CHI_TIET_HOA_DON_BLL.Instance.update(idBill, item.SubItems[0].Text, soLuong);
-                        
+                        ShowBill(ban);
                         return;
                     }
                 }
@@ -194,6 +194,7 @@ namespace DO_AN_PBL3
                 lsvTemp.Items.Add(lsvItem);
                 hangHoa = null;
                 nmrsoLuong.Value = 1;
+                ShowBill(ban);
             }
             else
             {

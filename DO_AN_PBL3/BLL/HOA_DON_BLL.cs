@@ -75,5 +75,10 @@ namespace DO_AN_PBL3.BLL
             HOA_DON_DAL.Instance.Sync();
         }
 
+        public List<HOA_DON> GetListHOADONByDate(DateTime checkIn, DateTime checkOut)
+        {
+            return HOA_DON_DAL.Instance.GetListByDate(checkIn, checkOut);
+        }
+
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DO_AN_PBL3.Entity
 {
-    class BillInfo
+   public class BillInfo
     {
         private String matHang;
         private double donGia;

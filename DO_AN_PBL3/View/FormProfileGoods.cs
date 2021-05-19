@@ -108,6 +108,7 @@ namespace DO_AN_PBL3.View
 
                     MessageBox.Show("Thao tác thành công");
                     D(-1);
+                    this.Close();
                 }
                 else
                 {

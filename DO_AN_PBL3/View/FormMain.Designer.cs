@@ -279,6 +279,7 @@ namespace DO_AN_PBL3
             this.btnTachBan.TabIndex = 15;
             this.btnTachBan.Text = "Tách bàn";
             this.btnTachBan.UseVisualStyleBackColor = true;
+            this.btnTachBan.Click += new System.EventHandler(this.btnTachBan_Click);
             // 
             // btnChuyenBan
             // 
@@ -288,6 +289,7 @@ namespace DO_AN_PBL3
             this.btnChuyenBan.TabIndex = 14;
             this.btnChuyenBan.Text = "Chuyển bàn";
             this.btnChuyenBan.UseVisualStyleBackColor = true;
+            this.btnChuyenBan.Click += new System.EventHandler(this.btnChuyenBan_Click);
             // 
             // nmrsoLuong
             // 
@@ -457,6 +459,7 @@ namespace DO_AN_PBL3
             this.btnInCheBien.TabIndex = 10;
             this.btnInCheBien.Text = "In chế biến";
             this.btnInCheBien.UseVisualStyleBackColor = true;
+            this.btnInCheBien.Click += new System.EventHandler(this.btnInCheBien_Click);
             // 
             // btnXoa
             // 

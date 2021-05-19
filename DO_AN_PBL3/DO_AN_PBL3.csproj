@@ -59,6 +59,7 @@
     <Compile Include="BLL\BillInfo_BLL.cs" />
     <Compile Include="BLL\Category_Merchandise_BLL.cs" />
     <Compile Include="BLL\CHI_TIET_HOA_DON_BLL.cs" />
+    <Compile Include="BLL\Customer_BLL.cs" />
     <Compile Include="BLL\HOA_DON_BLL.cs" />
     <Compile Include="BLL\Merchandise_BLL.cs" />
     <Compile Include="BLL\Table_BLL.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="DAL\BillInfo_DAL.cs" />
     <Compile Include="DAL\Category_Merchandise_DAL.cs" />
     <Compile Include="DAL\CHI_TIET_HOA_DON_DAL.cs" />
+    <Compile Include="DAL\Customer_DAL.cs" />
     <Compile Include="DAL\HOA_DON_DAL.cs" />
     <Compile Include="DAL\Merchandise_DAL.cs" />
     <Compile Include="DAL\Table_DAL.cs" />
@@ -123,6 +125,18 @@
     <Compile Include="View\BILL.Designer.cs">
       <DependentUpon>BILL.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\DetailTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DetailTable.Designer.cs">
+      <DependentUpon>DetailTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormInchebien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormInchebien.Designer.cs">
+      <DependentUpon>FormInchebien.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,11 +161,11 @@
     <Compile Include="View\FormProfileGoods.Designer.cs">
       <DependentUpon>FormProfileGoods.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormRevenue.cs">
+    <Compile Include="View\FormRevenues.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormRevenue.Designer.cs">
-      <DependentUpon>FormRevenue.cs</DependentUpon>
+    <Compile Include="View\FormRevenues.Designer.cs">
+      <DependentUpon>FormRevenues.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormTable.cs">
       <SubType>Form</SubType>
@@ -167,8 +181,20 @@
     <Compile Include="View\Form_QLGoods.Designer.cs">
       <DependentUpon>Form_QLGoods.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\TableTach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TableTach.Designer.cs">
+      <DependentUpon>TableTach.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\BILL.resx">
       <DependentUpon>BILL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DetailTable.resx">
+      <DependentUpon>DetailTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormInchebien.resx">
+      <DependentUpon>FormInchebien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormLogIn.resx">
       <DependentUpon>FormLogIn.cs</DependentUpon>
@@ -182,8 +208,8 @@
     <EmbeddedResource Include="View\FormProfileGoods.resx">
       <DependentUpon>FormProfileGoods.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormRevenue.resx">
-      <DependentUpon>FormRevenue.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormRevenues.resx">
+      <DependentUpon>FormRevenues.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormTable.resx">
       <DependentUpon>FormTable.cs</DependentUpon>
@@ -200,6 +226,9 @@
     </Compile>
     <EmbeddedResource Include="View\Form_QLGoods.resx">
       <DependentUpon>Form_QLGoods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TableTach.resx">
+      <DependentUpon>TableTach.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Entity\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

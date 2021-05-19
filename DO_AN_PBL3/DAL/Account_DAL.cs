@@ -32,12 +32,14 @@ namespace DO_AN_PBL3.DAL
         {
             db = new PBL3_QLTraSuaEntities();
         }
+
         public bool Login_DAL(int username, string password)
         {
             NHANVIEN s = db.NHANVIENs.FirstOrDefault(p=> p.ID_NV == username);
             if (s == null) return false;
             return s.password == password;
         }
+
         public bool ResetPassword_DAL(int username, string newpassword)
         {
 
@@ -60,7 +62,13 @@ namespace DO_AN_PBL3.DAL
                 }
                 return false;
             }
+        }
 
+        public NHANVIEN GetNVByID(int id)
+        {
+            NHANVIEN nv = db.NHANVIENs.FirstOrDefault(p => p.ID_NV == id);
+
+            return nv;
         }
     }
 }

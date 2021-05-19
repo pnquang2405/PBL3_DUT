@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
+using DO_AN_PBL3.Entity;
+using DO_AN_PBL3.DAL;
 
 namespace DO_AN_PBL3.BLL
 {
@@ -42,6 +44,11 @@ namespace DO_AN_PBL3.BLL
             {
                 return DAL.Account_DAL.Instance.ResetPassword_DAL(username, hashpass);
             }
+        }
+
+        public NHANVIEN GetNVByID(int id)
+        {
+            return Account_DAL.Instance.GetNVByID(id);
         }
 
     }

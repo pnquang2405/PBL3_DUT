@@ -350,8 +350,51 @@ namespace DO_AN_PBL3
 
         private void btnDoanhThu_Click(object sender, EventArgs e)
         {
-            FormRevenue f = new FormRevenue();
+            FormRevenues f = new FormRevenues();
             f.Show();
+        }
+
+        private void btnTachBan_Click(object sender, EventArgs e)
+        {
+            if (ban != null && BLL.HOA_DON_BLL.Instance.checkHoaDon(ban.ID_BAN))
+            {
+                DetailTable f2 = new DetailTable(HOA_DON_BLL.Instance.GetIdByTable(ban.ID_BAN), user);
+
+                f2.ShowDialog();
+                button1_Click(new object(), new EventArgs());
+            }
+            else
+            {
+                MessageBox.Show("Vui long chon ban hoac ban chua duoc order!!!");
+            }
+        }
+
+        private void btnChuyenBan_Click(object sender, EventArgs e)
+        {
+            if (ban != null && BLL.HOA_DON_BLL.Instance.checkHoaDon(ban.ID_BAN))
+            {
+                TableTach f2 = new TableTach(ban.ID_BAN, null, user);
+                f2.ShowDialog();
+                button1_Click(new object(), new EventArgs());
+            }
+            else
+            {
+                MessageBox.Show("Vui  long chon ban!!!");
+            }
+        }
+
+        private void btnInCheBien_Click(object sender, EventArgs e)
+        {
+            if (ban != null && BLL.HOA_DON_BLL.Instance.checkHoaDon(ban.ID_BAN))
+            {
+                FormInchebien f2 = new FormInchebien(HOA_DON_BLL.Instance.GetIdByTable(ban.ID_BAN));
+                f2.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Chua chon ban can thanh toan hoac ban khong co du lieu!!!");
+
+            }
         }
     }
 }

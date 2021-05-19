@@ -37,6 +37,16 @@ namespace DO_AN_PBL3.DAL
             throw new NotImplementedException();
         }
 
+        public List<HOA_DON> GetListByDate(DateTime checkIn, DateTime checkOut)
+        {
+            List<HOA_DON> list = (from hoadon in db.HOA_DON
+                                 where hoadon.Gio_den >= checkIn && hoadon.Gio_di <= checkOut
+                                 select hoadon).ToList();
+
+            return list;
+
+        }
+
         public List<HOA_DON> GetList(int key)
         {
             List<HOA_DON> list = (from hoadon in db.HOA_DON 

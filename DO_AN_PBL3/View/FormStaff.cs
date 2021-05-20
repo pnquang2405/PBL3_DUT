@@ -82,7 +82,7 @@ namespace DO_AN_PBL3.View
         }
         private String passWord()
         {
-            return "12111";
+            return "11111";
 
         }
 

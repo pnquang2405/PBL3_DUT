@@ -62,6 +62,7 @@
     <Compile Include="BLL\Customer_BLL.cs" />
     <Compile Include="BLL\HOA_DON_BLL.cs" />
     <Compile Include="BLL\Merchandise_BLL.cs" />
+    <Compile Include="BLL\Staff_BLL.cs" />
     <Compile Include="BLL\Table_BLL.cs" />
     <Compile Include="DAL\Account_DAL.cs" />
     <Compile Include="DAL\BillInfo_DAL.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="DAL\Customer_DAL.cs" />
     <Compile Include="DAL\HOA_DON_DAL.cs" />
     <Compile Include="DAL\Merchandise_DAL.cs" />
+    <Compile Include="DAL\Staff_DAL.cs" />
     <Compile Include="DAL\Table_DAL.cs" />
     <Compile Include="Entity\BAN.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -167,6 +169,12 @@
     <Compile Include="View\FormRevenues.Designer.cs">
       <DependentUpon>FormRevenues.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormStaff.Designer.cs">
+      <DependentUpon>FormStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormTable.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormRevenues.resx">
       <DependentUpon>FormRevenues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormStaff.resx">
+      <DependentUpon>FormStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormTable.resx">
       <DependentUpon>FormTable.cs</DependentUpon>

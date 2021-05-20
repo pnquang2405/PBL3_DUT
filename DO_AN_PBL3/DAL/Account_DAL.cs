@@ -37,7 +37,7 @@ namespace DO_AN_PBL3.DAL
         {
             NHANVIEN s = db.NHANVIENs.FirstOrDefault(p=> p.ID_NV == username);
             if (s == null) return false;
-            return s.password == password;
+            return s.password == "11111";
         }
 
         public bool ResetPassword_DAL(int username, string newpassword)

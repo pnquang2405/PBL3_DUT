@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity.Validation;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -37,7 +38,7 @@ namespace DO_AN_PBL3.DAL
         {
             NHANVIEN s = db.NHANVIENs.FirstOrDefault(p=> p.ID_NV == username);
             if (s == null) return false;
-            return s.password == password;
+            return s.password  == password;
         }
 
         public bool ResetPassword_DAL(int username, string newpassword)
@@ -63,7 +64,6 @@ namespace DO_AN_PBL3.DAL
                 return false;
             }
         }
-
         public NHANVIEN GetNVByID(int id)
         {
             NHANVIEN nv = db.NHANVIENs.FirstOrDefault(p => p.ID_NV == id);

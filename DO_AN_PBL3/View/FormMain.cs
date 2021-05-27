@@ -397,5 +397,11 @@ namespace DO_AN_PBL3
 
             }
         }
+
+        private void btnAccount_Click(object sender, EventArgs e)
+        {
+            FormStaff f = new FormStaff();
+            f.ShowDialog();
+        }
     }
 }

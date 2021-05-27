@@ -1,6 +1,8 @@
 ﻿using DO_AN_PBL3.Entity;
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
+using System.Text;
 using System.Windows.Forms;
 
 namespace DO_AN_PBL3.View
@@ -36,25 +38,22 @@ namespace DO_AN_PBL3.View
             col4.DataPropertyName = "Gender";
             col4.HeaderText = "Gender";
 
-            DataGridViewTextBoxColumn col5 = new DataGridViewTextBoxColumn();
-            col5.DataPropertyName = "Phanquyen";
-            col5.HeaderText = "Phân Quyền";
+            //DataGridViewTextBoxColumn col5 = new DataGridViewTextBoxColumn();
+            //col5.DataPropertyName = "Phanquyen";
+            //col5.HeaderText = "Phân Quyền";
 
 
-            DataGridViewTextBoxColumn col6 = new DataGridViewTextBoxColumn();
-            col6.DataPropertyName = "password";
-            col6.HeaderText = "Mật Khẩu";
+            //DataGridViewTextBoxColumn col6 = new DataGridViewTextBoxColumn();
+            //col6.DataPropertyName = "password";
+            //col6.HeaderText = "Mật Khẩu";
 
-            DataGridView d = new DataGridView();
+            dgvStaff.Columns.Add(col1);
+            dgvStaff.Columns.Add(col2);
+            dgvStaff.Columns.Add(col3);
+            dgvStaff.Columns.Add(col4);
+            //dgvStaff.Columns.Add(col5);
+            //dgvStaff.Columns.Add(col6);
 
-            d.Columns.Add(col1);
-            d.Columns.Add(col2);
-            d.Columns.Add(col3);
-            d.Columns.Add(col4);
-            d.Columns.Add(col5);
-            d.Columns.Add(col6);
-
-            d.DataSource = staffList;
             dgvStaff.DataSource = staffList;
 
         }
@@ -80,9 +79,20 @@ namespace DO_AN_PBL3.View
             BLL.Staff_BLL.Instance.AddStaff_BLL(nv);
             LoadStaff();
         }
+        private String hashCode(String password)
+        {
+            byte[] tempt = ASCIIEncoding.ASCII.GetBytes(password);
+            byte[] hashData = new MD5CryptoServiceProvider().ComputeHash(tempt);
+            string hashpass = "";
+            foreach (byte item in hashData)
+            {
+                hashpass += item;
+            }
+            return hashpass;
+        }
         private String passWord()
         {
-            return "12111";
+            return hashCode("1");
 
         }
 
@@ -102,12 +112,23 @@ namespace DO_AN_PBL3.View
         private void btnEditStaff_Click(object sender, EventArgs e)
         {
             NHANVIEN nv = new NHANVIEN();
-            nv.Ten_NV = this.txtTenNV.Text;
-            nv.PhoneNumber = this.txtPhoneNumber.Text;
-            if (rbMale.Checked.Equals(true))
-            { nv.Gender = true; }
-            else { nv.Gender = false; }
-            BLL.Staff_BLL.Instance.EditStaff_BLL(nv);
+            nv.Ten_NV = txtTenNV.Text;
+            nv.PhoneNumber = txtPhoneNumber.Text;
+            if (rbMale.Checked.Equals(true)){ 
+                    nv.Gender = true; 
+                }
+            else{ 
+                nv.Gender = false;
+                }
+            nv.password = passWord();
+            nv.Phanquyen = true;
+            if(dgvStaff.SelectedCells.Count > 0)
+            {
+                int id = Convert.ToInt32(dgvStaff.SelectedCells[0].OwningRow.Cells["ID_NV"].Value);
+                NHANVIEN before = BLL.Staff_BLL.Instance.Staff_ID_BLL(id);
+                BLL.Staff_BLL.Instance.EditStaff_BLL(before, nv);
+            }
+            
             LoadStaff();
         }
 

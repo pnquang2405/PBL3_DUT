@@ -34,9 +34,9 @@ namespace DO_AN_PBL3.BLL
         {
             DAL.Staff_DAL.Instance.Add(nv);
         }
-        public void EditStaff_BLL(NHANVIEN nv)
+        public void EditStaff_BLL(NHANVIEN before, NHANVIEN after)
         {
-            DAL.Staff_DAL.Instance.Update(nv);
+            DAL.Staff_DAL.Instance.Update(before,after);
         }
         public NHANVIEN Staff_ID_BLL(int id)
         {

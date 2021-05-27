@@ -51,7 +51,6 @@ namespace DO_AN_PBL3.View
             this.dgvStaff.Name = "dgvStaff";
             this.dgvStaff.Size = new System.Drawing.Size(496, 150);
             this.dgvStaff.TabIndex = 19;
-            this.dgvStaff.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStaff_CellClick);
             // 
             // txtTenNV
             // 
@@ -68,7 +67,6 @@ namespace DO_AN_PBL3.View
             this.btnDelStaff.TabIndex = 18;
             this.btnDelStaff.Text = "Xóa";
             this.btnDelStaff.UseVisualStyleBackColor = true;
-            this.btnDelStaff.Click += new System.EventHandler(this.btnDelStaff_Click);
             // 
             // label1
             // 
@@ -87,7 +85,6 @@ namespace DO_AN_PBL3.View
             this.btnEditStaff.TabIndex = 17;
             this.btnEditStaff.Text = "Sửa ";
             this.btnEditStaff.UseVisualStyleBackColor = true;
-            this.btnEditStaff.Click += new System.EventHandler(this.btnEditStaff_Click);
             // 
             // txtPhoneNumber
             // 
@@ -104,7 +101,6 @@ namespace DO_AN_PBL3.View
             this.btnAddStaff.TabIndex = 12;
             this.btnAddStaff.Text = "Thêm";
             this.btnAddStaff.UseVisualStyleBackColor = true;
-            this.btnAddStaff.Click += new System.EventHandler(this.BtnAddStaff_Click);
             // 
             // label2
             // 

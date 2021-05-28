@@ -9,8 +9,6 @@ namespace DO_AN_PBL3.View
     {
         public FormStaff()
         {
-
-
             InitializeComponent();
             LoadStaff();
         }
@@ -19,7 +17,7 @@ namespace DO_AN_PBL3.View
         public void LoadStaff()
         {
             List<NHANVIEN> staffList = BLL.Staff_BLL.Instance.getStaff();
-            //n
+
             DataGridViewTextBoxColumn col1 = new DataGridViewTextBoxColumn();
             col1.DataPropertyName = "ID_NV";
             col1.HeaderText = "Mã NV";
@@ -82,7 +80,7 @@ namespace DO_AN_PBL3.View
         }
         private String passWord()
         {
-            return "12111";
+            return "1962026656160185351301320480154111117132155";
 
         }
 
@@ -123,5 +121,6 @@ namespace DO_AN_PBL3.View
             LoadStaff();
 
         }
+
     }
 }

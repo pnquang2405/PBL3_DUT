@@ -262,6 +262,7 @@ namespace DO_AN_PBL3
             this.btnAccount.Text = "Quản lý Tài khoản";
             this.btnAccount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAccount.UseVisualStyleBackColor = false;
+            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
             // 
             // btnDoanhThu
             // 

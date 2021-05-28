@@ -42,8 +42,8 @@
           <Property Name="ID_BAN" Type="int" />
           <Property Name="ID_NV" Type="int" />
           <Property Name="ID_KH" Type="int" />
-          <Property Name="Gio_den" Type="date" />
-          <Property Name="Gio_di" Type="date" />
+          <Property Name="Gio_den" Type="datetime" />
+          <Property Name="Gio_di" Type="datetime" />
           <Property Name="Tong_tien" Type="money" />
           <Property Name="discount" Type="float" />
           <Property Name="Diem_TL" Type="float" />
@@ -291,8 +291,8 @@
           <Property Name="ID_BAN" Type="Int32" />
           <Property Name="ID_NV" Type="Int32" />
           <Property Name="ID_KH" Type="Int32" />
-          <Property Name="Gio_den" Type="DateTime" Precision="0" />
-          <Property Name="Gio_di" Type="DateTime" Precision="0" />
+          <Property Name="Gio_den" Type="DateTime" Precision="3" />
+          <Property Name="Gio_di" Type="DateTime" Precision="3" />
           <Property Name="Tong_tien" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="discount" Type="Double" />
           <Property Name="Diem_TL" Type="Double" />
@@ -458,7 +458,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="PBL3_QLTraSuaEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="PBL3_QLTraSuaEntities4" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="BANs" EntityType="Self.BAN" />
           <EntitySet Name="CHI_TIET_HOA_DON" EntityType="Self.CHI_TIET_HOA_DON" />
           <EntitySet Name="HANGHOAs" EntityType="Self.HANGHOA" />
@@ -507,7 +507,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="QuanLyQuanTSModelStoreContainer" CdmEntityContainer="PBL3_QLTraSuaEntities">
+        <EntityContainerMapping StorageEntityContainer="QuanLyQuanTSModelStoreContainer" CdmEntityContainer="PBL3_QLTraSuaEntities4">
           <EntitySetMapping Name="BANs">
             <EntityTypeMapping TypeName="QuanLyQuanTSModel.BAN">
               <MappingFragment StoreEntitySet="BAN">

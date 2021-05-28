@@ -23,3 +23,4 @@ D:\WinformC#\DO_AN_PBL3\DO_AN_PBL3\obj\Debug\DO_AN_PBL3.csprojAssemblyReference.
 D:\WinformC#\DO_AN_PBL3\DO_AN_PBL3\obj\Debug\DO_AN_PBL3.View.DetailTable.resources
 D:\WinformC#\DO_AN_PBL3\DO_AN_PBL3\obj\Debug\DO_AN_PBL3.View.FormInchebien.resources
 D:\WinformC#\DO_AN_PBL3\DO_AN_PBL3\obj\Debug\DO_AN_PBL3.View.TableTach.resources
+D:\WinformC#\DO_AN_PBL3\DO_AN_PBL3\obj\Debug\DO_AN_PBL3.View.FormStaff.resources

@@ -37,8 +37,8 @@
     <Property Name="ID_BAN" Type="int" />
     <Property Name="ID_NV" Type="int" />
     <Property Name="ID_KH" Type="int" />
-    <Property Name="Gio_den" Type="date" />
-    <Property Name="Gio_di" Type="date" />
+    <Property Name="Gio_den" Type="datetime" />
+    <Property Name="Gio_di" Type="datetime" />
     <Property Name="Tong_tien" Type="money" />
     <Property Name="discount" Type="float" />
     <Property Name="Diem_TL" Type="float" />

@@ -1,5 +1,4 @@
-﻿
-namespace DO_AN_PBL3.View
+﻿namespace DO_AN_PBL3.View
 {
     partial class FormStaff
     {
@@ -47,67 +46,80 @@ namespace DO_AN_PBL3.View
             // dgvStaff
             // 
             this.dgvStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStaff.Location = new System.Drawing.Point(22, 161);
+            this.dgvStaff.Location = new System.Drawing.Point(29, 198);
+            this.dgvStaff.Margin = new System.Windows.Forms.Padding(4);
             this.dgvStaff.Name = "dgvStaff";
-            this.dgvStaff.Size = new System.Drawing.Size(496, 150);
+            this.dgvStaff.RowHeadersWidth = 51;
+            this.dgvStaff.Size = new System.Drawing.Size(661, 185);
             this.dgvStaff.TabIndex = 19;
+            this.dgvStaff.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStaff_CellClick);
             // 
             // txtTenNV
             // 
-            this.txtTenNV.Location = new System.Drawing.Point(126, 40);
+            this.txtTenNV.Location = new System.Drawing.Point(168, 49);
+            this.txtTenNV.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenNV.Name = "txtTenNV";
-            this.txtTenNV.Size = new System.Drawing.Size(126, 20);
+            this.txtTenNV.Size = new System.Drawing.Size(167, 22);
             this.txtTenNV.TabIndex = 14;
             // 
             // btnDelStaff
             // 
-            this.btnDelStaff.Location = new System.Drawing.Point(375, 335);
+            this.btnDelStaff.Location = new System.Drawing.Point(500, 412);
+            this.btnDelStaff.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelStaff.Name = "btnDelStaff";
-            this.btnDelStaff.Size = new System.Drawing.Size(93, 26);
+            this.btnDelStaff.Size = new System.Drawing.Size(124, 32);
             this.btnDelStaff.TabIndex = 18;
             this.btnDelStaff.Text = "Xóa";
             this.btnDelStaff.UseVisualStyleBackColor = true;
+            this.btnDelStaff.Click += new System.EventHandler(this.btnDelStaff_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 43);
+            this.label1.Location = new System.Drawing.Point(29, 53);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
+            this.label1.Size = new System.Drawing.Size(50, 17);
             this.label1.TabIndex = 11;
             this.label1.Text = "Họ tên";
             // 
             // btnEditStaff
             // 
-            this.btnEditStaff.Location = new System.Drawing.Point(199, 335);
+            this.btnEditStaff.Location = new System.Drawing.Point(265, 412);
+            this.btnEditStaff.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditStaff.Name = "btnEditStaff";
-            this.btnEditStaff.Size = new System.Drawing.Size(93, 26);
+            this.btnEditStaff.Size = new System.Drawing.Size(124, 32);
             this.btnEditStaff.TabIndex = 17;
             this.btnEditStaff.Text = "Sửa ";
             this.btnEditStaff.UseVisualStyleBackColor = true;
+            this.btnEditStaff.Click += new System.EventHandler(this.btnEditStaff_Click);
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(126, 89);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(168, 110);
+            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(126, 20);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(167, 22);
             this.txtPhoneNumber.TabIndex = 15;
             // 
             // btnAddStaff
             // 
-            this.btnAddStaff.Location = new System.Drawing.Point(22, 335);
+            this.btnAddStaff.Location = new System.Drawing.Point(29, 412);
+            this.btnAddStaff.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddStaff.Name = "btnAddStaff";
-            this.btnAddStaff.Size = new System.Drawing.Size(93, 26);
+            this.btnAddStaff.Size = new System.Drawing.Size(124, 32);
             this.btnAddStaff.TabIndex = 12;
             this.btnAddStaff.Text = "Thêm";
             this.btnAddStaff.UseVisualStyleBackColor = true;
+            this.btnAddStaff.Click += new System.EventHandler(this.BtnAddStaff_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 92);
+            this.label2.Location = new System.Drawing.Point(29, 113);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 13);
+            this.label2.Size = new System.Drawing.Size(103, 17);
             this.label2.TabIndex = 13;
             this.label2.Text = "Phone Number";
             // 
@@ -115,9 +127,11 @@ namespace DO_AN_PBL3.View
             // 
             this.Gender.Controls.Add(this.rbFeMale);
             this.Gender.Controls.Add(this.rbMale);
-            this.Gender.Location = new System.Drawing.Point(344, 25);
+            this.Gender.Location = new System.Drawing.Point(459, 31);
+            this.Gender.Margin = new System.Windows.Forms.Padding(4);
             this.Gender.Name = "Gender";
-            this.Gender.Size = new System.Drawing.Size(147, 84);
+            this.Gender.Padding = new System.Windows.Forms.Padding(4);
+            this.Gender.Size = new System.Drawing.Size(196, 103);
             this.Gender.TabIndex = 16;
             this.Gender.TabStop = false;
             this.Gender.Text = "Gender";
@@ -125,9 +139,10 @@ namespace DO_AN_PBL3.View
             // rbFeMale
             // 
             this.rbFeMale.AutoSize = true;
-            this.rbFeMale.Location = new System.Drawing.Point(8, 53);
+            this.rbFeMale.Location = new System.Drawing.Point(11, 65);
+            this.rbFeMale.Margin = new System.Windows.Forms.Padding(4);
             this.rbFeMale.Name = "rbFeMale";
-            this.rbFeMale.Size = new System.Drawing.Size(60, 17);
+            this.rbFeMale.Size = new System.Drawing.Size(75, 21);
             this.rbFeMale.TabIndex = 1;
             this.rbFeMale.TabStop = true;
             this.rbFeMale.Text = "FeMale";
@@ -136,9 +151,10 @@ namespace DO_AN_PBL3.View
             // rbMale
             // 
             this.rbMale.AutoSize = true;
-            this.rbMale.Location = new System.Drawing.Point(8, 19);
+            this.rbMale.Location = new System.Drawing.Point(11, 23);
+            this.rbMale.Margin = new System.Windows.Forms.Padding(4);
             this.rbMale.Name = "rbMale";
-            this.rbMale.Size = new System.Drawing.Size(48, 17);
+            this.rbMale.Size = new System.Drawing.Size(59, 21);
             this.rbMale.TabIndex = 0;
             this.rbMale.TabStop = true;
             this.rbMale.Text = "Male";
@@ -146,9 +162,9 @@ namespace DO_AN_PBL3.View
             // 
             // FormStaff
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(540, 386);
+            this.ClientSize = new System.Drawing.Size(720, 475);
             this.Controls.Add(this.dgvStaff);
             this.Controls.Add(this.txtTenNV);
             this.Controls.Add(this.btnDelStaff);
@@ -158,6 +174,7 @@ namespace DO_AN_PBL3.View
             this.Controls.Add(this.btnAddStaff);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Gender);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormStaff";
             this.Text = "FormStaff";
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).EndInit();

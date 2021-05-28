@@ -23,7 +23,7 @@ namespace DO_AN_PBL3
       
         public FormMain(int username)
         {
-            InitializeComponent();
+            InitializeComponent(); 
             user = username;
             button1_Click(new object(), new EventArgs());
             SetGUI();
@@ -396,6 +396,12 @@ namespace DO_AN_PBL3
                 MessageBox.Show("Chua chon ban can thanh toan hoac ban khong co du lieu!!!");
 
             }
+        }
+
+        private void btnAccount_Click(object sender, EventArgs e)
+        {
+            FormStaff f = new FormStaff();
+            f.Show();
         }
     }
 }

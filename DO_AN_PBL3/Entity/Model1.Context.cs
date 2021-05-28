@@ -16,7 +16,7 @@ namespace DO_AN_PBL3.Entity
     public partial class PBL3_QLTraSuaEntities : DbContext
     {
         public PBL3_QLTraSuaEntities()
-            : base("name=PBL3_QLTraSuaEntities")
+            : base("name=PBL3_QLTraSuaEntities4")
         {
         }
     

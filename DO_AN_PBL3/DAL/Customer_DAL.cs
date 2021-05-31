@@ -34,7 +34,8 @@ namespace DO_AN_PBL3.DAL
 
         public List<KHACHHANG> GetList()
         {
-            throw new NotImplementedException();
+            List<KHACHHANG> list = (db.KHACHHANGs).ToList();
+            return list;
         }
 
         public List<KHACHHANG> GetList(int key)
@@ -49,9 +50,16 @@ namespace DO_AN_PBL3.DAL
             return kh;
         }
 
+        public KHACHHANG GetKHByInfo(String inForKH)
+        {
+            KHACHHANG kh = db.KHACHHANGs.FirstOrDefault(p => p.PhoneNumber == inForKH || p.Ten_KH == inForKH);
+
+            return kh;
+        }
+
         public void Add(KHACHHANG temp)
         {
-            throw new NotImplementedException();
+            db.KHACHHANGs.Add(temp);
         }
 
         public void Delete(KHACHHANG temp)
@@ -59,9 +67,18 @@ namespace DO_AN_PBL3.DAL
             throw new NotImplementedException();
         }
 
+        public void UpdateDTL(KHACHHANG khachhang,int dtl)
+        {
+            KHACHHANG kh = db.KHACHHANGs.First(p => p.ID_KH == khachhang.ID_KH);
+            kh.Diemtichluy += dtl;
+
+            if (kh.Diemtichluy > 200) kh.ID_LKH = 1;
+
+        }
+
         public void Sync()
         {
-            throw new NotImplementedException();
+            db.SaveChanges();
         }
     }
 }

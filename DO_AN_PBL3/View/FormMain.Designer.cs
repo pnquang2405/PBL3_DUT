@@ -50,6 +50,8 @@ namespace DO_AN_PBL3
             this.btnDoanhThu = new System.Windows.Forms.Button();
             this.btnHangHoa = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtPhoneCustomer = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnTachBan = new System.Windows.Forms.Button();
             this.btnChuyenBan = new System.Windows.Forms.Button();
             this.nmrsoLuong = new System.Windows.Forms.NumericUpDown();
@@ -246,6 +248,7 @@ namespace DO_AN_PBL3
             this.btnKhachHang.Text = "   Quản lý khách hàng";
             this.btnKhachHang.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnKhachHang.UseVisualStyleBackColor = false;
+            this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
             // 
             // btnAccount
             // 
@@ -301,6 +304,8 @@ namespace DO_AN_PBL3
             // panel3
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel3.Controls.Add(this.txtPhoneCustomer);
+            this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.btnTachBan);
             this.panel3.Controls.Add(this.btnChuyenBan);
             this.panel3.Controls.Add(this.nmrsoLuong);
@@ -321,6 +326,23 @@ namespace DO_AN_PBL3
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(787, 644);
             this.panel3.TabIndex = 5;
+            // 
+            // txtPhoneCustomer
+            // 
+            this.txtPhoneCustomer.Location = new System.Drawing.Point(462, 40);
+            this.txtPhoneCustomer.Name = "txtPhoneCustomer";
+            this.txtPhoneCustomer.Size = new System.Drawing.Size(233, 26);
+            this.txtPhoneCustomer.TabIndex = 17;
+            this.txtPhoneCustomer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneCustomer_KeyPress);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(339, 43);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(117, 20);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Thông tin KH: ";
             // 
             // btnTachBan
             // 
@@ -736,5 +758,7 @@ namespace DO_AN_PBL3
         private System.Windows.Forms.Panel panelGhichu;
         private System.Windows.Forms.TextBox txtGhiChu;
         private System.Windows.Forms.Button btnTamThanhToan;
+        private System.Windows.Forms.TextBox txtPhoneCustomer;
+        private System.Windows.Forms.Label label6;
     }
 }

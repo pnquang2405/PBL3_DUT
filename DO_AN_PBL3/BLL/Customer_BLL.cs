@@ -31,5 +31,38 @@ namespace DO_AN_PBL3.BLL
         {
             return Customer_DAL.Instance.GetKHByID(idKH);
         }
+
+        public KHACHHANG GetKHByInfo(String inForKH)
+        {
+            return Customer_DAL.Instance.GetKHByInfo(inForKH);
+        }
+
+        public void updateDTL(KHACHHANG kh, int dtl)
+        {
+            Customer_DAL.Instance.UpdateDTL(kh, dtl);
+            Customer_DAL.Instance.Sync();
+        }
+
+        public void AddCustomer_BLL(String info, int dtl)
+        {
+            int i;
+            if (dtl < 200) i = 0;
+            else i = 1;
+            KHACHHANG kh = new KHACHHANG
+            {
+                Ten_KH = "",
+                ID_LKH = i,
+                Diachi = "",
+                PhoneNumber = info,
+                Diemtichluy = dtl
+            };
+            Customer_DAL.Instance.Add(kh);
+            Customer_DAL.Instance.Sync();
+        }
+
+        public List<KHACHHANG> GetList()
+        {
+            return Customer_DAL.Instance.GetList();
+        }
     }
 }

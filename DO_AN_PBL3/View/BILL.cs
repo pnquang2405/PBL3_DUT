@@ -17,10 +17,12 @@ namespace DO_AN_PBL3.View
     {
         private int ID_BAN { get; set; }
         private int type { get; set; }
-        public BILL(int IDHOADON, int type)
+        private String info { get; set; }
+        public BILL(int IDHOADON, int type,String infoKH)
         {
             this.type = type;
             ID_BAN = IDHOADON;
+            info = infoKH;
             InitializeComponent();
             SETGUI();
         }
@@ -38,6 +40,7 @@ namespace DO_AN_PBL3.View
             txbBan.Text = Table_BLL.Instance.GetnameTable(hd.ID_BAN.Value);
             txbNV.Text = "NHAP";
             txbthoigian.Text = DateTime.Now.ToString();
+            txbKH.Text = info;
 
             CultureInfo culture = new CultureInfo("vi-VN");
             List<BillInfo> listbillinfo = BillInfo_BLL.Instance.GetList(Table_BLL.Instance.gettable(hd.ID_BAN.Value));

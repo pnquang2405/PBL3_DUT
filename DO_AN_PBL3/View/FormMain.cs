@@ -320,7 +320,21 @@ namespace DO_AN_PBL3
 
             if (ban != null && BLL.HOA_DON_BLL.Instance.checkHoaDon(ban.ID_BAN))
             {
-                BILL bill = new BILL(BLL.HOA_DON_BLL.Instance.GetIdByTable(ban.ID_BAN), 1);
+                BILL bill = new BILL(BLL.HOA_DON_BLL.Instance.GetIdByTable(ban.ID_BAN), 1, txtPhoneCustomer.Text);
+
+                if(txtPhoneCustomer.Text != "")
+                {
+                    int dtl = Convert.ToInt32(txtThanhTien.Text) / 10000;
+                    KHACHHANG kh = Customer_BLL.Instance.GetKHByInfo(txtPhoneCustomer.Text);
+                    if(kh != null)
+                    {
+                        Customer_BLL.Instance.updateDTL(kh, dtl);
+                    }
+                    else
+                    {
+                        Customer_BLL.Instance.AddCustomer_BLL(txtPhoneCustomer.Text, dtl);
+                    }
+                }
 
                 HOA_DON_BLL.Instance.Thanhtoan(HOA_DON_BLL.Instance.GetIdByTable(ban.ID_BAN), Convert.ToDecimal(txtThanhTien.Text));
                 button1_Click(new object(), new EventArgs());
@@ -336,7 +350,7 @@ namespace DO_AN_PBL3
         {
             if (ban != null && BLL.HOA_DON_BLL.Instance.checkHoaDon(ban.ID_BAN))
             {
-                BILL bill = new BILL(BLL.HOA_DON_BLL.Instance.GetIdByTable(ban.ID_BAN), 0);
+                BILL bill = new BILL(BLL.HOA_DON_BLL.Instance.GetIdByTable(ban.ID_BAN), 0, txtPhoneCustomer.Text);
 
                 bill.ShowDialog();
             }
@@ -402,6 +416,20 @@ namespace DO_AN_PBL3
         {
             FormStaff f = new FormStaff();
             f.Show();
+        }
+
+        private void btnKhachHang_Click(object sender, EventArgs e)
+        {
+            FormCustomer f = new FormCustomer();
+            f.Show();
+        }
+
+        private void txtPhoneCustomer_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) || txtPhoneCustomer.Text.Length >= 11)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

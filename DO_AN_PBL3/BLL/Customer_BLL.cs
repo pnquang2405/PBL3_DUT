@@ -64,5 +64,17 @@ namespace DO_AN_PBL3.BLL
         {
             return Customer_DAL.Instance.GetList();
         }
+
+        public void UpdateKH(KHACHHANG kh)
+        {
+            Customer_DAL.Instance.UpdateKH(kh);
+            Customer_DAL.Instance.Sync();
+        }
+
+        public void Delete(KHACHHANG kh)
+        {
+            Customer_DAL.Instance.Delete(kh);
+            Customer_DAL.Instance.Sync();
+        }
     }
 }

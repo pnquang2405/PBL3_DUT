@@ -64,8 +64,9 @@ namespace DO_AN_PBL3.DAL
 
         public void Delete(KHACHHANG temp)
         {
-            throw new NotImplementedException();
+            db.KHACHHANGs.Remove(temp);
         }
+
 
         public void UpdateDTL(KHACHHANG khachhang,int dtl)
         {
@@ -74,6 +75,14 @@ namespace DO_AN_PBL3.DAL
 
             if (kh.Diemtichluy > 200) kh.ID_LKH = 1;
 
+        }
+
+        public void UpdateKH(KHACHHANG kh)
+        {
+            KHACHHANG cus = db.KHACHHANGs.First(p => p.ID_KH == kh.ID_KH);
+            cus.Ten_KH = kh.Ten_KH;
+            cus.Diachi = kh.Diachi;
+            cus.PhoneNumber = kh.PhoneNumber;
         }
 
         public void Sync()

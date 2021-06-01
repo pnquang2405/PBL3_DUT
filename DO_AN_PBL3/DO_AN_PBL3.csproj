@@ -163,6 +163,12 @@
     <Compile Include="View\FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormProfileCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormProfileCustomer.Designer.cs">
+      <DependentUpon>FormProfileCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormProfileGoods.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormProfileCustomer.resx">
+      <DependentUpon>FormProfileCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormProfileGoods.resx">
       <DependentUpon>FormProfileGoods.cs</DependentUpon>

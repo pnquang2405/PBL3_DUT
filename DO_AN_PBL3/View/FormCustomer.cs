@@ -54,15 +54,6 @@ namespace DO_AN_PBL3.View
 
             if (list.Count > 0)
             {
-                //DataGridViewRow row = new DataGridViewRow();
-                //row.CreateCells(dtgvCustomer);
-                //row.Cells[0].Value = 1 + "";
-                //row.Cells[1].Value = list[0].Ten_HH;
-                //row.Cells[2].Value = list[0].Gia;
-                //row.Cells[3].Value = list[0].Loai_HANGHOA.Ten_LHH;
-
-                //dtgvGoods.Rows.Add(row);
-
                 for (int i = 0; i < list.Count; i++)
                 {
                     DataGridViewRow row1 = new DataGridViewRow();
@@ -74,6 +65,7 @@ namespace DO_AN_PBL3.View
                     row1.Cells[3].Value = list[i].PhoneNumber;
                     row1.Cells[4].Value = list[i].LOAI_KHACH_HANG.Ten_LKH;
                     row1.Cells[5].Value = list[i].Diemtichluy;
+                    row1.Tag = list[i];
 
                     dtgvCustomer.Rows.Add(row1);
                 }
@@ -94,11 +86,63 @@ namespace DO_AN_PBL3.View
 
         private void txtPhone_TextChanged(object sender, EventArgs e)
         {
-            List<KHACHHANG> list = Customer_BLL.Instance.GetList();
+            List<KHACHHANG> list = new List<KHACHHANG>();
+            foreach (DataGridViewRow item in dtgvCustomer.Rows)
+            {
+                if ((KHACHHANG)item.Tag != null) list.Add((KHACHHANG)item.Tag);
+            }
 
             var search = (from x in list where x.PhoneNumber.Contains(txtPhone.Text) select x).ToList();
 
             LoadDL(search);
+        }
+
+        private void cậpNhậtThôngTinKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            KHACHHANG kh = (KHACHHANG)dtgvCustomer.SelectedRows[0].Tag;
+            FormProfileCustomer f = new FormProfileCustomer(kh);
+            f.D += LoadDL;
+            f.Show();
+        }
+
+        private void txtPhone_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Back)
+            {
+                String key = "";
+                if (txtPhone.Text.Length > 0) key = txtPhone.Text.Substring(0, txtPhone.Text.Length - 1);
+                List<KHACHHANG> list = Customer_BLL.Instance.GetList();
+
+                var search = (from x in list where x.PhoneNumber.Contains(key) select x).ToList();
+
+                LoadDL(search);
+            }
+        }
+
+        private void tảiLạiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadDL(Customer_BLL.Instance.GetList());
+        }
+
+        private void xóaThôngTinKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Xác nhận xóa thông tin các khách hàng đã chọn (" + dtgvCustomer.SelectedRows.Count.ToString() + " Khách hàng được chọn)!", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+            {
+                try
+                {
+                    foreach (DataGridViewRow item in dtgvCustomer.SelectedRows)
+                    {
+                        Customer_BLL.Instance.Delete((KHACHHANG)item.Tag);
+                    }
+                    MessageBox.Show("Xóa thành công");
+
+                    LoadDL(Customer_BLL.Instance.GetList());
+                }
+                catch
+                {
+                    MessageBox.Show("Gặp lỗi khi xóa");
+                }
+            }
         }
     }
 }

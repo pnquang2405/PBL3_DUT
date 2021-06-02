@@ -45,11 +45,15 @@
             // 
             // dgvStaff
             // 
+            this.dgvStaff.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvStaff.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStaff.GridColor = System.Drawing.Color.DeepSkyBlue;
             this.dgvStaff.Location = new System.Drawing.Point(29, 198);
             this.dgvStaff.Margin = new System.Windows.Forms.Padding(4);
             this.dgvStaff.Name = "dgvStaff";
             this.dgvStaff.RowHeadersWidth = 51;
+            this.dgvStaff.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvStaff.Size = new System.Drawing.Size(661, 185);
             this.dgvStaff.TabIndex = 19;
             this.dgvStaff.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStaff_CellClick);

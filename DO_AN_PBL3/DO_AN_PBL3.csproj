@@ -70,6 +70,7 @@
     <Compile Include="DAL\CHI_TIET_HOA_DON_DAL.cs" />
     <Compile Include="DAL\Customer_DAL.cs" />
     <Compile Include="DAL\HOA_DON_DAL.cs" />
+    <Compile Include="DAL\IGenaral.cs" />
     <Compile Include="DAL\Merchandise_DAL.cs" />
     <Compile Include="DAL\Staff_DAL.cs" />
     <Compile Include="DAL\Table_DAL.cs" />

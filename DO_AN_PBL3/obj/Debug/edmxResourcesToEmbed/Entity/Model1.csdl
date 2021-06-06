@@ -46,7 +46,7 @@
     <Property Name="Gio_den" Type="DateTime" Precision="3" />
     <Property Name="Gio_di" Type="DateTime" Precision="3" />
     <Property Name="Tong_tien" Type="Decimal" Precision="19" Scale="4" />
-    <Property Name="discount" Type="Double" />
+    <Property Name="discount" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="Diem_TL" Type="Double" />
     <NavigationProperty Name="BAN" Relationship="Self.FK__HOA_DON__ID_BAN__32AB8735" FromRole="HOA_DON" ToRole="BAN" />
     <NavigationProperty Name="CHI_TIET_HOA_DON" Relationship="Self.FK__CHI_TIET___ID_HD__3864608B" FromRole="HOA_DON" ToRole="CHI_TIET_HOA_DON" />
@@ -210,7 +210,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="PBL3_QLTraSuaEntities4" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="PBL3_QLTraSuaEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="BANs" EntityType="Self.BAN" />
     <EntitySet Name="CHI_TIET_HOA_DON" EntityType="Self.CHI_TIET_HOA_DON" />
     <EntitySet Name="HANGHOAs" EntityType="Self.HANGHOA" />

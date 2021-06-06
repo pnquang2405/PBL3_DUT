@@ -320,7 +320,7 @@ namespace DO_AN_PBL3
 
             if (ban != null && BLL.HOA_DON_BLL.Instance.checkHoaDon(ban.ID_BAN))
             {
-                BILL bill = new BILL(BLL.HOA_DON_BLL.Instance.GetIdByTable(ban.ID_BAN), 1, txtPhoneCustomer.Text);
+               
 
                 if(txtPhoneCustomer.Text != "")
                 {
@@ -336,7 +336,9 @@ namespace DO_AN_PBL3
                     }
                 }
 
-                HOA_DON_BLL.Instance.Thanhtoan(HOA_DON_BLL.Instance.GetIdByTable(ban.ID_BAN), Convert.ToDecimal(txtThanhTien.Text));
+            
+                BILL bill = new BILL(BLL.HOA_DON_BLL.Instance.GetIdByTable(ban.ID_BAN), 1, txtPhoneCustomer.Text);
+                txtPhoneCustomer.Text = "";
                 button1_Click(new object(), new EventArgs());
 
                 bill.ShowDialog();

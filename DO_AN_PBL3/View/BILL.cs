@@ -38,7 +38,7 @@ namespace DO_AN_PBL3.View
 
             txbID.Text = ID_BAN.ToString();
             txbBan.Text = Table_BLL.Instance.GetnameTable(hd.ID_BAN.Value);
-            txbNV.Text = "NHAP";
+            txbNV.Text = Staff_BLL.Instance.getname((int)hd.ID_NV);
             txbthoigian.Text = DateTime.Now.ToString();
             txbKH.Text = info;
 
@@ -62,10 +62,33 @@ namespace DO_AN_PBL3.View
 
                 lsvbill.Items.Add(lsvItem);
             }
-
             txbTongcong.Text = tongcong.ToString();
-            txbchietkhau.Text = hd.discount.ToString();
-            txbThanhtien.Text = (tongcong - (tongcong * (double)hd.discount.Value) / 100).ToString();
+            txbchietkhau.Text = "0";
+            if (info != "")
+            {
+                KHACHHANG kh = Customer_BLL.Instance.GetKHByInfo(info);
+
+                if (kh.ID_LKH == 0 && kh.Diemtichluy > 20)
+                {
+                    txbchietkhau.Text = ((tongcong * 5) / 100).ToString();
+                }
+                else if (kh.ID_LKH == 1)
+                {
+                    txbchietkhau.Text = ((tongcong * 10) / 100).ToString();
+                }
+            }
+
+            txbThanhtien.Text = (tongcong - Convert.ToDouble(txbchietkhau.Text)).ToString();
+            int? idkh = Customer_BLL.Instance.getIDbyInfo(info);
+
+            if (idkh == null)
+            {
+                HOA_DON_BLL.Instance.Thanhtoan(ID_BAN/* ID_BAN=ID_HOADON nha hehe*/, Convert.ToDecimal(txbThanhtien.Text), null, Convert.ToDecimal(txbchietkhau.Text));
+            }
+            else
+            {
+                HOA_DON_BLL.Instance.Thanhtoan(ID_BAN/* ID_BAN=ID_HOADON nha hehe*/, Convert.ToDecimal(txbThanhtien.Text), idkh, Convert.ToDecimal(txbchietkhau.Text));
+            }
 
         }
     }

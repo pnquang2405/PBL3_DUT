@@ -76,5 +76,9 @@ namespace DO_AN_PBL3.BLL
             Customer_DAL.Instance.Delete(kh);
             Customer_DAL.Instance.Sync();
         }
+        public int? getIDbyInfo(String info)
+        {
+            return Customer_DAL.Instance.getIDbyInfo(info);
+        }
     }
 }

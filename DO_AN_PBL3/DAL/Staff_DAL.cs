@@ -142,5 +142,11 @@ namespace DO_AN_PBL3.DAL
             }
 
         }
+
+        public String getname(int IDNV)
+        {
+            NHANVIEN hv = db.NHANVIENs.First(p => p.ID_NV == IDNV);
+            return hv.Ten_NV;
+        }
     }
 }

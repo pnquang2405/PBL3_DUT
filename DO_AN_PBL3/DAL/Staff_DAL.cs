@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace DO_AN_PBL3.DAL
 {
-    public class Staff_DAL : IGenaral<NHANVIEN>
+    public class Staff_DAL : IGeneral<NHANVIEN>
     {
         private PBL3_QLTraSuaEntities db;
         private static Staff_DAL _Instance;
@@ -168,6 +168,16 @@ namespace DO_AN_PBL3.DAL
         {
             NHANVIEN hv = db.NHANVIENs.First(p => p.ID_NV == IDNV);
             return hv.Ten_NV;
+        }
+
+        void IGeneral<NHANVIEN>.Add(NHANVIEN temp)
+        {
+            throw new NotImplementedException();
+        }
+
+        void IGeneral<NHANVIEN>.Delete(NHANVIEN temp)
+        {
+            throw new NotImplementedException();
         }
     }
 }

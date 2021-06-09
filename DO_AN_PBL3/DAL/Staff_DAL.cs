@@ -142,6 +142,27 @@ namespace DO_AN_PBL3.DAL
             }
 
         }
+        public bool ResetPass_DAL(int id, String pass)
+        {
+            NHANVIEN nv = Staff_ID_DAL(id);
+            try
+            {
+                using (PBL3_QLTraSuaEntities db = new PBL3_QLTraSuaEntities())
+                {
+                    nv = db.NHANVIENs.Where(p => p.ID_NV.Equals(nv.ID_NV)).SingleOrDefault();
+                    nv.password = pass;
+                    db.SaveChanges();
+                    MessageBox.Show("Đã Reset");
+                    return true;
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Lỗi " + e.Message);
+                return false;
+            }
+
+        }
 
         public String getname(int IDNV)
         {

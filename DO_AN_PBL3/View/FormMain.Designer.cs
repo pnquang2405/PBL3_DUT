@@ -410,7 +410,7 @@ namespace DO_AN_PBL3
             // 
             // btnTamThanhToan
             // 
-            this.btnTamThanhToan.Location = new System.Drawing.Point(290, 30);
+            this.btnTamThanhToan.Location = new System.Drawing.Point(294, 30);
             this.btnTamThanhToan.Name = "btnTamThanhToan";
             this.btnTamThanhToan.Size = new System.Drawing.Size(90, 83);
             this.btnTamThanhToan.TabIndex = 6;
@@ -424,7 +424,7 @@ namespace DO_AN_PBL3
             this.txtThanhTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtThanhTien.Location = new System.Drawing.Point(124, 89);
             this.txtThanhTien.Name = "txtThanhTien";
-            this.txtThanhTien.Size = new System.Drawing.Size(181, 19);
+            this.txtThanhTien.Size = new System.Drawing.Size(164, 19);
             this.txtThanhTien.TabIndex = 5;
             // 
             // label5

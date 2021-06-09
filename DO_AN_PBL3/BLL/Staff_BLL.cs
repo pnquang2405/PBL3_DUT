@@ -28,24 +28,28 @@ namespace DO_AN_PBL3.BLL
         }
         public List<NHANVIEN> getStaff()
         {
-            return Staff_DAL.Instance.GetList();
+            return DAL.Staff_DAL.Instance.GetList();
         }
 
         public void AddStaff_BLL(NHANVIEN nv)
         {
-            Staff_DAL.Instance.Add(nv);
+            DAL.Staff_DAL.Instance.Add(nv);
         }
         public void EditStaff_BLL(NHANVIEN before, NHANVIEN after)
         {
-            Staff_DAL.Instance.Update(before, after);
+            DAL.Staff_DAL.Instance.Update(before, after);
         }
         public NHANVIEN Staff_ID_BLL(int id)
         {
-            return Staff_DAL.Instance.Staff_ID_DAL(id);
+            return DAL.Staff_DAL.Instance.Staff_ID_DAL(id);
         }
         public void DelStaff_BLL(NHANVIEN nv)
         {
-            Staff_DAL.Instance.Delete(nv);
+            DAL.Staff_DAL.Instance.Delete(nv);
+        }
+        public void ResetPass_BLL(int id, String pass)
+        {
+            DAL.Staff_DAL.Instance.ResetPass_DAL(id, pass);
         }
 
         public String getname(int IDNV)

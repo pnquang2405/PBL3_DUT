@@ -27,10 +27,16 @@ namespace DO_AN_PBL3.DAL
 
             }
         }
-        public Table_DAL()
+        Table_DAL()
         {
             db = new PBL3_QLTraSuaEntities();
         }
+
+        ~Table_DAL()
+        {
+            db.Dispose();
+        }
+
         public void Add(BAN temp)
         {
             throw new NotImplementedException();

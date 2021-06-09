@@ -113,17 +113,25 @@ namespace DO_AN_PBL3
         {
             toolTip1.Show("Bàn", btnTable);
         }
-
+        //
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            if(panelAdmin.Visible == true)
+            NHANVIEN nv = Staff_BLL.Instance.Staff_ID_BLL(user);
+            if(nv.Phanquyen == true)
             {
-                panelAdmin.Hide();
+                if (panelAdmin.Visible == true)
+                {
+                    panelAdmin.Hide();
+                }
+                else
+                {
+                    panelAdmin.Show();
+                }
             }
             else
             {
-                panelAdmin.Show();
+                MessageBox.Show("Không phải admin");
             }
         }
 
@@ -280,7 +288,6 @@ namespace DO_AN_PBL3
             
         }
 
-
         private void txbSearch_TextChanged(object sender, EventArgs e)
         {
 
@@ -348,6 +355,7 @@ namespace DO_AN_PBL3
                 MessageBox.Show("Chua chon ban can thanh toan hoac ban khong co du lieu!!!");
             }
         }
+
         private void btnTamThanhToan_Click_1(object sender, EventArgs e)
         {
             if (ban != null && BLL.HOA_DON_BLL.Instance.checkHoaDon(ban.ID_BAN))
@@ -361,9 +369,6 @@ namespace DO_AN_PBL3
                 MessageBox.Show("Chua chon ban can thanh toan hoac ban khong co du lieu!!!");
             }
         }
-
-
-        #endregion
 
         private void btnDoanhThu_Click(object sender, EventArgs e)
         {
@@ -433,5 +438,9 @@ namespace DO_AN_PBL3
                 e.Handled = true;
             }
         }
+
+        #endregion
+
+
     }
 }

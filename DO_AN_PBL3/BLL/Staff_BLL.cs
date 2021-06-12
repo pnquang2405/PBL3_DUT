@@ -52,5 +52,17 @@ namespace DO_AN_PBL3.BLL
         {
             return Staff_DAL.Instance.getID_DAL(phonenumber);
         }
+
+        public void ChangeInf_BLL(String user, string name, string newpass)
+        {
+            if (newpass != "")
+            {
+                Account_BLL.Instance.Login_BLL(user, newpass, 1);
+            }
+            else
+            {
+                Staff_DAL.Instance.ChangeInfo_DAL(user, name);
+            }
+        }
     }
 }

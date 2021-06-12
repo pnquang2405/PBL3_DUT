@@ -1,4 +1,5 @@
-﻿using DO_AN_PBL3.Entity;
+﻿using DO_AN_PBL3.BLL;
+using DO_AN_PBL3.Entity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,53 +30,25 @@ namespace DO_AN_PBL3.View
         
         private void btnSave_Click(object sender, EventArgs e)
         {
-            NHANVIEN before = BLL.Staff_BLL.Instance.Staff_ID_BLL(User);
-            if (tbNewPass.Text == "")
+            bool check = Account_BLL.Instance.Login_BLL(tbUserName.Text, tbPassWord.Text, 0);
+            if (check == true)
             {
-                if (tbPassWord.Text == "")
+                if (tbNewPass.Text != null && tbNewPass.Text == tbRePass.Text)
                 {
-                    MessageBox.Show("Nhập Mật Khẩu khi đổi tên");
-                    return;
+                    Staff_BLL.Instance.ChangeInf_BLL(tbUserName.Text, tbName.Text, tbNewPass.Text);
+                    MessageBox.Show("Thay doi thanh cong");
+                    this.Dispose();
                 }
                 else
                 {
-                    NHANVIEN after = new NHANVIEN();
-                    after.ID_NV = before.ID_NV;
-                    after.Ten_NV = tbName.Text;
-                    after.PhoneNumber = before.PhoneNumber;
-                    after.password = before.password;
-                    after.Gender = before.Gender;
-                    after.Phanquyen = after.Phanquyen;
-                    BLL.Account_BLL.Instance.ChangeAccount(before.ID_NV, after);
-                    MessageBox.Show("Thành Công");
-                    return;
+                    MessageBox.Show("Mat khau khong khop");
                 }
-
-            }
-            else if (Convert.ToString(before.PhoneNumber) == tbUserName.Text && before.password == FormStaff.passWord(tbPassWord.Text) && tbNewPass.Text != "" && tbName.Text != "")
-            {
-
-                NHANVIEN after = new NHANVIEN();
-                after.ID_NV = before.ID_NV;
-                after.Ten_NV = tbName.Text;
-                after.PhoneNumber = before.PhoneNumber;
-                after.password = FormStaff.passWord(tbNewPass.Text);
-                after.Gender = before.Gender;
-                after.Phanquyen = after.Phanquyen;
-                BLL.Account_BLL.Instance.ChangeAccount(before.ID_NV, after);
-                MessageBox.Show("Thành Công");
-
-            }
-            else if (tbNewPass.Text == tbPassWord.Text || tbNewPass.Text != tbRePass.Text)
-            {
-                MessageBox.Show("Nhập Lại");
-                return;
-
             }
             else
             {
-                MessageBox.Show("Nhập Lại");
+                MessageBox.Show("Mat khau khong dung");
             }
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)

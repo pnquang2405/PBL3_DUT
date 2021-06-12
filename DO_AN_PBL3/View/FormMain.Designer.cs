@@ -34,6 +34,7 @@ namespace DO_AN_PBL3
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbChangeAccount = new System.Windows.Forms.Label();
             this.btnAdmin = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnFullScreen = new System.Windows.Forms.Button();
@@ -87,7 +88,6 @@ namespace DO_AN_PBL3
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.lbChangeAccount = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -117,6 +117,17 @@ namespace DO_AN_PBL3
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1418, 62);
             this.panel1.TabIndex = 1;
+            // 
+            // lbChangeAccount
+            // 
+            this.lbChangeAccount.AutoSize = true;
+            this.lbChangeAccount.ForeColor = System.Drawing.Color.SkyBlue;
+            this.lbChangeAccount.Location = new System.Drawing.Point(1135, 21);
+            this.lbChangeAccount.Name = "lbChangeAccount";
+            this.lbChangeAccount.Size = new System.Drawing.Size(53, 20);
+            this.lbChangeAccount.TabIndex = 7;
+            this.lbChangeAccount.Text = "label7";
+            this.lbChangeAccount.Click += new System.EventHandler(this.lbChangeAccount_Click);
             // 
             // btnAdmin
             // 
@@ -665,16 +676,6 @@ namespace DO_AN_PBL3
             this.label1.Size = new System.Drawing.Size(47, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Lọc: ";
-            // 
-            // lbChangeAccount
-            // 
-            this.lbChangeAccount.AutoSize = true;
-            this.lbChangeAccount.Location = new System.Drawing.Point(1135, 21);
-            this.lbChangeAccount.Name = "lbChangeAccount";
-            this.lbChangeAccount.Size = new System.Drawing.Size(53, 20);
-            this.lbChangeAccount.TabIndex = 7;
-            this.lbChangeAccount.Text = "label7";
-            this.lbChangeAccount.Click += new System.EventHandler(this.lbChangeAccount_Click);
             // 
             // FormMain
             // 

@@ -54,6 +54,12 @@ namespace DO_AN_PBL3.DAL
             }
 
         }
+        public void ChangeInfo_DAL(String user, string name)
+        {
+            NHANVIEN nv = db.NHANVIENs.First(p => p.PhoneNumber == user);
+            nv.Ten_NV = name;
+            Sync();
+        }
 
         public bool Delete(NHANVIEN temp)
         {
@@ -114,7 +120,7 @@ namespace DO_AN_PBL3.DAL
 
         public void Sync()
         {
-            throw new NotImplementedException();
+            db.SaveChanges();
         }
 
         public bool Update(NHANVIEN before, NHANVIEN after)    //NHANVIEN before
@@ -140,11 +146,6 @@ namespace DO_AN_PBL3.DAL
                 return false;
             }
 
-        }
-        public String getname(int IDNV)
-        {
-            NHANVIEN hv = db.NHANVIENs.First(p => p.ID_NV == IDNV);
-            return hv.Ten_NV;
         }
 
         void IGeneral<NHANVIEN>.Add(NHANVIEN temp)

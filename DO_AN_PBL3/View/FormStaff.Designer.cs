@@ -44,12 +44,8 @@ namespace DO_AN_PBL3.View
             this.rbFeMale = new System.Windows.Forms.RadioButton();
             this.rbMale = new System.Windows.Forms.RadioButton();
             this.btnResetPass = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rdbStaff = new System.Windows.Forms.RadioButton();
-            this.rdbAdmin = new System.Windows.Forms.RadioButton();
             this.dgvStaff = new System.Windows.Forms.DataGridView();
             this.Gender.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,11 +122,11 @@ namespace DO_AN_PBL3.View
             // 
             this.Gender.Controls.Add(this.rbFeMale);
             this.Gender.Controls.Add(this.rbMale);
-            this.Gender.Location = new System.Drawing.Point(388, 42);
+            this.Gender.Location = new System.Drawing.Point(491, 38);
             this.Gender.Margin = new System.Windows.Forms.Padding(4);
             this.Gender.Name = "Gender";
             this.Gender.Padding = new System.Windows.Forms.Padding(4);
-            this.Gender.Size = new System.Drawing.Size(119, 92);
+            this.Gender.Size = new System.Drawing.Size(155, 92);
             this.Gender.TabIndex = 16;
             this.Gender.TabStop = false;
             this.Gender.Text = "Gender";
@@ -169,43 +165,6 @@ namespace DO_AN_PBL3.View
             this.btnResetPass.Text = "ResetPass";
             this.btnResetPass.UseVisualStyleBackColor = true;
             this.btnResetPass.Click += new System.EventHandler(this.btnResetPass_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.rdbStaff);
-            this.groupBox1.Controls.Add(this.rdbAdmin);
-            this.groupBox1.Location = new System.Drawing.Point(567, 42);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(119, 92);
-            this.groupBox1.TabIndex = 17;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Phân Quyền";
-            // 
-            // rdbStaff
-            // 
-            this.rdbStaff.AutoSize = true;
-            this.rdbStaff.Location = new System.Drawing.Point(11, 64);
-            this.rdbStaff.Margin = new System.Windows.Forms.Padding(4);
-            this.rdbStaff.Name = "rdbStaff";
-            this.rdbStaff.Size = new System.Drawing.Size(58, 21);
-            this.rdbStaff.TabIndex = 1;
-            this.rdbStaff.TabStop = true;
-            this.rdbStaff.Text = "Staff";
-            this.rdbStaff.UseVisualStyleBackColor = true;
-            // 
-            // rdbAdmin
-            // 
-            this.rdbAdmin.AutoSize = true;
-            this.rdbAdmin.Location = new System.Drawing.Point(11, 23);
-            this.rdbAdmin.Margin = new System.Windows.Forms.Padding(4);
-            this.rdbAdmin.Name = "rdbAdmin";
-            this.rdbAdmin.Size = new System.Drawing.Size(68, 21);
-            this.rdbAdmin.TabIndex = 0;
-            this.rdbAdmin.TabStop = true;
-            this.rdbAdmin.Text = "Admin";
-            this.rdbAdmin.UseVisualStyleBackColor = true;
             // 
             // dgvStaff
             // 
@@ -251,6 +210,7 @@ namespace DO_AN_PBL3.View
             this.dgvStaff.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvStaff.Size = new System.Drawing.Size(661, 209);
             this.dgvStaff.TabIndex = 21;
+            this.dgvStaff.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStaff_CellClick);
             // 
             // FormStaff
             // 
@@ -259,7 +219,6 @@ namespace DO_AN_PBL3.View
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(720, 475);
             this.Controls.Add(this.dgvStaff);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnResetPass);
             this.Controls.Add(this.txtTenNV);
             this.Controls.Add(this.btnDelStaff);
@@ -275,8 +234,6 @@ namespace DO_AN_PBL3.View
             this.Text = "FormStaff";
             this.Gender.ResumeLayout(false);
             this.Gender.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -295,9 +252,6 @@ namespace DO_AN_PBL3.View
         private System.Windows.Forms.RadioButton rbFeMale;
         private System.Windows.Forms.RadioButton rbMale;
         private System.Windows.Forms.Button btnResetPass;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton rdbStaff;
-        private System.Windows.Forms.RadioButton rdbAdmin;
         private System.Windows.Forms.DataGridView dgvStaff;
     }
 }

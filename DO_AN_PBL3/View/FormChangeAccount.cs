@@ -26,15 +26,33 @@ namespace DO_AN_PBL3.View
             tbName.Text = nv.Ten_NV;
             tbUserName.Text = nv.PhoneNumber;
         }
-
+        
         private void btnSave_Click(object sender, EventArgs e)
         {
             NHANVIEN before = BLL.Staff_BLL.Instance.Staff_ID_BLL(User);
-            if (tbNewPass.Text == tbPassWord.Text || tbNewPass.Text != tbRePass.Text)
+            if (tbNewPass.Text == "")
             {
-                MessageBox.Show("Nhập Lại");
+                if (tbPassWord.Text == "")
+                {
+                    MessageBox.Show("Nhập Mật Khẩu khi đổi tên");
+                    return;
+                }
+                else
+                {
+                    NHANVIEN after = new NHANVIEN();
+                    after.ID_NV = before.ID_NV;
+                    after.Ten_NV = tbName.Text;
+                    after.PhoneNumber = before.PhoneNumber;
+                    after.password = before.password;
+                    after.Gender = before.Gender;
+                    after.Phanquyen = after.Phanquyen;
+                    BLL.Account_BLL.Instance.ChangeAccount(before.ID_NV, after);
+                    MessageBox.Show("Thành Công");
+                    return;
+                }
+
             }
-            else if (Convert.ToString(before.PhoneNumber) == tbUserName.Text && before.password == FormStaff.passWord(tbPassWord.Text))
+            else if (Convert.ToString(before.PhoneNumber) == tbUserName.Text && before.password == FormStaff.passWord(tbPassWord.Text) && tbNewPass.Text != "" && tbName.Text != "")
             {
 
                 NHANVIEN after = new NHANVIEN();
@@ -46,6 +64,12 @@ namespace DO_AN_PBL3.View
                 after.Phanquyen = after.Phanquyen;
                 BLL.Account_BLL.Instance.ChangeAccount(before.ID_NV, after);
                 MessageBox.Show("Thành Công");
+
+            }
+            else if (tbNewPass.Text == tbPassWord.Text || tbNewPass.Text != tbRePass.Text)
+            {
+                MessageBox.Show("Nhập Lại");
+                return;
 
             }
             else

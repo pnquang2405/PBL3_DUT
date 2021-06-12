@@ -47,14 +47,10 @@ namespace DO_AN_PBL3.BLL
         {
             DAL.Staff_DAL.Instance.Delete(nv);
         }
-        public void ResetPass_BLL(int id, String pass)
+       
+        public int getID_BLL(string phonenumber)
         {
-            DAL.Staff_DAL.Instance.ResetPass_DAL(id, pass);
-        }
-
-        public String getname(int IDNV)
-        {
-            return Staff_DAL.Instance.getname(IDNV);
+            return Staff_DAL.Instance.getID_DAL(phonenumber);
         }
     }
 }

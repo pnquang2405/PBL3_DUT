@@ -33,18 +33,18 @@ namespace DO_AN_PBL3.DAL
             db = new PBL3_QLTraSuaEntities();
         }
 
-        public bool Login_DAL(int username, string password)
+        public bool Login_DAL(string username, string password)
         {
-            NHANVIEN s = db.NHANVIENs.FirstOrDefault(p=> p.ID_NV == username);
+            NHANVIEN s = db.NHANVIENs.FirstOrDefault(p=> p.PhoneNumber == username);
             if (s == null) return false;
             return s.password == password;
         }
 
-        public bool ResetPassword_DAL(int username, string newpassword)
+        public bool ResetPassword_DAL(string username, string newpassword)
         {
 
             db = new PBL3_QLTraSuaEntities();
-            var s = db.NHANVIENs.Where(p => p.ID_NV == username).FirstOrDefault();
+            var s = db.NHANVIENs.Where(p => p.PhoneNumber == username).FirstOrDefault();
             s.password = newpassword;
             try
             {

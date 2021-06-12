@@ -27,7 +27,7 @@ namespace DO_AN_PBL3.BLL
 
             }
         }
-        public bool Login_BLL(int username, string password, int type)
+        public bool Login_BLL(string username, string password, int type)
         {
             byte[] tempt = ASCIIEncoding.ASCII.GetBytes(password);
             byte[] hashData = new MD5CryptoServiceProvider().ComputeHash(tempt);

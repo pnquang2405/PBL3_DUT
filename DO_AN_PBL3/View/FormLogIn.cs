@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DO_AN_PBL3.BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,12 +27,12 @@ namespace DO_AN_PBL3
         {
             if(txtPassword.Text != "" && txtUserName.Text != "")
             {
-                int username = Convert.ToInt32(txtUserName.Text);
+                string username = txtUserName.Text;
                 string password = txtPassword.Text;
                 if (BLL.Account_BLL.Instance.Login_BLL(username, password, 0))
                 {
-
-                    FormMain f = new FormMain(username);
+                    
+                    FormMain f = new FormMain(Staff_BLL.Instance.getID_BLL(username));
                     f.ShowDialog();
                 }
                 else

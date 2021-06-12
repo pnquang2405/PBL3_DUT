@@ -36,6 +36,7 @@ namespace DO_AN_PBL3.BLL
             {
                 hashpass += item;
             }
+            
             if (type == 0)
             {
                 return DAL.Account_DAL.Instance.Login_DAL(username, hashpass);

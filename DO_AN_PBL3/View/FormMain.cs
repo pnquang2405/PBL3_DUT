@@ -441,13 +441,13 @@ namespace DO_AN_PBL3
             }
         }
 
-
-        #endregion
-
         private void lbChangeAccount_Click(object sender, EventArgs e)
         {
             FormChangeAccount f = new FormChangeAccount(user);
             f.ShowDialog();
         }
+
+        #endregion
+
     }
 }

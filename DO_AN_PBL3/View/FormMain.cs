@@ -63,6 +63,8 @@ namespace DO_AN_PBL3
                 listBox1.Items.Add(item);
             }
             listBox1.DisplayMember = "Ten_LHH";
+            NHANVIEN nv = BLL.Staff_BLL.Instance.Staff_ID_BLL(user);
+            lbChangeAccount.Text = nv.Ten_NV;
         }
 
         void ShowBill(BAN table)
@@ -113,17 +115,25 @@ namespace DO_AN_PBL3
         {
             toolTip1.Show("Bàn", btnTable);
         }
-
+        //
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            if(panelAdmin.Visible == true)
+            NHANVIEN nv = Staff_BLL.Instance.Staff_ID_BLL(user);
+            if(nv.Phanquyen == true)
             {
-                panelAdmin.Hide();
+                if (panelAdmin.Visible == true)
+                {
+                    panelAdmin.Hide();
+                }
+                else
+                {
+                    panelAdmin.Show();
+                }
             }
             else
             {
-                panelAdmin.Show();
+                MessageBox.Show("Không phải admin");
             }
         }
 
@@ -280,7 +290,6 @@ namespace DO_AN_PBL3
             
         }
 
-
         private void txbSearch_TextChanged(object sender, EventArgs e)
         {
 
@@ -320,7 +329,7 @@ namespace DO_AN_PBL3
 
             if (ban != null && BLL.HOA_DON_BLL.Instance.checkHoaDon(ban.ID_BAN))
             {
-                BILL bill = new BILL(BLL.HOA_DON_BLL.Instance.GetIdByTable(ban.ID_BAN), 1, txtPhoneCustomer.Text);
+               
 
                 if(txtPhoneCustomer.Text != "")
                 {
@@ -336,7 +345,9 @@ namespace DO_AN_PBL3
                     }
                 }
 
-                HOA_DON_BLL.Instance.Thanhtoan(HOA_DON_BLL.Instance.GetIdByTable(ban.ID_BAN), Convert.ToDecimal(txtThanhTien.Text));
+            
+                BILL bill = new BILL(BLL.HOA_DON_BLL.Instance.GetIdByTable(ban.ID_BAN), 1, txtPhoneCustomer.Text);
+                txtPhoneCustomer.Text = "";
                 button1_Click(new object(), new EventArgs());
 
                 bill.ShowDialog();
@@ -346,6 +357,7 @@ namespace DO_AN_PBL3
                 MessageBox.Show("Chua chon ban can thanh toan hoac ban khong co du lieu!!!");
             }
         }
+
         private void btnTamThanhToan_Click_1(object sender, EventArgs e)
         {
             if (ban != null && BLL.HOA_DON_BLL.Instance.checkHoaDon(ban.ID_BAN))
@@ -359,9 +371,6 @@ namespace DO_AN_PBL3
                 MessageBox.Show("Chua chon ban can thanh toan hoac ban khong co du lieu!!!");
             }
         }
-
-
-        #endregion
 
         private void btnDoanhThu_Click(object sender, EventArgs e)
         {
@@ -430,6 +439,15 @@ namespace DO_AN_PBL3
             {
                 e.Handled = true;
             }
+        }
+
+
+        #endregion
+
+        private void lbChangeAccount_Click(object sender, EventArgs e)
+        {
+            FormChangeAccount f = new FormChangeAccount(user);
+            f.ShowDialog();
         }
     }
 }

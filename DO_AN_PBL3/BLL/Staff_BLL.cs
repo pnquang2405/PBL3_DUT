@@ -1,4 +1,5 @@
-﻿using DO_AN_PBL3.Entity;
+﻿using DO_AN_PBL3.DAL;
+using DO_AN_PBL3.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,6 +46,11 @@ namespace DO_AN_PBL3.BLL
         public void DelStaff_BLL(NHANVIEN nv)
         {
             DAL.Staff_DAL.Instance.Delete(nv);
+        }
+       
+        public int getID_BLL(string phonenumber)
+        {
+            return Staff_DAL.Instance.getID_DAL(phonenumber);
         }
     }
 }

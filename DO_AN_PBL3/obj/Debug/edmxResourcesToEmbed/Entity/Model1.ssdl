@@ -40,7 +40,7 @@
     <Property Name="Gio_den" Type="datetime" />
     <Property Name="Gio_di" Type="datetime" />
     <Property Name="Tong_tien" Type="money" />
-    <Property Name="discount" Type="float" />
+    <Property Name="discount" Type="money" />
     <Property Name="Diem_TL" Type="float" />
   </EntityType>
   <EntityType Name="KHACHHANG">

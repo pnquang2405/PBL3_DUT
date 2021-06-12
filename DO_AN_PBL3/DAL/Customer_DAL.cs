@@ -89,5 +89,13 @@ namespace DO_AN_PBL3.DAL
         {
             db.SaveChanges();
         }
+        public int? getIDbyInfo(String info)
+        {
+            KHACHHANG cus = db.KHACHHANGs.FirstOrDefault(p => p.PhoneNumber == info);
+            if (cus != null)
+                return cus.ID_KH;
+            else return null;
+        }
     }
 }
+ 

@@ -83,13 +83,16 @@ namespace DO_AN_PBL3.DAL
             db.SaveChanges();
         }
 
-        public void Thanhtoan(int idbill, decimal tongtien)
+        public void Thanhtoan(int idbill, decimal tongtien, int? IDKH, decimal discount)
         {
             HOA_DON tempt = db.HOA_DON.FirstOrDefault(p => p.ID_HD == idbill);
             tempt.Gio_di = DateTime.Now;
             tempt.Tong_tien = tongtien;
+            tempt.ID_KH = IDKH;
+            tempt.discount = discount;
             Table_DAL.Instance.Update((int)tempt.ID_BAN, true);
             Table_DAL.Instance.Sync();
+
         }
     }
 }

@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace DO_AN_PBL3.DAL
 {
-    public class Staff_DAL : IGenaral<NHANVIEN>
+    public class Staff_DAL : IGeneral<NHANVIEN>
     {
         private PBL3_QLTraSuaEntities db;
         private static Staff_DAL _Instance;
@@ -104,7 +104,6 @@ namespace DO_AN_PBL3.DAL
 
             }
 
-
             return list;
         }
 
@@ -141,6 +140,27 @@ namespace DO_AN_PBL3.DAL
                 return false;
             }
 
+        }
+        public String getname(int IDNV)
+        {
+            NHANVIEN hv = db.NHANVIENs.First(p => p.ID_NV == IDNV);
+            return hv.Ten_NV;
+        }
+
+        void IGeneral<NHANVIEN>.Add(NHANVIEN temp)
+        {
+            throw new NotImplementedException();
+        }
+
+        void IGeneral<NHANVIEN>.Delete(NHANVIEN temp)
+        {
+            throw new NotImplementedException();
+        }
+       
+        public int getID_DAL(string phonenumber)
+        {
+            NHANVIEN nv = db.NHANVIENs.First(p => p.PhoneNumber == phonenumber);
+            return nv.ID_NV;
         }
     }
 }

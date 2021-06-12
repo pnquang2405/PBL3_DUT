@@ -12,7 +12,6 @@ namespace DO_AN_PBL3.Interface
         List<T> GetList(int key);
         void Add(T temp);
         void Delete(T temp);
-
         void Sync();
 
     }

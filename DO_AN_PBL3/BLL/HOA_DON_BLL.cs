@@ -69,12 +69,19 @@ namespace DO_AN_PBL3.BLL
             HOA_DON_DAL.Instance.Sync();
         }
 
-        public void Thanhtoan(int idbill, decimal tongtien)
+        public void Thanhtoan(int idbill, decimal tongtien, int? IDKH, decimal discount)
         {
-            HOA_DON_DAL.Instance.Thanhtoan(idbill, tongtien);
+            if (IDKH == null)
+            {
+                HOA_DON_DAL.Instance.Thanhtoan(idbill, tongtien, null, discount);
+            }
+            else
+            {
+                HOA_DON_DAL.Instance.Thanhtoan(idbill, tongtien, (int)IDKH, discount);
+            }
+
             HOA_DON_DAL.Instance.Sync();
         }
-
         public List<HOA_DON> GetListHOADONByDate(DateTime checkIn, DateTime checkOut)
         {
             return HOA_DON_DAL.Instance.GetListByDate(checkIn, checkOut);

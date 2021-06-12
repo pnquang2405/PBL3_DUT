@@ -17,7 +17,7 @@ namespace DO_AN_PBL3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormStaff());
+            Application.Run(new FormLogIn());
         }
     }
 }

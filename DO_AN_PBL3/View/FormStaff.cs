@@ -1,6 +1,8 @@
-﻿using DO_AN_PBL3.Entity;
+﻿using DO_AN_PBL3.BLL;
+using DO_AN_PBL3.Entity;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
@@ -9,17 +11,19 @@ namespace DO_AN_PBL3.View
 {
     public partial class FormStaff : Form
     {
-
+      
         public FormStaff()
         {
-            InitializeComponent();
+            InitializeComponent();            
             LoadStaff();
+            
         }
 
 
         public void LoadStaff()
         {
             dgvStaff.Rows.Clear();
+            dgvStaff.Columns.Clear();
             //n
             DataGridViewTextBoxColumn col1 = new DataGridViewTextBoxColumn();
             col1.DataPropertyName = "ID_NV";
@@ -37,9 +41,9 @@ namespace DO_AN_PBL3.View
             col4.DataPropertyName = "Gender";
             col4.HeaderText = "Gender";
 
-            //DataGridViewTextBoxColumn col5 = new DataGridViewTextBoxColumn();
-            //col5.DataPropertyName = "Phanquyen";
-            //col5.HeaderText = "Phân Quyền";
+            DataGridViewTextBoxColumn col5 = new DataGridViewTextBoxColumn();
+            col5.DataPropertyName = "Phanquyen";
+            col5.HeaderText = "Phân Quyền";
 
 
             //DataGridViewTextBoxColumn col6 = new DataGridViewTextBoxColumn();
@@ -50,7 +54,7 @@ namespace DO_AN_PBL3.View
             dgvStaff.Columns.Add(col2);
             dgvStaff.Columns.Add(col3);
             dgvStaff.Columns.Add(col4);
-            //dgvStaff.Columns.Add(col5);
+            dgvStaff.Columns.Add(col5);
             //dgvStaff.Columns.Add(col6);
 
 
@@ -62,7 +66,7 @@ namespace DO_AN_PBL3.View
                     NHANVIEN nv = null;
                     if (staffList[i].ID_NV != 0)
                     {
-                        nv = BLL.Staff_BLL.Instance.Staff_ID_BLL(staffList[i].ID_NV);
+                        nv = Staff_BLL.Instance.Staff_ID_BLL(staffList[i].ID_NV);
                         DataGridViewRow row1 = new DataGridViewRow();
                         row1.CreateCells(dgvStaff);
                         row1.Cells[0].Value = staffList[i].ID_NV;
@@ -73,48 +77,87 @@ namespace DO_AN_PBL3.View
                             row1.Cells[3].Value = "Nam";
                         }
                         else row1.Cells[3].Value = "Nữ";
+                        if (staffList[i].Phanquyen == true)
+                        {
+                            row1.Cells[4].Value = "Admin";
+                        }
+                        else
+                            row1.Cells[4].Value = "Staff";
 
                         dgvStaff.Rows.Add(row1);
                     }
-                    dgvStaff.Columns[0].Width = 100;
+                    dgvStaff.Columns[0].Width = 50;
                     dgvStaff.Columns[1].Width = 150;
-                    dgvStaff.Columns[2].Width = 130;
+                    dgvStaff.Columns[2].Width = 110;
                     dgvStaff.Columns[3].Width = 75;
+                    dgvStaff.Columns[4].Width = 70;
 
                 }
             }
 
         }
 
+
+        private static bool CheckPhone(String phone)
+        {
+            var isNumeric = !string.IsNullOrEmpty(phone) && phone.All(Char.IsDigit);
+            return isNumeric;
+        }
+
+        private Boolean CheckPhone2(String PhoneNumber)
+        {
+            int k = 0;
+            List<NHANVIEN> list = BLL.Staff_BLL.Instance.getStaff();
+            if (list.Count > 0)
+            {
+                for (int i = 0; i < list.Count; i++)
+                {
+                    if (list[i].PhoneNumber == PhoneNumber)
+                    {
+                        k++;
+                    }
+                }
+                if (k == 0) return true;
+                else {
+                    MessageBox.Show("Số Điện thoại này đã được đăng ký");
+                    return false; }
+            }
+            else return false;
+
+        }
         private void BtnAddStaff_Click(object sender, EventArgs e)
         {
-            if (txtPhoneNumber.Text != "" && txtTenNV.Text != "")
-            {
-                String TenNV = txtTenNV.Text;
-                String PhoneNumber = txtPhoneNumber.Text;
-                Boolean gender;
-                if (rbMale.Equals(true))
+
+                if (txtPhoneNumber.Text != "" && txtTenNV.Text != "" && CheckPhone2(txtPhoneNumber.Text) && CheckPhone(txtPhoneNumber.Text))
                 {
-                    gender = true;
+                    String TenNV = txtTenNV.Text;
+                    String PhoneNumber = txtPhoneNumber.Text;
+                    Boolean gender;
+                    Boolean phanquyen;
+                    if (rbMale.Checked==true)
+                    {
+                        gender = true;
+                    }
+                    else gender = false;
+                    phanquyen = false;
+                    NHANVIEN nv = new NHANVIEN
+                    {
+                        Gender = gender,
+                        Ten_NV = TenNV,
+                        PhoneNumber = PhoneNumber,
+                        password = passWord("1"),
+                        Phanquyen = phanquyen,
+                    };
+                    Staff_BLL.Instance.AddStaff_BLL(nv);
+                    LoadStaff();
                 }
-                else gender = false;
-                NHANVIEN nv = new NHANVIEN
+                else
                 {
-                    Gender = gender,
-                    Ten_NV = TenNV,
-                    PhoneNumber = PhoneNumber,
-                    password = passWord("1"),
-                    Phanquyen = false,
-                };
-                BLL.Staff_BLL.Instance.AddStaff_BLL(nv);
-                LoadStaff();
-            }
-            else
-            {
-                MessageBox.Show("Vui Lòng Nhập Thông Tin Nhân Viên");
-            }
+                    MessageBox.Show("Vui Lòng Nhập Lại");
+                }
+            
         }
-        private String passWord(String password)
+        public static String passWord(String password)
         {
             byte[] tempt = ASCIIEncoding.ASCII.GetBytes(password);
             byte[] hashData = new MD5CryptoServiceProvider().ComputeHash(tempt);
@@ -136,18 +179,17 @@ namespace DO_AN_PBL3.View
                 {
                     txtTenNV.Text = row.Cells[1].Value.ToString();
                     txtPhoneNumber.Text = row.Cells[2].Value.ToString();
-                    if (row.Cells[2].Value.Equals(true))
+                    if (row.Cells[3].Value.Equals("Nam"))
                     { rbMale.Checked = true; }
                     else rbFeMale.Checked = true;
                 }
             }
         }
-
+       
         private void btnEditStaff_Click(object sender, EventArgs e)
         {
             NHANVIEN nv = new NHANVIEN();
             nv.Ten_NV = txtTenNV.Text;
-            nv.PhoneNumber = txtPhoneNumber.Text;
             if (rbMale.Checked.Equals(true))
             {
                 nv.Gender = true;
@@ -156,20 +198,33 @@ namespace DO_AN_PBL3.View
             {
                 nv.Gender = false;
             }
-            nv.password = "1962026656160185351301320480154111117132155";
-            nv.Phanquyen = true;
+            if (CheckPhone(txtPhoneNumber.Text))
+            {
+                nv.PhoneNumber = txtPhoneNumber.Text;
+            }
+            else
+            {
+                MessageBox.Show("Lỗi sdt");
+                return;
+            }
+            nv.password = passWord("1");
+            nv.Phanquyen = false;
+
             if (dgvStaff.SelectedCells.Count > 0)
             {
                 int id = Convert.ToInt32(dgvStaff.SelectedRows[0].Cells[0].Value);
                 NHANVIEN before = BLL.Staff_BLL.Instance.Staff_ID_BLL(id);
+                nv.password = before.password;
                 BLL.Staff_BLL.Instance.EditStaff_BLL(before, nv);
             }
 
             LoadStaff();
         }
 
+
         private void btnDelStaff_Click(object sender, EventArgs e)
         {
+         
             if (dgvStaff.SelectedCells.Count > 0)
             {
                 int id = Convert.ToInt32(dgvStaff.SelectedRows[0].Cells[0].Value);
@@ -180,5 +235,24 @@ namespace DO_AN_PBL3.View
             LoadStaff();
 
         }
+
+        private void btnResetPass_Click(object sender, EventArgs e)
+        {                  
+            if (dgvStaff.SelectedRows.Count > 0)
+            {
+                int id = Convert.ToInt32(dgvStaff.SelectedRows[0].Cells[0].Value);
+                NHANVIEN nv = Staff_BLL.Instance.Staff_ID_BLL(id);
+              bool check=  Account_BLL.Instance.Login_BLL(nv.PhoneNumber, "1", 1);
+                if (check == true)
+                    MessageBox.Show("Đã reset");
+                else MessageBox.Show("Loi");
+            }
+            else
+            {
+                MessageBox.Show("Vui long cho nhan vien");
+            }
+
+        }
+
     }
 }

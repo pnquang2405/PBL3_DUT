@@ -87,6 +87,7 @@ namespace DO_AN_PBL3
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.lbChangeAccount = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -106,6 +107,7 @@ namespace DO_AN_PBL3
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            this.panel1.Controls.Add(this.lbChangeAccount);
             this.panel1.Controls.Add(this.btnAdmin);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.btnFullScreen);
@@ -410,7 +412,7 @@ namespace DO_AN_PBL3
             // 
             // btnTamThanhToan
             // 
-            this.btnTamThanhToan.Location = new System.Drawing.Point(290, 30);
+            this.btnTamThanhToan.Location = new System.Drawing.Point(294, 30);
             this.btnTamThanhToan.Name = "btnTamThanhToan";
             this.btnTamThanhToan.Size = new System.Drawing.Size(90, 83);
             this.btnTamThanhToan.TabIndex = 6;
@@ -424,7 +426,7 @@ namespace DO_AN_PBL3
             this.txtThanhTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtThanhTien.Location = new System.Drawing.Point(124, 89);
             this.txtThanhTien.Name = "txtThanhTien";
-            this.txtThanhTien.Size = new System.Drawing.Size(181, 19);
+            this.txtThanhTien.Size = new System.Drawing.Size(164, 19);
             this.txtThanhTien.TabIndex = 5;
             // 
             // label5
@@ -664,6 +666,16 @@ namespace DO_AN_PBL3
             this.label1.TabIndex = 0;
             this.label1.Text = "Lọc: ";
             // 
+            // lbChangeAccount
+            // 
+            this.lbChangeAccount.AutoSize = true;
+            this.lbChangeAccount.Location = new System.Drawing.Point(1135, 21);
+            this.lbChangeAccount.Name = "lbChangeAccount";
+            this.lbChangeAccount.Size = new System.Drawing.Size(53, 20);
+            this.lbChangeAccount.TabIndex = 7;
+            this.lbChangeAccount.Text = "label7";
+            this.lbChangeAccount.Click += new System.EventHandler(this.lbChangeAccount_Click);
+            // 
             // FormMain
             // 
             this.AllowDrop = true;
@@ -760,5 +772,6 @@ namespace DO_AN_PBL3
         private System.Windows.Forms.Button btnTamThanhToan;
         private System.Windows.Forms.TextBox txtPhoneCustomer;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbChangeAccount;
     }
 }

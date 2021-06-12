@@ -27,7 +27,7 @@ namespace DO_AN_PBL3.Entity
         public Nullable<System.DateTime> Gio_den { get; set; }
         public Nullable<System.DateTime> Gio_di { get; set; }
         public Nullable<decimal> Tong_tien { get; set; }
-        public Nullable<double> discount { get; set; }
+        public Nullable<decimal> discount { get; set; }
         public Nullable<double> Diem_TL { get; set; }
     
         public virtual BAN BAN { get; set; }

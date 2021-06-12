@@ -27,7 +27,7 @@ namespace DO_AN_PBL3.BLL
 
             }
         }
-        public bool Login_BLL(int username, string password, int type)
+        public bool Login_BLL(string username, string password, int type)
         {
             byte[] tempt = ASCIIEncoding.ASCII.GetBytes(password);
             byte[] hashData = new MD5CryptoServiceProvider().ComputeHash(tempt);
@@ -44,6 +44,11 @@ namespace DO_AN_PBL3.BLL
             {
                 return DAL.Account_DAL.Instance.ResetPassword_DAL(username, hashpass);
             }
+        }
+
+        public bool ChangeAccount(int id, NHANVIEN after)
+        {
+            return Account_DAL.Instance.ChangeAccount(id, after);
         }
 
         public NHANVIEN GetNVByID(int id)

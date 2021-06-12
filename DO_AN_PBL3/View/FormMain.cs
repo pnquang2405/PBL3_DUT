@@ -63,6 +63,8 @@ namespace DO_AN_PBL3
                 listBox1.Items.Add(item);
             }
             listBox1.DisplayMember = "Ten_LHH";
+            NHANVIEN nv = BLL.Staff_BLL.Instance.Staff_ID_BLL(user);
+            lbChangeAccount.Text = nv.Ten_NV;
         }
 
         void ShowBill(BAN table)
@@ -439,8 +441,13 @@ namespace DO_AN_PBL3
             }
         }
 
+
         #endregion
 
-
+        private void lbChangeAccount_Click(object sender, EventArgs e)
+        {
+            FormChangeAccount f = new FormChangeAccount(user);
+            f.ShowDialog();
+        }
     }
 }

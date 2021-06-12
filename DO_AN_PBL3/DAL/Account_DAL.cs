@@ -63,6 +63,23 @@ namespace DO_AN_PBL3.DAL
                 return false;
             }
         }
+        public bool ChangeAccount(int username, NHANVIEN after)    //NHANVIEN before
+        {
+            db = new PBL3_QLTraSuaEntities();
+            var s = db.NHANVIENs.Where(p => p.ID_NV == username).FirstOrDefault();
+            s.Ten_NV = after.Ten_NV;
+            s.password = after.password;
+            try
+            {
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+        }
 
         public NHANVIEN GetNVByID(int id)
         {

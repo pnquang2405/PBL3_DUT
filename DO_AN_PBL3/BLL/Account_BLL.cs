@@ -46,6 +46,11 @@ namespace DO_AN_PBL3.BLL
             }
         }
 
+        public bool ChangeAccount(int id, NHANVIEN after)
+        {
+            return Account_DAL.Instance.ChangeAccount(id, after);
+        }
+
         public NHANVIEN GetNVByID(int id)
         {
             return Account_DAL.Instance.GetNVByID(id);

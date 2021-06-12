@@ -1,5 +1,6 @@
 ﻿using DO_AN_PBL3.BLL;
 using DO_AN_PBL3.Entity;
+using PagedList;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,8 @@ namespace DO_AN_PBL3.View
 {
     public partial class FormRevenues : Form
     {
+        private int pageNumber = 1;
+        private List<HOA_DON> list;
         public FormRevenues()
         {
             InitializeComponent();
@@ -32,7 +35,9 @@ namespace DO_AN_PBL3.View
         public void LoadListBillByDate(DateTime checkIn, DateTime checkOut)
         {
             dtgvRevenue.Rows.Clear();
-            List<HOA_DON> list = HOA_DON_BLL.Instance.GetListHOADONByDate(checkIn, checkOut);
+            pageNumber = 1;
+            List<HOA_DON> listHD = HOA_DON_BLL.Instance.GetListHOADONByDate(checkIn, checkOut);
+            list = listHD;
 
             if (dtgvRevenue.Columns.Count == 0)
             {
@@ -73,9 +78,29 @@ namespace DO_AN_PBL3.View
                 dtgvRevenue.Columns.Add(col9);
             }
 
-            if(list.Count > 0)
+            ShowDL();
+        }
+
+        public void ShowDL()
+        {
+            dtgvRevenue.Rows.Clear();
+            if (list.Count > 0)
             {
-                for (int i = 0; i < list.Count; i++)
+                int firstProfile = 0;
+                int lastProfile = list.Count;
+                if (list.Count > 32) lastProfile = 32;
+
+                if (pageNumber > 1)
+                {
+                    firstProfile = lastProfile + 1;
+                    if (pageNumber == list.Count / 32 + 1)
+                    {
+                        lastProfile = list.Count;
+                    }
+                    else { lastProfile = firstProfile + 32; }
+                }
+
+                for (int i = firstProfile; i < lastProfile; i++)
                 {
                     KHACHHANG kh = null;
                     if (list[i].ID_KH != null) { kh = Customer_BLL.Instance.GetKHByID((int)(list[i].ID_KH)); }
@@ -94,7 +119,7 @@ namespace DO_AN_PBL3.View
                     row1.Cells[6].Value = nv.Ten_NV;
                     row1.Cells[7].Value = list[i].Diem_TL;
 
-                    if(kh != null) row1.Cells[8].Value = kh.Ten_KH;
+                    if (kh != null) row1.Cells[8].Value = kh.Ten_KH;
 
                     dtgvRevenue.Rows.Add(row1);
                 }
@@ -105,6 +130,8 @@ namespace DO_AN_PBL3.View
                 dtgvRevenue.Columns[2].Width = 190;
                 dtgvRevenue.Columns[3].Width = 190;
             }
+            txtPage.Text = pageNumber.ToString();
+            lb1.Text = "/" + (list.Count / 32 + 1).ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -115,13 +142,56 @@ namespace DO_AN_PBL3.View
         private void dtpkFrom_ValueChanged(object sender, EventArgs e)
         {
             DateTime dateFrom = dtpkFrom.Value;
-            LoadListBillByDate(dateFrom, dtpkTo.Value);
+            DateTime dateTo = dtpkTo.Value;
+            LoadListBillByDate(dateFrom, dateTo);
         }
 
-        private void dtpkTo_ValueChanged(object sender, EventArgs e)
+        private void btnPre_Click(object sender, EventArgs e)
         {
-            DateTime dateFrom = dtpkTo.Value;
-            LoadListBillByDate(dtpkFrom.Value, dateFrom);
+            if(pageNumber > 1)
+            {
+                --pageNumber;
+                ShowDL();
+            }
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if (pageNumber <= list.Count / 32)
+            {
+                ++pageNumber;
+                ShowDL();
+            }
+        }
+
+        private void txtPage_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                if(Convert.ToInt32(txtPage.Text) > 0 && Convert.ToInt32(txtPage.Text) <= list.Count / 32 + 1)
+                {
+                    pageNumber = Convert.ToInt32(txtPage.Text);
+                    ShowDL();
+                }
+                else
+                {
+                    MessageBox.Show("Trang không hợp lệ!");
+                    txtPage.Text = pageNumber.ToString();
+                }
+            }
+        }
+
+        private void txtPage_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) || txtPage.Text.Length >= 3)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void FormRevenues_Click(object sender, EventArgs e)
+        {
+            if (txtPage.Text == "") txtPage.Text = pageNumber.ToString();
         }
     }
 }

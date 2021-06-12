@@ -20,6 +20,7 @@ namespace DO_AN_PBL3.View
         public void LoadStaff()
         {
             dgvStaff.Rows.Clear();
+            dgvStaff.Columns.Clear();
             //n
             DataGridViewTextBoxColumn col1 = new DataGridViewTextBoxColumn();
             col1.DataPropertyName = "ID_NV";
@@ -145,7 +146,7 @@ namespace DO_AN_PBL3.View
                 }
             
         }
-        private String passWord(String password)
+        public static String passWord(String password)
         {
             byte[] tempt = ASCIIEncoding.ASCII.GetBytes(password);
             byte[] hashData = new MD5CryptoServiceProvider().ComputeHash(tempt);
@@ -180,7 +181,7 @@ namespace DO_AN_PBL3.View
                 }
             }
         }
-
+       
         private void btnEditStaff_Click(object sender, EventArgs e)
         {
                 NHANVIEN nv = new NHANVIEN();
@@ -241,5 +242,6 @@ namespace DO_AN_PBL3.View
             }
 
         }
+
     }
 }

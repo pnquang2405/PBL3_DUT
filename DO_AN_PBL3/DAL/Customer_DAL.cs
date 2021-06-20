@@ -96,6 +96,13 @@ namespace DO_AN_PBL3.DAL
                 return cus.ID_KH;
             else return null;
         }
+
+        public bool checkSDT(String sdt)
+        {
+            KHACHHANG cus = db.KHACHHANGs.FirstOrDefault(p => p.PhoneNumber == sdt);
+            
+            return false ? cus.PhoneNumber == null : true;
+        }
     }
 }
  

@@ -287,12 +287,10 @@ namespace DO_AN_PBL3
                     }
                 }
             }
-            
         }
 
         private void txbSearch_TextChanged(object sender, EventArgs e)
         {
-
             Loai_HANGHOA lhh = (Loai_HANGHOA)listBox1.SelectedItem;
             List<HANGHOA> list = null;
             if (listBox1.SelectedIndex < 1)

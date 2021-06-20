@@ -80,5 +80,10 @@ namespace DO_AN_PBL3.BLL
         {
             return Customer_DAL.Instance.getIDbyInfo(info);
         }
+
+        public bool checkSDT(String sdt)
+        {
+            return Customer_DAL.Instance.checkSDT(sdt);
+        }
     }
 }

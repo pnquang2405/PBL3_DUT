@@ -57,10 +57,12 @@ namespace DO_AN_PBL3.BLL
             int id = HOA_DON_DAL.Instance.GetList(idTable).First().ID_HD;
             return id;
         }
+
         public HOA_DON getHOADONbyID(int ID_HOADON)
         {
             return HOA_DON_DAL.Instance.Get_HOA_DON(ID_HOADON);
         }
+
         public void delete(int idBill)
         {
             HOA_DON hoadon = HOA_DON_DAL.Instance.Get_HOA_DON(idBill);
@@ -82,10 +84,21 @@ namespace DO_AN_PBL3.BLL
 
             HOA_DON_DAL.Instance.Sync();
         }
+
         public List<HOA_DON> GetListHOADONByDate(DateTime checkIn, DateTime checkOut)
         {
             return HOA_DON_DAL.Instance.GetListByDate(checkIn, checkOut);
         }
 
+        public int getIDByKH(KHACHHANG kh)
+        {
+            return HOA_DON_DAL.Instance.GetIDByKH(kh);
+        }
+
+        public void UpdateKH(int idBill, KHACHHANG kh)
+        {
+            HOA_DON_DAL.Instance.UpdateKH(idBill, kh);
+            HOA_DON_DAL.Instance.Sync();
+        }
     }
 }

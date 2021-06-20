@@ -45,11 +45,27 @@ namespace DO_AN_PBL3.View
             {
                 if(txtName.Text != kh.Ten_KH || txtDiaChi.Text != kh.Diachi || txtPhone.Text != kh.PhoneNumber)
                 {
-                    kh.Ten_KH = txtName.Text;
-                    kh.Diachi = txtDiaChi.Text;
-                    kh.PhoneNumber = txtPhone.Text;
+                    if(Customer_BLL.Instance.checkSDT(txtPhone.Text) == false)
+                    {
+                        kh.Ten_KH = txtName.Text;
+                        kh.Diachi = txtDiaChi.Text;
+                        kh.PhoneNumber = txtPhone.Text;
 
-                    Customer_BLL.Instance.UpdateKH(kh);
+                        Customer_BLL.Instance.UpdateKH(kh);
+                    }
+                    else
+                    {
+                        if (MessageBox.Show("Số điện thoại đã tồn tại, Xác nhận cộng dồn điểm tích lũy?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                        {
+                            int dtl = Convert.ToInt32(kh.Diemtichluy);
+                            KHACHHANG khachhang = Customer_BLL.Instance.GetKHByInfo(txtPhone.Text);
+                            int idBill = HOA_DON_BLL.Instance.getIDByKH(kh);
+
+                            HOA_DON_BLL.Instance.UpdateKH(idBill, khachhang);
+                            Customer_BLL.Instance.Delete(kh);
+                            Customer_BLL.Instance.updateDTL(khachhang, dtl);
+                        }
+                    }
 
                     List<KHACHHANG> list = Customer_BLL.Instance.GetList();
                     D(list);

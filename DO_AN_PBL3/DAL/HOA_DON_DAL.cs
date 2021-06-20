@@ -94,5 +94,19 @@ namespace DO_AN_PBL3.DAL
             Table_DAL.Instance.Sync();
 
         }
+
+        public int GetIDByKH(KHACHHANG kh)
+        {
+            HOA_DON hd = db.HOA_DON.FirstOrDefault(p => p.ID_KH == kh.ID_KH);
+
+            return hd.ID_HD;
+        }
+
+        public void UpdateKH(int idBill, KHACHHANG kh)
+        {
+            HOA_DON hd = db.HOA_DON.FirstOrDefault(p => p.ID_HD == idBill);
+
+            hd.ID_KH = kh.ID_KH;
+        }
     }
 }

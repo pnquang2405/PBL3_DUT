@@ -15,6 +15,11 @@ namespace DO_AN_PBL3.View
     public partial class FormChangeAccount : Form
     {
         private int User;
+        public delegate void changeInfo(String name);
+        private changeInfo d;
+
+        public changeInfo D { get => d; set => d = value; }
+
         public FormChangeAccount(int user)
         {
             InitializeComponent();
@@ -37,6 +42,7 @@ namespace DO_AN_PBL3.View
                 {
                     Staff_BLL.Instance.ChangeInf_BLL(tbUserName.Text, tbName.Text, tbNewPass.Text);
                     MessageBox.Show("Thay doi thanh cong");
+                    d(tbName.Text);
                     this.Dispose();
                 }
                 else

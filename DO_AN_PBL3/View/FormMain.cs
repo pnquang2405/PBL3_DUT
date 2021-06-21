@@ -81,6 +81,7 @@ namespace DO_AN_PBL3
                 lsvItem.SubItems.Add(item.DonGia.ToString("c", culture));
                 lsvItem.SubItems.Add(item.TongTien.ToString("c", culture));
                 thanhTien += item.TongTien;
+
                 HANGHOA hh = new HANGHOA
                 {
                     Ten_HH = item.MatHang,
@@ -93,6 +94,11 @@ namespace DO_AN_PBL3
             
             txtTienhang.Text = thanhTien.ToString("c", culture);
             txtThanhTien.Text = (thanhTien - thanhTien * (int)nmrDiscount.Value).ToString();
+        }
+
+        void changeInfo(String info)
+        {
+            lbChangeAccount.Text = info;
         }
 
         #endregion
@@ -115,7 +121,6 @@ namespace DO_AN_PBL3
         {
             toolTip1.Show("Bàn", btnTable);
         }
-        //
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
@@ -415,7 +420,6 @@ namespace DO_AN_PBL3
             else
             {
                 MessageBox.Show("Chua chon ban can thanh toan hoac ban khong co du lieu!!!");
-
             }
         }
 
@@ -442,6 +446,7 @@ namespace DO_AN_PBL3
         private void lbChangeAccount_Click(object sender, EventArgs e)
         {
             FormChangeAccount f = new FormChangeAccount(user);
+            f.D = changeInfo;
             f.ShowDialog();
         }
 

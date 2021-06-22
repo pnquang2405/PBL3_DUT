@@ -115,7 +115,7 @@ namespace DO_AN_PBL3.View
             this.sửaMónNàyToolStripMenuItem,
             this.xóaMónNàyToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(251, 104);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(251, 76);
             // 
             // thêmMónToolStripMenuItem
             // 

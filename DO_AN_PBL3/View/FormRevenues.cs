@@ -69,10 +69,6 @@ namespace DO_AN_PBL3.View
                 col7.HeaderText = "Nhân Viên thanh toán";
                 dtgvRevenue.Columns.Add(col7);
 
-                DataGridViewColumn col8 = new DataGridViewTextBoxColumn();
-                col8.HeaderText = "Điểm tích lũy";
-                dtgvRevenue.Columns.Add(col8);
-
                 DataGridViewColumn col9 = new DataGridViewTextBoxColumn();
                 col9.HeaderText = "Khách Hàng";
                 dtgvRevenue.Columns.Add(col9);
@@ -92,7 +88,7 @@ namespace DO_AN_PBL3.View
 
                 if (pageNumber > 1)
                 {
-                    firstProfile = lastProfile + 1;
+                    firstProfile = lastProfile;
                     if (pageNumber == list.Count / 32 + 1)
                     {
                         lastProfile = list.Count;
@@ -117,9 +113,8 @@ namespace DO_AN_PBL3.View
                     row1.Cells[4].Value = list[i].discount;
                     row1.Cells[5].Value = list[i].Tong_tien;
                     row1.Cells[6].Value = nv.Ten_NV;
-                    row1.Cells[7].Value = list[i].Diem_TL;
 
-                    if (kh != null) row1.Cells[8].Value = kh.Ten_KH;
+                    if (kh != null) row1.Cells[7].Value = kh.Ten_KH;
 
                     dtgvRevenue.Rows.Add(row1);
                 }

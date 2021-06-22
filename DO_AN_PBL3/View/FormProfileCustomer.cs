@@ -45,7 +45,7 @@ namespace DO_AN_PBL3.View
             {
                 if(txtName.Text != kh.Ten_KH || txtDiaChi.Text != kh.Diachi || txtPhone.Text != kh.PhoneNumber)
                 {
-                    if(Customer_BLL.Instance.checkSDT(txtPhone.Text) == false)
+                    if(Customer_BLL.Instance.checkSDT(txtPhone.Text) == false || Customer_BLL.Instance.GetKHByInfo(txtPhone.Text).ID_KH == kh.ID_KH)
                     {
                         kh.Ten_KH = txtName.Text;
                         kh.Diachi = txtDiaChi.Text;

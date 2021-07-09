@@ -228,7 +228,10 @@ namespace DO_AN_PBL3.View
             this.Controls.Add(this.btnAddStaff);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Gender);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormStaff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormStaff";

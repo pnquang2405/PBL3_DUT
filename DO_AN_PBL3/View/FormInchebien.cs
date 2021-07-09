@@ -16,17 +16,20 @@ namespace DO_AN_PBL3.View
     public partial class FormInchebien : Form
     {
         private int IDBILL { get; set; }
-        public FormInchebien(int idbill)
+        private int User;
+        public FormInchebien(int idbill, int user)
         {
             IDBILL = idbill;
             InitializeComponent();
+            User = user;
             SETGUI();
         }
         private void SETGUI()
         {
             HOA_DON tempt = HOA_DON_BLL.Instance.getHOADONbyID(IDBILL);
             lbban.Text = Table_BLL.Instance.GetnameTable((int)tempt.ID_BAN);
-            lbName.Text = "Nguyen thanh than";
+            NHANVIEN nv = Staff_BLL.Instance.Staff_ID_BLL(User);
+            lbName.Text = nv.Ten_NV;
             CultureInfo culture = new CultureInfo("vi-VN");
             List<BillInfo> listbillinfo = BillInfo_BLL.Instance.GetList(Table_BLL.Instance.gettable(tempt.ID_BAN.Value));
             foreach (BillInfo item in listbillinfo)

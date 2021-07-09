@@ -11,14 +11,18 @@ namespace DO_AN_PBL3.View
 {
     public partial class FormStaff : Form
     {
-      
-        public FormStaff()
-        {
-            InitializeComponent();            
-            LoadStaff();
-            
-        }
 
+        public delegate void changeInfo(String name);
+        private int User;
+        private changeInfo d;
+
+        public changeInfo D { get => d; set => d = value; }
+        public FormStaff(int user)
+        {
+            InitializeComponent();
+            User = user;
+            LoadStaff();
+        }
 
         public void LoadStaff()
         {
@@ -155,7 +159,6 @@ namespace DO_AN_PBL3.View
                 {
                     MessageBox.Show("Vui Lòng Nhập Lại");
                 }
-            
         }
         public static String passWord(String password)
         {
@@ -216,6 +219,11 @@ namespace DO_AN_PBL3.View
                 NHANVIEN before = BLL.Staff_BLL.Instance.Staff_ID_BLL(id);
                 nv.password = before.password;
                 BLL.Staff_BLL.Instance.EditStaff_BLL(before, nv);
+            }
+
+            if (Convert.ToInt32(dgvStaff.SelectedRows[0].Cells[0].Value) == User)
+            {
+                d(FormMain.subString(txtTenNV.Text));
             }
 
             LoadStaff();

@@ -122,7 +122,7 @@ namespace DO_AN_PBL3
             // 
             this.lbChangeAccount.AutoSize = true;
             this.lbChangeAccount.ForeColor = System.Drawing.Color.SkyBlue;
-            this.lbChangeAccount.Location = new System.Drawing.Point(1135, 21);
+            this.lbChangeAccount.Location = new System.Drawing.Point(1169, 21);
             this.lbChangeAccount.Name = "lbChangeAccount";
             this.lbChangeAccount.Size = new System.Drawing.Size(53, 20);
             this.lbChangeAccount.TabIndex = 7;

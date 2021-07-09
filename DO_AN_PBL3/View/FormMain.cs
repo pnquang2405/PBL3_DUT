@@ -64,9 +64,22 @@ namespace DO_AN_PBL3
             }
             listBox1.DisplayMember = "Ten_LHH";
             NHANVIEN nv = BLL.Staff_BLL.Instance.Staff_ID_BLL(user);
-            lbChangeAccount.Text = nv.Ten_NV;
-        }
+            lbChangeAccount.Text = subString(nv.Ten_NV);
 
+        }
+        public static String subString(String text)
+        {
+            int i = text.LastIndexOf(" ");
+            if (i == -1)
+            {
+                return text.Substring(0);
+            }
+            else return text.Substring(i);
+        }
+        void changeInfo(String info)
+        {
+            lbChangeAccount.Text = info;
+        }
         void ShowBill(BAN table)
         {
             this.ban = table;
@@ -96,10 +109,6 @@ namespace DO_AN_PBL3
             txtThanhTien.Text = (thanhTien - thanhTien * (int)nmrDiscount.Value).ToString();
         }
 
-        void changeInfo(String info)
-        {
-            lbChangeAccount.Text = info;
-        }
 
         #endregion
 
@@ -414,7 +423,7 @@ namespace DO_AN_PBL3
         {
             if (ban != null && BLL.HOA_DON_BLL.Instance.checkHoaDon(ban.ID_BAN))
             {
-                FormInchebien f2 = new FormInchebien(HOA_DON_BLL.Instance.GetIdByTable(ban.ID_BAN));
+                FormInchebien f2 = new FormInchebien(HOA_DON_BLL.Instance.GetIdByTable(ban.ID_BAN),user);
                 f2.ShowDialog();
             }
             else
@@ -425,8 +434,9 @@ namespace DO_AN_PBL3
 
         private void btnAccount_Click(object sender, EventArgs e)
         {
-            FormStaff f = new FormStaff();
-            f.Show();
+            FormStaff f = new FormStaff(user);
+            f.D = changeInfo;
+            f.ShowDialog();
         }
 
         private void btnKhachHang_Click(object sender, EventArgs e)

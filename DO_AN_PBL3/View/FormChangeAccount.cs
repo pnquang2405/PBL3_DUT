@@ -42,7 +42,7 @@ namespace DO_AN_PBL3.View
                 {
                     Staff_BLL.Instance.ChangeInf_BLL(tbUserName.Text, tbName.Text, tbNewPass.Text);
                     MessageBox.Show("Thay doi thanh cong");
-                    d(tbName.Text);
+                    d(FormMain.subString(tbName.Text));
                     this.Dispose();
                 }
                 else

@@ -101,6 +101,11 @@ namespace DO_AN_PBL3.View
 
         }
 
+        internal static bool isDigit(string v)
+        {
+            var isNumeric = !string.IsNullOrEmpty(v) && v.All(Char.IsDigit);
+            return isNumeric;
+        }
 
         private static bool CheckPhone(String phone)
         {

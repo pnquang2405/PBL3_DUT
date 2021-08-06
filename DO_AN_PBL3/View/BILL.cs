@@ -67,9 +67,17 @@ namespace DO_AN_PBL3.View
             txbchietkhau.Text = "0";
             if (info != "")
             {
-                KHACHHANG kh = Customer_BLL.Instance.GetKHByInfo(info); 
+                KHACHHANG kh = Customer_BLL.Instance.GetKHByInfo(info);
+                if (kh != null)
                 {
-                    txbchietkhau.Text = ((tongcong * 10) / 100).ToString();
+                    if (kh.ID_LKH == 0 && kh.Diemtichluy > 20)
+                    {
+                        txbchietkhau.Text = ((tongcong * 5) / 100).ToString();
+                    }
+                    else if (kh.ID_LKH == 1)
+                    {
+                        txbchietkhau.Text = ((tongcong * 10) / 100).ToString();
+                    }
                 }
             }
 

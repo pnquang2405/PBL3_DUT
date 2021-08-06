@@ -141,6 +141,7 @@ namespace DO_AN_PBL3
             this.btnAdmin.TabIndex = 6;
             this.btnAdmin.UseVisualStyleBackColor = false;
             this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
+            this.btnAdmin.MouseHover += new System.EventHandler(this.showPanel);
             // 
             // btnExit
             // 
@@ -245,6 +246,7 @@ namespace DO_AN_PBL3
             this.panelAdmin.Size = new System.Drawing.Size(218, 139);
             this.panelAdmin.TabIndex = 4;
             this.panelAdmin.Visible = false;
+            this.panelAdmin.MouseLeave += new System.EventHandler(this.hidePanel);
             // 
             // btnKhachHang
             // 

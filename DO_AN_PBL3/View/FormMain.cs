@@ -159,6 +159,10 @@ namespace DO_AN_PBL3
         private void listBox1_MouseClick(object sender, MouseEventArgs e)
         {
             Loai_HANGHOA lhh = (Loai_HANGHOA)listBox1.SelectedItem;
+            if(lhh == null)
+            {
+                return;
+            }
             List<HANGHOA> list = Merchandise_BLL.Instance.GetList(lhh.ID_LHH);
             lsvHH.Items.Clear();
 
@@ -462,5 +466,13 @@ namespace DO_AN_PBL3
 
         #endregion
 
+        private void showPanel(object sender, EventArgs e)
+        {
+            panelAdmin.Hide();
+        }
+        private void hidePanel(object sender, EventArgs e)
+        {
+            panelAdmin.Hide();
+        }
     }
 }

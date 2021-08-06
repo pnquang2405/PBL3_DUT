@@ -47,18 +47,35 @@ namespace DO_AN_PBL3.View
             for (int i = 0; i < dtgDetail.Rows.Count - 1; i++)
             {
                 BillInfo a = new BillInfo();
-                a.MatHang = dtgDetail.Rows[i].Cells["Ten"].Value.ToString();
-
-                if (Convert.ToInt32(dtgDetail.Rows[i].Cells["SL"].Value) < 0 || Convert.ToInt32(dtgDetail.Rows[i].Cells["SL"].Value) > listbillInfo[i].SoLuong)
+                if (dtgDetail.Rows[i].Cells["ten"].Value != null)
                 {
-                    MessageBox.Show("So luong cua mon  " + a.MatHang.ToString() + " khong phu hop");
-                    ++dem;
+                    a.MatHang = dtgDetail.Rows[i].Cells["ten"].Value.ToString();
+
+                    if (FormStaff.isDigit(dtgDetail.Rows[i].Cells["SL"].Value.ToString()) && dtgDetail.Rows[i].Cells["ten"].Value != null)
+                    {
+                        if (Convert.ToInt32(dtgDetail.Rows[i].Cells["SL"].Value) < 0 || Convert.ToInt32(dtgDetail.Rows[i].Cells["SL"].Value) > listbillInfo[i].SoLuong)
+                        {
+                            MessageBox.Show("So luong cua mon  " + a.MatHang.ToString() + " khong phu hop");
+                            ++dem;
+                        }
+                        else
+                        {
+                            a.SoLuong = Convert.ToInt32(dtgDetail.Rows[i].Cells["SL"].Value);
+                            listtach.Add(a);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Số lượng nhập không đúng");
+                        return;
+                    }
                 }
                 else
                 {
-                    a.SoLuong = Convert.ToInt32(dtgDetail.Rows[i].Cells["SL"].Value);
-                    listtach.Add(a);
+                    MessageBox.Show("Lỗi ");
+                    return;
                 }
+
             }
             if (dem == 0)
             {

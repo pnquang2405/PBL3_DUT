@@ -31,10 +31,10 @@ namespace DO_AN_PBL3.View
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtgDetail = new System.Windows.Forms.DataGridView();
-            this.ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnSend = new System.Windows.Forms.Button();
+            this.ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDetail)).BeginInit();
             this.SuspendLayout();
@@ -49,30 +49,18 @@ namespace DO_AN_PBL3.View
             // 
             // dtgDetail
             // 
+            this.dtgDetail.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ten,
             this.SL});
             this.dtgDetail.Location = new System.Drawing.Point(67, 3);
             this.dtgDetail.Name = "dtgDetail";
+            this.dtgDetail.RowHeadersVisible = false;
             this.dtgDetail.RowHeadersWidth = 51;
             this.dtgDetail.RowTemplate.Height = 24;
             this.dtgDetail.Size = new System.Drawing.Size(288, 287);
             this.dtgDetail.TabIndex = 0;
-            // 
-            // ten
-            // 
-            this.ten.HeaderText = "Ten";
-            this.ten.MinimumWidth = 20;
-            this.ten.Name = "ten";
-            this.ten.Width = 130;
-            // 
-            // SL
-            // 
-            this.SL.HeaderText = "SL";
-            this.SL.MinimumWidth = 20;
-            this.SL.Name = "SL";
-            this.SL.Width = 50;
             // 
             // btnThoat
             // 
@@ -98,6 +86,21 @@ namespace DO_AN_PBL3.View
             this.btnSend.UseVisualStyleBackColor = false;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
+            // ten
+            // 
+            this.ten.HeaderText = "Ten";
+            this.ten.MinimumWidth = 20;
+            this.ten.Name = "ten";
+            this.ten.ReadOnly = true;
+            this.ten.Width = 150;
+            // 
+            // SL
+            // 
+            this.SL.HeaderText = "SL";
+            this.SL.MinimumWidth = 20;
+            this.SL.Name = "SL";
+            this.SL.Width = 70;
+            // 
             // DetailTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -119,9 +122,9 @@ namespace DO_AN_PBL3.View
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dtgDetail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ten;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SL;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnSend;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ten;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SL;
     }
 }

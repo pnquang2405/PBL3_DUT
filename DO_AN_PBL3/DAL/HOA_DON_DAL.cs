@@ -108,5 +108,14 @@ namespace DO_AN_PBL3.DAL
 
             hd.ID_KH = kh.ID_KH;
         }
+
+        public void UpdateIDKH(int idKH)
+        {
+            var list = from p in db.HOA_DON where p.ID_KH == idKH select p;
+            foreach (HOA_DON item in list)
+            {
+                item.ID_KH = null;
+            }
+        }
     }
 }

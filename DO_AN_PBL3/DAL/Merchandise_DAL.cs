@@ -57,11 +57,22 @@ namespace DO_AN_PBL3.DAL
 
         public void Update(HANGHOA hanghoaThayDoi, String name)
         {
-            HANGHOA current = db.HANGHOAs.First(p => p.Ten_HH == name && p.tinhTrang == 1);
-            current.Ten_HH = hanghoaThayDoi.Ten_HH;
-            current.picture = hanghoaThayDoi.picture;
-            current.ID_LHH = hanghoaThayDoi.ID_LHH;
-            current.Gia = hanghoaThayDoi.Gia;
+            HANGHOA current = db.HANGHOAs.First(p => p.Ten_HH == name);
+            if(current.tinhTrang == 1)
+            {
+                current.Ten_HH = hanghoaThayDoi.Ten_HH;
+                current.picture = hanghoaThayDoi.picture;
+                current.ID_LHH = hanghoaThayDoi.ID_LHH;
+                current.Gia = hanghoaThayDoi.Gia;
+            }
+            else
+            {
+                current.tinhTrang = 1;
+                current.Ten_HH = hanghoaThayDoi.Ten_HH;
+                current.picture = hanghoaThayDoi.picture;
+                current.ID_LHH = hanghoaThayDoi.ID_LHH;
+                current.Gia = hanghoaThayDoi.Gia;
+            }
         }
 
         public int GetIDByName(String name)

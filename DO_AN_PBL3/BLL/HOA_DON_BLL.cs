@@ -100,5 +100,11 @@ namespace DO_AN_PBL3.BLL
             HOA_DON_DAL.Instance.UpdateKH(idBill, kh);
             HOA_DON_DAL.Instance.Sync();
         }
+
+        public void UpdateIDKH(int idKH)
+        {
+            HOA_DON_DAL.Instance.UpdateIDKH(idKH);
+            HOA_DON_DAL.Instance.Sync();
+        }
     }
 }

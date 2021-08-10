@@ -48,15 +48,6 @@ namespace DO_AN_PBL3.View
             }
             if (list.Count > 0)
             {
-                //DataGridViewRow row = new DataGridViewRow();
-                //row.CreateCells(dtgvGoods);
-                //row.Cells[0].Value = 1 + "";
-                //row.Cells[1].Value = list[0].Ten_HH;
-                //row.Cells[2].Value = list[0].Gia;
-                //row.Cells[3].Value = list[0].Loai_HANGHOA.Ten_LHH;
-
-                //dtgvGoods.Rows.Add(row);
-
                 for (int i = 0; i < list.Count; i++)
                 {
                     DataGridViewRow row1 = new DataGridViewRow();

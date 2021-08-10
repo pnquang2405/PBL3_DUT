@@ -87,11 +87,11 @@ namespace DO_AN_PBL3.View
             {
                 if (idkh == null)
                 {
-                    HOA_DON_BLL.Instance.Thanhtoan(ID_BAN/* ID_BAN=ID_HOADON nha hehe*/, Convert.ToDecimal(txbThanhtien.Text), null, Convert.ToDecimal(txbchietkhau.Text));
+                    HOA_DON_BLL.Instance.Thanhtoan(ID_BAN, Convert.ToDecimal(txbThanhtien.Text), null, Convert.ToDecimal(txbchietkhau.Text));
                 }
                 else
                 {
-                    HOA_DON_BLL.Instance.Thanhtoan(ID_BAN/* ID_BAN=ID_HOADON nha hehe*/, Convert.ToDecimal(txbThanhtien.Text), idkh, Convert.ToDecimal(txbchietkhau.Text));
+                    HOA_DON_BLL.Instance.Thanhtoan(ID_BAN, Convert.ToDecimal(txbThanhtien.Text), idkh, Convert.ToDecimal(txbchietkhau.Text));
                 }
             }
 

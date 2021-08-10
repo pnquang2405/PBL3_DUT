@@ -73,6 +73,7 @@ namespace DO_AN_PBL3.BLL
 
         public void Delete(KHACHHANG kh)
         {
+            HOA_DON_BLL.Instance.UpdateIDKH(kh.ID_KH);
             Customer_DAL.Instance.Delete(kh);
             Customer_DAL.Instance.Sync();
         }

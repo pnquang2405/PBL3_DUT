@@ -468,11 +468,11 @@ namespace DO_AN_PBL3
 
         private void showPanel(object sender, EventArgs e)
         {
-            panelAdmin.Hide();
+            //panelAdmin.Hide();
         }
         private void hidePanel(object sender, EventArgs e)
         {
-            panelAdmin.Hide();
+            //panelAdmin.Hide();
         }
     }
 }

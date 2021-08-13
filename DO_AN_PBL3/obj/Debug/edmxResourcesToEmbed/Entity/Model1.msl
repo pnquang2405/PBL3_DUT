@@ -4,11 +4,11 @@
     <EntitySetMapping Name="BANs">
       <EntityTypeMapping TypeName="PBL3_QLTraSuaModel.BAN">
         <MappingFragment StoreEntitySet="BAN">
+          <ScalarProperty Name="ID_ban_chuyen" ColumnName="ID_ban_chuyen" />
           <ScalarProperty Name="ID_BAN" ColumnName="ID_BAN" />
           <ScalarProperty Name="ID_KV" ColumnName="ID_KV" />
           <ScalarProperty Name="Tenban" ColumnName="Tenban" />
           <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
-          <ScalarProperty Name="ID_ban_Chuyen" ColumnName="ID_ban_Chuyen" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -37,6 +37,7 @@
     <EntitySetMapping Name="HOA_DON">
       <EntityTypeMapping TypeName="PBL3_QLTraSuaModel.HOA_DON">
         <MappingFragment StoreEntitySet="HOA_DON">
+          <ScalarProperty Name="Diem_TL" ColumnName="Diem_TL" />
           <ScalarProperty Name="ID_HD" ColumnName="ID_HD" />
           <ScalarProperty Name="ID_BAN" ColumnName="ID_BAN" />
           <ScalarProperty Name="ID_NV" ColumnName="ID_NV" />

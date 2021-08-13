@@ -10,6 +10,7 @@
     <Property Name="TinhTrang" Type="Boolean" />
     <Property Name="ID_ban_Chuyen" Type="Int32" />
     <NavigationProperty Name="HOA_DON" Relationship="Self.FK__HOA_DON__ID_BAN__5FB337D6" FromRole="BAN" ToRole="HOA_DON" />
+    <Property Name="ID_ban_chuyen" Type="Int32" />
   </EntityType>
   <EntityType Name="CHI_TIET_HOA_DON">
     <Key>
@@ -43,14 +44,15 @@
     <Property Name="ID_BAN" Type="Int32" />
     <Property Name="ID_NV" Type="Int32" />
     <Property Name="ID_KH" Type="Int32" />
-    <Property Name="Gio_den" Type="DateTime" Precision="0" />
-    <Property Name="Gio_di" Type="DateTime" Precision="0" />
+    <Property Name="Gio_den" Type="DateTime" Precision="3" />
+    <Property Name="Gio_di" Type="DateTime" Precision="3" />
     <Property Name="Tong_tien" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="discount" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="BAN" Relationship="Self.FK__HOA_DON__ID_BAN__5FB337D6" FromRole="HOA_DON" ToRole="BAN" />
     <NavigationProperty Name="CHI_TIET_HOA_DON" Relationship="Self.FK__CHI_TIET___ID_HD__656C112C" FromRole="HOA_DON" ToRole="CHI_TIET_HOA_DON" />
     <NavigationProperty Name="KHACHHANG" Relationship="Self.FK__HOA_DON__ID_KH__619B8048" FromRole="HOA_DON" ToRole="KHACHHANG" />
     <NavigationProperty Name="NHANVIEN" Relationship="Self.FK__HOA_DON__ID_NV__60A75C0F" FromRole="HOA_DON" ToRole="NHANVIEN" />
+    <Property Name="Diem_TL" Type="Double" />
   </EntityType>
   <EntityType Name="KHACHHANG">
     <Key>
@@ -91,7 +93,7 @@
     <Property Name="Gender" Type="Boolean" />
     <Property Name="PhoneNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
     <Property Name="Phanquyen" Type="Boolean" Nullable="false" />
-    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="HOA_DON" Relationship="Self.FK__HOA_DON__ID_NV__60A75C0F" FromRole="NHANVIEN" ToRole="HOA_DON" />
   </EntityType>
   <EntityType Name="sysdiagram">

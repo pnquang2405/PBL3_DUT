@@ -117,5 +117,16 @@ namespace DO_AN_PBL3.DAL
                 item.ID_KH = null;
             }
         }
+
+        public double getTotalBillInMonth_DAL(DateTime firstMonth, DateTime endMonth)
+        {
+            var list = from p in db.HOA_DON
+                       where p.Gio_den >= firstMonth
+                       && p.Gio_di <= endMonth
+                       select p.Tong_tien;
+            var sum = list.ToList().Sum();
+
+            return Convert.ToDouble(sum);
+        }
     }
 }

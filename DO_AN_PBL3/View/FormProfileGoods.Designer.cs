@@ -124,6 +124,7 @@ namespace DO_AN_PBL3.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::DO_AN_PBL3.Properties.Resources.proFile;
             this.ClientSize = new System.Drawing.Size(671, 362);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtPrice);

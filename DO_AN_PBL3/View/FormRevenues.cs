@@ -188,5 +188,11 @@ namespace DO_AN_PBL3.View
         {
             if (txtPage.Text == "") txtPage.Text = pageNumber.ToString();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            FormDetailsRevenue f = new FormDetailsRevenue();
+            f.Show();
+        }
     }
 }

@@ -29,3 +29,4 @@ D:\WinformC#\DO_AN_PBL3\DO_AN_PBL3\obj\Debug\DO_AN_PBL3.View.FormProfileCustomer
 D:\WinformC#\DO_AN_PBL3\DO_AN_PBL3\bin\Debug\PagedList.dll
 D:\WinformC#\DO_AN_PBL3\DO_AN_PBL3\bin\Debug\PagedList.xml
 D:\WinformC#\DO_AN_PBL3\DO_AN_PBL3\obj\Debug\DO_AN_PBL3.View.FormChangeAccount.resources
+D:\WinformC#\DO_AN_PBL3\DO_AN_PBL3\obj\Debug\DO_AN_PBL3.View.FormDetailsRevenue.resources

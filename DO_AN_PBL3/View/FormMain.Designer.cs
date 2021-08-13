@@ -319,6 +319,7 @@ namespace DO_AN_PBL3
             // panel3
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
             this.panel3.Controls.Add(this.txtPhoneCustomer);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.btnTachBan);
@@ -685,6 +686,7 @@ namespace DO_AN_PBL3
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1418, 728);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panelAdmin);

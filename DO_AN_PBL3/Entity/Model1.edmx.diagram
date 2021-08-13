@@ -4,25 +4,23 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="bf36d44986924dfa80171b4d1a0df787" Name="Diagram1">
-        <EntityTypeShape EntityType="QuanLyQuanTSModel.BAN" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyQuanTSModel.CHI_TIET_HOA_DON" Width="1.5" PointX="7.5" PointY="1.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyQuanTSModel.HANGHOA" Width="1.5" PointX="5.25" PointY="13.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyQuanTSModel.HOA_DON" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyQuanTSModel.KHACHHANG" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyQuanTSModel.KHU_VUC" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyQuanTSModel.Loai_HANGHOA" Width="1.5" PointX="3" PointY="14" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyQuanTSModel.LOAI_KHACH_HANG" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyQuanTSModel.NHANVIEN" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyQuanTSModel.sysdiagram" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
-        <AssociationConnector Association="QuanLyQuanTSModel.FK__BAN__ID_KV__2EDAF651" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyQuanTSModel.FK__HOA_DON__ID_BAN__32AB8735" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyQuanTSModel.FK__CHI_TIET___ID_HD__3864608B" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyQuanTSModel.FK__CHI_TIET___ID_HH__395884C4" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyQuanTSModel.FK__HANGHOA__ID_LHH__282DF8C2" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyQuanTSModel.FK__HOA_DON__ID_KH__3493CFA7" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyQuanTSModel.FK__HOA_DON__ID_NV__339FAB6E" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyQuanTSModel.FK__KHACHHANG__ID_LK__22751F6C" ManuallyRouted="false" />
+      <Diagram DiagramId="fafa278cdff647d99205456dfb09991b" Name="Diagram1">
+        <EntityTypeShape EntityType="PBL3_QLTraSuaModel.BAN" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3_QLTraSuaModel.CHI_TIET_HOA_DON" Width="1.5" PointX="7.5" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3_QLTraSuaModel.HANGHOA" Width="1.5" PointX="5.25" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3_QLTraSuaModel.HOA_DON" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3_QLTraSuaModel.KHACHHANG" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3_QLTraSuaModel.Loai_HANGHOA" Width="1.5" PointX="3" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3_QLTraSuaModel.LOAI_KHACH_HANG" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3_QLTraSuaModel.NHANVIEN" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3_QLTraSuaModel.sysdiagram" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="PBL3_QLTraSuaModel.FK__HOA_DON__ID_BAN__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3_QLTraSuaModel.FK__CHI_TIET___ID_HD__656C112C" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3_QLTraSuaModel.FK__CHI_TIET___ID_HH__66603565" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3_QLTraSuaModel.FK__HANGHOA__ID_LHH__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3_QLTraSuaModel.FK__HOA_DON__ID_KH__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3_QLTraSuaModel.FK__HOA_DON__ID_NV__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3_QLTraSuaModel.FK__KHACHHANG__ID_LK__440B1D61" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

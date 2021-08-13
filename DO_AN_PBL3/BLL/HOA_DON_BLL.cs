@@ -45,7 +45,7 @@ namespace DO_AN_PBL3.BLL
                 Gio_di = null,
                 Tong_tien = 0,
                 discount = 0, 
-                Diem_TL = 0
+              //  Diem_TL = 0
             };
 
             HOA_DON_DAL.Instance.Add(hoadon);

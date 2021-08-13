@@ -91,6 +91,13 @@ namespace DO_AN_PBL3.DAL
             tempt.ID_KH = IDKH;
             tempt.discount = discount;
             Table_DAL.Instance.Update((int)tempt.ID_BAN, true);
+            List<BAN> listban=  Table_DAL.Instance.GetList();
+            foreach(BAN item in listban)
+            {
+                if(item.ID_ban_Chuyen==tempt.ID_BAN)
+                Table_DAL.Instance.Update((int)item.ID_BAN, true);
+                Table_DAL.Instance.updateID_chuyen(item.ID_BAN, null);
+            }
             Table_DAL.Instance.Sync();
 
         }

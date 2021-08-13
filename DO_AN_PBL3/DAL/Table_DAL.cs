@@ -49,9 +49,7 @@ namespace DO_AN_PBL3.DAL
 
         public List<BAN> GetList()
         {
-            List<BAN> list = (from p in db.BANs
-                       select p).ToList();
-
+            List<BAN> list = (db.BANs).ToList();
             return list;
         }
         public BAN gettable(int idban)
@@ -78,7 +76,13 @@ namespace DO_AN_PBL3.DAL
 
             List<BAN> list = db.BANs.ToList();
         }
-
+        public void updateID_chuyen(int idban,int? idchuyen)
+        {
+            BAN ban = db.BANs.First(p => p.ID_BAN == idban);
+            ban.ID_ban_Chuyen = idchuyen;
+            Sync();
+        }
+      
         public void Sync()
         {
             db.SaveChanges();

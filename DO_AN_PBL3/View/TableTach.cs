@@ -46,9 +46,13 @@ namespace DO_AN_PBL3.View
         private void Btn_Click(object sender, EventArgs e)
         {
             BAN table = (sender as Button).Tag as BAN;
-            if (table.ID_BAN == idban)
+            if (table.ID_BAN == idban )
             {
                 MessageBox.Show("Khong hop le");
+            }
+            if (table.ID_ban_Chuyen != null)
+            {
+                MessageBox.Show("Xin lỗi, bàn này đang được gộp!!!");
             }
             else
             {
@@ -58,7 +62,7 @@ namespace DO_AN_PBL3.View
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
-        {
+        {    /// tach ban
             if (listhh != null)
             {
                 List<BillInfo> listBillInfo = BillInfo_BLL.Instance.GetList(Table_BLL.Instance.gettable(idban));
@@ -81,10 +85,30 @@ namespace DO_AN_PBL3.View
                     HOA_DON_BLL.Instance.delete(HOA_DON_BLL.Instance.GetIdByTable(idban));
                 }
             }
+            /// Chuyen ban
             else
             {
                 listhh = BillInfo_BLL.Instance.GetList(Table_BLL.Instance.gettable(idban));
-                Table_BLL.Instance.update(idban, true);
+                string message = "Giữ lại bàn cũ?";
+                string title = " ";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show(message, title, buttons);
+                if (result == DialogResult.Yes)
+                {
+                    BAN ban = Table_BLL.Instance.gettable(idban);
+                    Table_BLL.Instance.updateID_chuyen(idban, newIDBAN);
+                    List<BAN> listban = Table_BLL.Instance.GetTable();
+                    foreach(BAN item in listban)
+                    {
+                        if (item.ID_ban_Chuyen == idban)
+                            Table_BLL.Instance.updateID_chuyen(item.ID_BAN, newIDBAN);
+                    }    
+                }
+                else
+                {
+                    Table_BLL.Instance.update(idban, true);
+                }
+              
                 for (int i = 0; i < listhh.Count; i++)
                 {
                     CHI_TIET_HOA_DON_BLL.Instance.delete(HOA_DON_BLL.Instance.GetIdByTable(idban), listhh[i].MatHang, listhh[i].SoLuong);

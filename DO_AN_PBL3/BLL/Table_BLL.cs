@@ -45,5 +45,11 @@ namespace DO_AN_PBL3.BLL
             Table_DAL.Instance.Update(id, tinhTrang);
             Table_DAL.Instance.Sync();
         }
+        public void updateID_chuyen(int idban,int idchuyen)
+        {
+            Table_DAL.Instance.updateID_chuyen(idban,(int) idchuyen);
+        }
+      
+       
     }
 }

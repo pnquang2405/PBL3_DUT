@@ -13,6 +13,7 @@
           <Property Name="ID_KV" Type="int" />
           <Property Name="Tenban" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="TinhTrang" Type="bit" />
+          <Property Name="ID_ban_chuyen" Type="int" />
         </EntityType>
         <EntityType Name="CHI_TIET_HOA_DON">
           <Key>
@@ -256,6 +257,7 @@
           <Property Name="ID_KV" Type="Int32" />
           <Property Name="Tenban" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="TinhTrang" Type="Boolean" />
+          <Property Name="ID_ban_chuyen" Type="Int32" />
           <NavigationProperty Name="KHU_VUC" Relationship="Self.FK__BAN__ID_KV__2EDAF651" FromRole="BAN" ToRole="KHU_VUC" />
           <NavigationProperty Name="HOA_DON" Relationship="Self.FK__HOA_DON__ID_BAN__32AB8735" FromRole="BAN" ToRole="HOA_DON" />
         </EntityType>
@@ -458,7 +460,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="PBL3_QLTraSuaEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="QuanLyQuanTSEntities4" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="BANs" EntityType="Self.BAN" />
           <EntitySet Name="CHI_TIET_HOA_DON" EntityType="Self.CHI_TIET_HOA_DON" />
           <EntitySet Name="HANGHOAs" EntityType="Self.HANGHOA" />
@@ -507,7 +509,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="QuanLyQuanTSModelStoreContainer" CdmEntityContainer="PBL3_QLTraSuaEntities1">
+        <EntityContainerMapping StorageEntityContainer="QuanLyQuanTSModelStoreContainer" CdmEntityContainer="QuanLyQuanTSEntities4">
           <EntitySetMapping Name="BANs">
             <EntityTypeMapping TypeName="QuanLyQuanTSModel.BAN">
               <MappingFragment StoreEntitySet="BAN">
@@ -515,6 +517,7 @@
                 <ScalarProperty Name="ID_KV" ColumnName="ID_KV" />
                 <ScalarProperty Name="Tenban" ColumnName="Tenban" />
                 <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
+                <ScalarProperty Name="ID_ban_chuyen" ColumnName="ID_ban_chuyen" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

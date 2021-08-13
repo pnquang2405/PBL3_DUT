@@ -82,7 +82,7 @@ namespace DO_AN_PBL3.DAL
             ban.ID_ban_chuyen = idchuyen;
             Sync();
         }
-      
+       
         public void Sync()
         {
             db.SaveChanges();

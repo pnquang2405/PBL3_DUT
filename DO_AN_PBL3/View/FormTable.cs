@@ -49,7 +49,7 @@ namespace DO_AN_PBL3
         private void Btn_Click(object sender, EventArgs e)
         { 
             BAN table = (sender as Button).Tag as BAN;
-            if (table.ID_ban_Chuyen != null)
+            if (table.ID_ban_chuyen != null)
             {
                 MessageBox.Show("Xin lỗi,Bàn này đang được gộp!!!");
             }

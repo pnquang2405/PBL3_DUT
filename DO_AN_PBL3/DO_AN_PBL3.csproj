@@ -94,6 +94,9 @@
     <Compile Include="Entity\KHACHHANG.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entity\KHU_VUC.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entity\Loai_HANGHOA.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

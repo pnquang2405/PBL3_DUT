@@ -79,7 +79,7 @@ namespace DO_AN_PBL3.DAL
         public void updateID_chuyen(int idban,int? idchuyen)
         {
             BAN ban = db.BANs.First(p => p.ID_BAN == idban);
-            ban.ID_ban_Chuyen = idchuyen;
+            ban.ID_ban_chuyen = idchuyen;
             Sync();
         }
       

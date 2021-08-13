@@ -1,14 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-<<<<<<< HEAD
-  <EntityContainerMapping StorageEntityContainer="QuanLyQuanTSModelStoreContainer" CdmEntityContainer="QuanLyQuanTSEntities4">
-=======
-  <EntityContainerMapping StorageEntityContainer="PBL3_QLTraSuaModelStoreContainer" CdmEntityContainer="PBL3_QLTraSuaEntities5">
->>>>>>> ThanhThan
+  <EntityContainerMapping StorageEntityContainer="QuanLyQuanTSModelStoreContainer" CdmEntityContainer="QuanLyQuanTSEntities5">
     <EntitySetMapping Name="BANs">
-      <EntityTypeMapping TypeName="PBL3_QLTraSuaModel.BAN">
+      <EntityTypeMapping TypeName="QuanLyQuanTSModel.BAN">
         <MappingFragment StoreEntitySet="BAN">
-          <ScalarProperty Name="ID_ban_chuyen" ColumnName="ID_ban_chuyen" />
           <ScalarProperty Name="ID_BAN" ColumnName="ID_BAN" />
           <ScalarProperty Name="ID_KV" ColumnName="ID_KV" />
           <ScalarProperty Name="Tenban" ColumnName="Tenban" />
@@ -18,7 +13,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CHI_TIET_HOA_DON">
-      <EntityTypeMapping TypeName="PBL3_QLTraSuaModel.CHI_TIET_HOA_DON">
+      <EntityTypeMapping TypeName="QuanLyQuanTSModel.CHI_TIET_HOA_DON">
         <MappingFragment StoreEntitySet="CHI_TIET_HOA_DON">
           <ScalarProperty Name="ID_CTHD" ColumnName="ID_CTHD" />
           <ScalarProperty Name="ID_HD" ColumnName="ID_HD" />
@@ -28,7 +23,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="HANGHOAs">
-      <EntityTypeMapping TypeName="PBL3_QLTraSuaModel.HANGHOA">
+      <EntityTypeMapping TypeName="QuanLyQuanTSModel.HANGHOA">
         <MappingFragment StoreEntitySet="HANGHOA">
           <ScalarProperty Name="ID_HH" ColumnName="ID_HH" />
           <ScalarProperty Name="ID_LHH" ColumnName="ID_LHH" />
@@ -40,9 +35,8 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="HOA_DON">
-      <EntityTypeMapping TypeName="PBL3_QLTraSuaModel.HOA_DON">
+      <EntityTypeMapping TypeName="QuanLyQuanTSModel.HOA_DON">
         <MappingFragment StoreEntitySet="HOA_DON">
-          <ScalarProperty Name="Diem_TL" ColumnName="Diem_TL" />
           <ScalarProperty Name="ID_HD" ColumnName="ID_HD" />
           <ScalarProperty Name="ID_BAN" ColumnName="ID_BAN" />
           <ScalarProperty Name="ID_NV" ColumnName="ID_NV" />
@@ -51,11 +45,12 @@
           <ScalarProperty Name="Gio_di" ColumnName="Gio_di" />
           <ScalarProperty Name="Tong_tien" ColumnName="Tong_tien" />
           <ScalarProperty Name="discount" ColumnName="discount" />
+          <ScalarProperty Name="Diem_TL" ColumnName="Diem_TL" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="KHACHHANGs">
-      <EntityTypeMapping TypeName="PBL3_QLTraSuaModel.KHACHHANG">
+      <EntityTypeMapping TypeName="QuanLyQuanTSModel.KHACHHANG">
         <MappingFragment StoreEntitySet="KHACHHANG">
           <ScalarProperty Name="ID_KH" ColumnName="ID_KH" />
           <ScalarProperty Name="ID_LKH" ColumnName="ID_LKH" />
@@ -66,8 +61,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="KHU_VUC">
+      <EntityTypeMapping TypeName="QuanLyQuanTSModel.KHU_VUC">
+        <MappingFragment StoreEntitySet="KHU_VUC">
+          <ScalarProperty Name="ID_KV" ColumnName="ID_KV" />
+          <ScalarProperty Name="Ten_KV" ColumnName="Ten_KV" />
+          <ScalarProperty Name="Trangthai" ColumnName="Trangthai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Loai_HANGHOA">
-      <EntityTypeMapping TypeName="PBL3_QLTraSuaModel.Loai_HANGHOA">
+      <EntityTypeMapping TypeName="QuanLyQuanTSModel.Loai_HANGHOA">
         <MappingFragment StoreEntitySet="Loai_HANGHOA">
           <ScalarProperty Name="ID_LHH" ColumnName="ID_LHH" />
           <ScalarProperty Name="Ten_LHH" ColumnName="Ten_LHH" />
@@ -75,7 +79,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="LOAI_KHACH_HANG">
-      <EntityTypeMapping TypeName="PBL3_QLTraSuaModel.LOAI_KHACH_HANG">
+      <EntityTypeMapping TypeName="QuanLyQuanTSModel.LOAI_KHACH_HANG">
         <MappingFragment StoreEntitySet="LOAI_KHACH_HANG">
           <ScalarProperty Name="ID_LKH" ColumnName="ID_LKH" />
           <ScalarProperty Name="Ten_LKH" ColumnName="Ten_LKH" />
@@ -84,7 +88,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="NHANVIENs">
-      <EntityTypeMapping TypeName="PBL3_QLTraSuaModel.NHANVIEN">
+      <EntityTypeMapping TypeName="QuanLyQuanTSModel.NHANVIEN">
         <MappingFragment StoreEntitySet="NHANVIEN">
           <ScalarProperty Name="ID_NV" ColumnName="ID_NV" />
           <ScalarProperty Name="Ten_NV" ColumnName="Ten_NV" />
@@ -96,7 +100,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="PBL3_QLTraSuaModel.sysdiagram">
+      <EntityTypeMapping TypeName="QuanLyQuanTSModel.sysdiagram">
         <MappingFragment StoreEntitySet="sysdiagrams">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />

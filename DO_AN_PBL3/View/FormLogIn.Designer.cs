@@ -150,7 +150,7 @@ namespace DO_AN_PBL3
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(204, 24);
             this.txtUserName.TabIndex = 9;
-            this.txtUserName.Text = "0901948483";
+            this.txtUserName.Text = "0326925065";
             // 
             // txtPassword
             // 

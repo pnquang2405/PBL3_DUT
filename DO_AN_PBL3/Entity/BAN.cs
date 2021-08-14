@@ -24,6 +24,7 @@ namespace DO_AN_PBL3.Entity
         public Nullable<int> ID_KV { get; set; }
         public string Tenban { get; set; }
         public Nullable<bool> TinhTrang { get; set; }
+        public Nullable<int> ID_ban_chuyen { get; set; }
     
         public virtual KHU_VUC KHU_VUC { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

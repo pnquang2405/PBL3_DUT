@@ -134,6 +134,7 @@ namespace DO_AN_PBL3.DAL
                     before.Ten_NV = after.Ten_NV;
                     before.PhoneNumber = after.PhoneNumber;
                     before.Gender = after.Gender;
+                    before.tinhtrang = after.tinhtrang;
                     db.SaveChanges();
 
                     MessageBox.Show("Thành Công");
@@ -157,7 +158,7 @@ namespace DO_AN_PBL3.DAL
         {
             throw new NotImplementedException();
         }
-       
+
         public int getID_DAL(string phonenumber)
         {
             NHANVIEN nv = db.NHANVIENs.First(p => p.PhoneNumber == phonenumber);

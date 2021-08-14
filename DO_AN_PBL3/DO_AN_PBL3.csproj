@@ -120,9 +120,6 @@
     <Compile Include="Entity\NHANVIEN.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entity\sysdiagram.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Interface\IGeneral.cs" />
     <Compile Include="View\BILL.cs">
       <SubType>Form</SubType>

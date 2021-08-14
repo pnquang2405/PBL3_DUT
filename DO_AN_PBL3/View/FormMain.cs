@@ -70,11 +70,16 @@ namespace DO_AN_PBL3
         public static String subString(String text)
         {
             int i = text.LastIndexOf(" ");
+
             if (i == -1)
             {
                 return text.Substring(0);
             }
-            else return text.Substring(i);
+            if (i == text.Length - 1)
+            {
+                return subString(text.Substring(0, i));
+            }
+            return text.Substring(i);
         }
         void changeInfo(String info)
         {

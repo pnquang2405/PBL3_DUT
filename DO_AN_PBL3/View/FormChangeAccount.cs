@@ -36,6 +36,11 @@ namespace DO_AN_PBL3.View
         private void btnSave_Click(object sender, EventArgs e)
         {
             bool check = Account_BLL.Instance.Login_BLL(tbUserName.Text, tbPassWord.Text, 0);
+            if (FormMain.subString(tbName.Text) == " (OLD)")
+            {
+                MessageBox.Show("Tên Không Hợp Lệ");
+                return;
+            }
             if (check == true)
             {
                 if (tbNewPass.Text != null && tbNewPass.Text == tbRePass.Text)

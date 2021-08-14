@@ -56,6 +56,5 @@ namespace DO_AN_PBL3.BLL
         {
             return Account_DAL.Instance.GetNVByID(id);
         }
-
     }
 }

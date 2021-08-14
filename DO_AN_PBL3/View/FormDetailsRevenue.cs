@@ -8,11 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace DO_AN_PBL3.View
 {
     public partial class FormDetailsRevenue : Form
     {
+        DateTime now = DateTime.Now;
         public FormDetailsRevenue()
         {
             InitializeComponent();
@@ -54,12 +56,29 @@ namespace DO_AN_PBL3.View
         {
             double[] b = new double[12];
             b = statistical();
+            double max = b[0];
+            chartRevenue.ChartAreas[0].AxisY.Maximum = max;
 
-            for (int i = 0; i < 12; i++)
+            for (int i = 0; i < b.Length; i++)
             {
-                chartRevenue.Series["Doanh thu"].Points.AddXY("Tháng" + (i + 1), b[i]);
-                chartRevenue.Series["Doanh thu"].Points[i].Label = b[i].ToString();
+                if (max < b[i]) max = b[i];
             }
+
+            if (chartRevenue.ChartAreas[0].AxisY.Maximum < max) chartRevenue.ChartAreas[0].AxisY.Maximum = max;
+
+            chartRevenue.Series.Clear();
+            Series s = new Series();
+            for (int i = 0; i < now.Month; i++)
+            {
+                DataPoint p = new DataPoint();
+                p.XValue = i;
+                p.SetValueY(b[i]);
+                p.AxisLabel = "Tháng " + (i + 1).ToString();
+                p.Label = b[i].ToString();
+                s.Points.Add(p);
+            }
+            chartRevenue.Series.Add(s);
+            chartRevenue.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
         }
     }
 }

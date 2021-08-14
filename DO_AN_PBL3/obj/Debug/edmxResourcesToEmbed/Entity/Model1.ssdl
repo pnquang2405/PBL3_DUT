@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="PBL3_QLTraSuaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="QuanLyQuanTSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="BAN">
     <Key>
       <PropertyRef Name="ID_BAN" />
@@ -8,7 +8,7 @@
     <Property Name="ID_KV" Type="int" />
     <Property Name="Tenban" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="TinhTrang" Type="bit" />
-    <Property Name="ID_ban_Chuyen" Type="int" />
+    <Property Name="ID_ban_chuyen" Type="int" />
   </EntityType>
   <EntityType Name="CHI_TIET_HOA_DON">
     <Key>
@@ -38,10 +38,11 @@
     <Property Name="ID_BAN" Type="int" />
     <Property Name="ID_NV" Type="int" />
     <Property Name="ID_KH" Type="int" />
-    <Property Name="Gio_den" Type="date" />
-    <Property Name="Gio_di" Type="date" />
+    <Property Name="Gio_den" Type="datetime" />
+    <Property Name="Gio_di" Type="datetime" />
     <Property Name="Tong_tien" Type="money" />
     <Property Name="discount" Type="money" />
+    <Property Name="Diem_TL" Type="float" />
   </EntityType>
   <EntityType Name="KHACHHANG">
     <Key>
@@ -53,6 +54,14 @@
     <Property Name="Diachi" Type="nvarchar" MaxLength="100" />
     <Property Name="PhoneNumber" Type="varchar" MaxLength="15" />
     <Property Name="Diemtichluy" Type="float" />
+  </EntityType>
+  <EntityType Name="KHU_VUC">
+    <Key>
+      <PropertyRef Name="ID_KV" />
+    </Key>
+    <Property Name="ID_KV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ten_KV" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Trangthai" Type="bit" />
   </EntityType>
   <EntityType Name="Loai_HANGHOA">
     <Key>
@@ -78,7 +87,7 @@
     <Property Name="Gender" Type="bit" />
     <Property Name="PhoneNumber" Type="varchar" MaxLength="15" />
     <Property Name="Phanquyen" Type="bit" Nullable="false" />
-    <Property Name="password" Type="varchar" MaxLength="50" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -90,7 +99,19 @@
     <Property Name="version" Type="int" />
     <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
-  <Association Name="FK__CHI_TIET___ID_HD__656C112C">
+  <Association Name="FK__BAN__ID_KV__2EDAF651">
+    <End Role="KHU_VUC" Type="Self.KHU_VUC" Multiplicity="0..1" />
+    <End Role="BAN" Type="Self.BAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHU_VUC">
+        <PropertyRef Name="ID_KV" />
+      </Principal>
+      <Dependent Role="BAN">
+        <PropertyRef Name="ID_KV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CHI_TIET___ID_HD__3864608B">
     <End Role="HOA_DON" Type="Self.HOA_DON" Multiplicity="0..1" />
     <End Role="CHI_TIET_HOA_DON" Type="Self.CHI_TIET_HOA_DON" Multiplicity="*" />
     <ReferentialConstraint>
@@ -102,7 +123,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CHI_TIET___ID_HH__66603565">
+  <Association Name="FK__CHI_TIET___ID_HH__395884C4">
     <End Role="HANGHOA" Type="Self.HANGHOA" Multiplicity="0..1" />
     <End Role="CHI_TIET_HOA_DON" Type="Self.CHI_TIET_HOA_DON" Multiplicity="*" />
     <ReferentialConstraint>
@@ -114,7 +135,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__HANGHOA__ID_LHH__4D94879B">
+  <Association Name="FK__HANGHOA__ID_LHH__282DF8C2">
     <End Role="Loai_HANGHOA" Type="Self.Loai_HANGHOA" Multiplicity="0..1" />
     <End Role="HANGHOA" Type="Self.HANGHOA" Multiplicity="*" />
     <ReferentialConstraint>
@@ -126,7 +147,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__HOA_DON__ID_BAN__5FB337D6">
+  <Association Name="FK__HOA_DON__ID_BAN__32AB8735">
     <End Role="BAN" Type="Self.BAN" Multiplicity="0..1" />
     <End Role="HOA_DON" Type="Self.HOA_DON" Multiplicity="*" />
     <ReferentialConstraint>
@@ -138,7 +159,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__HOA_DON__ID_KH__619B8048">
+  <Association Name="FK__HOA_DON__ID_KH__3493CFA7">
     <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="0..1" />
     <End Role="HOA_DON" Type="Self.HOA_DON" Multiplicity="*" />
     <ReferentialConstraint>
@@ -150,7 +171,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__HOA_DON__ID_NV__60A75C0F">
+  <Association Name="FK__HOA_DON__ID_NV__339FAB6E">
     <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
     <End Role="HOA_DON" Type="Self.HOA_DON" Multiplicity="*" />
     <ReferentialConstraint>
@@ -162,7 +183,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__KHACHHANG__ID_LK__440B1D61">
+  <Association Name="FK__KHACHHANG__ID_LK__22751F6C">
     <End Role="LOAI_KHACH_HANG" Type="Self.LOAI_KHACH_HANG" Multiplicity="0..1" />
     <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="*" />
     <ReferentialConstraint>
@@ -174,41 +195,46 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="PBL3_QLTraSuaModelStoreContainer">
+  <EntityContainer Name="QuanLyQuanTSModelStoreContainer">
     <EntitySet Name="BAN" EntityType="Self.BAN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CHI_TIET_HOA_DON" EntityType="Self.CHI_TIET_HOA_DON" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HANGHOA" EntityType="Self.HANGHOA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HOA_DON" EntityType="Self.HOA_DON" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="KHACHHANG" EntityType="Self.KHACHHANG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KHU_VUC" EntityType="Self.KHU_VUC" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Loai_HANGHOA" EntityType="Self.Loai_HANGHOA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LOAI_KHACH_HANG" EntityType="Self.LOAI_KHACH_HANG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NHANVIEN" EntityType="Self.NHANVIEN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__CHI_TIET___ID_HD__656C112C" Association="Self.FK__CHI_TIET___ID_HD__656C112C">
+    <AssociationSet Name="FK__BAN__ID_KV__2EDAF651" Association="Self.FK__BAN__ID_KV__2EDAF651">
+      <End Role="KHU_VUC" EntitySet="KHU_VUC" />
+      <End Role="BAN" EntitySet="BAN" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CHI_TIET___ID_HD__3864608B" Association="Self.FK__CHI_TIET___ID_HD__3864608B">
       <End Role="HOA_DON" EntitySet="HOA_DON" />
       <End Role="CHI_TIET_HOA_DON" EntitySet="CHI_TIET_HOA_DON" />
     </AssociationSet>
-    <AssociationSet Name="FK__CHI_TIET___ID_HH__66603565" Association="Self.FK__CHI_TIET___ID_HH__66603565">
+    <AssociationSet Name="FK__CHI_TIET___ID_HH__395884C4" Association="Self.FK__CHI_TIET___ID_HH__395884C4">
       <End Role="HANGHOA" EntitySet="HANGHOA" />
       <End Role="CHI_TIET_HOA_DON" EntitySet="CHI_TIET_HOA_DON" />
     </AssociationSet>
-    <AssociationSet Name="FK__HANGHOA__ID_LHH__4D94879B" Association="Self.FK__HANGHOA__ID_LHH__4D94879B">
+    <AssociationSet Name="FK__HANGHOA__ID_LHH__282DF8C2" Association="Self.FK__HANGHOA__ID_LHH__282DF8C2">
       <End Role="Loai_HANGHOA" EntitySet="Loai_HANGHOA" />
       <End Role="HANGHOA" EntitySet="HANGHOA" />
     </AssociationSet>
-    <AssociationSet Name="FK__HOA_DON__ID_BAN__5FB337D6" Association="Self.FK__HOA_DON__ID_BAN__5FB337D6">
+    <AssociationSet Name="FK__HOA_DON__ID_BAN__32AB8735" Association="Self.FK__HOA_DON__ID_BAN__32AB8735">
       <End Role="BAN" EntitySet="BAN" />
       <End Role="HOA_DON" EntitySet="HOA_DON" />
     </AssociationSet>
-    <AssociationSet Name="FK__HOA_DON__ID_KH__619B8048" Association="Self.FK__HOA_DON__ID_KH__619B8048">
+    <AssociationSet Name="FK__HOA_DON__ID_KH__3493CFA7" Association="Self.FK__HOA_DON__ID_KH__3493CFA7">
       <End Role="KHACHHANG" EntitySet="KHACHHANG" />
       <End Role="HOA_DON" EntitySet="HOA_DON" />
     </AssociationSet>
-    <AssociationSet Name="FK__HOA_DON__ID_NV__60A75C0F" Association="Self.FK__HOA_DON__ID_NV__60A75C0F">
+    <AssociationSet Name="FK__HOA_DON__ID_NV__339FAB6E" Association="Self.FK__HOA_DON__ID_NV__339FAB6E">
       <End Role="NHANVIEN" EntitySet="NHANVIEN" />
       <End Role="HOA_DON" EntitySet="HOA_DON" />
     </AssociationSet>
-    <AssociationSet Name="FK__KHACHHANG__ID_LK__440B1D61" Association="Self.FK__KHACHHANG__ID_LK__440B1D61">
+    <AssociationSet Name="FK__KHACHHANG__ID_LK__22751F6C" Association="Self.FK__KHACHHANG__ID_LK__22751F6C">
       <End Role="LOAI_KHACH_HANG" EntitySet="LOAI_KHACH_HANG" />
       <End Role="KHACHHANG" EntitySet="KHACHHANG" />
     </AssociationSet>

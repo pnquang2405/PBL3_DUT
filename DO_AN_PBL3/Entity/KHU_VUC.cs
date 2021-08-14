@@ -12,22 +12,19 @@ namespace DO_AN_PBL3.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class BAN
+    public partial class KHU_VUC
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public BAN()
+        public KHU_VUC()
         {
-            this.HOA_DON = new HashSet<HOA_DON>();
+            this.BANs = new HashSet<BAN>();
         }
     
-        public int ID_BAN { get; set; }
-        public Nullable<int> ID_KV { get; set; }
-        public string Tenban { get; set; }
-        public Nullable<bool> TinhTrang { get; set; }
-        public Nullable<int> ID_ban_chuyen { get; set; }
+        public int ID_KV { get; set; }
+        public string Ten_KV { get; set; }
+        public Nullable<bool> Trangthai { get; set; }
     
-        public virtual KHU_VUC KHU_VUC { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HOA_DON> HOA_DON { get; set; }
+        public virtual ICollection<BAN> BANs { get; set; }
     }
 }

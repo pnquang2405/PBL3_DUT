@@ -16,7 +16,7 @@ namespace DO_AN_PBL3.Entity
     public partial class PBL3_QLTraSuaEntities : DbContext
     {
         public PBL3_QLTraSuaEntities()
-            : base("name=PBL3_QLTraSuaEntities5")
+            : base("name=QuanLyQuanTSEntities5")
         {
         }
     
@@ -30,6 +30,7 @@ namespace DO_AN_PBL3.Entity
         public virtual DbSet<HANGHOA> HANGHOAs { get; set; }
         public virtual DbSet<HOA_DON> HOA_DON { get; set; }
         public virtual DbSet<KHACHHANG> KHACHHANGs { get; set; }
+        public virtual DbSet<KHU_VUC> KHU_VUC { get; set; }
         public virtual DbSet<Loai_HANGHOA> Loai_HANGHOA { get; set; }
         public virtual DbSet<LOAI_KHACH_HANG> LOAI_KHACH_HANG { get; set; }
         public virtual DbSet<NHANVIEN> NHANVIENs { get; set; }

@@ -50,7 +50,7 @@ namespace DO_AN_PBL3.View
             {
                 MessageBox.Show("Khong hop le");
             }
-            if (table.ID_ban_Chuyen != null)
+            if (table.ID_ban_chuyen != null)
             {
                 MessageBox.Show("Xin lỗi, bàn này đang được gộp!!!");
             }
@@ -100,7 +100,7 @@ namespace DO_AN_PBL3.View
                     List<BAN> listban = Table_BLL.Instance.GetTable();
                     foreach(BAN item in listban)
                     {
-                        if (item.ID_ban_Chuyen == idban)
+                        if (item.ID_ban_chuyen == idban)
                             Table_BLL.Instance.updateID_chuyen(item.ID_BAN, newIDBAN);
                     }    
                 }

@@ -106,5 +106,10 @@ namespace DO_AN_PBL3.BLL
             HOA_DON_DAL.Instance.UpdateIDKH(idKH);
             HOA_DON_DAL.Instance.Sync();
         }
+
+        public double getTotalBillInMonth(DateTime firstMonth, DateTime endMonth)
+        {
+            return HOA_DON_DAL.Instance.getTotalBillInMonth_DAL(firstMonth, endMonth);
+        }
     }
 }

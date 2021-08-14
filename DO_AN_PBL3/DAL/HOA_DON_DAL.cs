@@ -94,7 +94,7 @@ namespace DO_AN_PBL3.DAL
             List<BAN> listban=  Table_DAL.Instance.GetList();
             foreach(BAN item in listban)
             {
-                if(item.ID_ban_Chuyen==tempt.ID_BAN)
+                if(item.ID_ban_chuyen==tempt.ID_BAN)
                 Table_DAL.Instance.Update((int)item.ID_BAN, true);
                 Table_DAL.Instance.updateID_chuyen(item.ID_BAN, null);
             }
@@ -123,6 +123,17 @@ namespace DO_AN_PBL3.DAL
             {
                 item.ID_KH = null;
             }
+        }
+
+        public double getTotalBillInMonth_DAL(DateTime firstMonth, DateTime endMonth)
+        {
+            var list = from p in db.HOA_DON
+                       where p.Gio_den >= firstMonth
+                       && p.Gio_di <= endMonth
+                       select p.Tong_tien;
+            var sum = list.ToList().Sum();
+
+            return Convert.ToDouble(sum);
         }
     }
 }

@@ -29,6 +29,9 @@ D:\WinformC#\DO_AN_PBL3\DO_AN_PBL3\obj\Debug\DO_AN_PBL3.View.FormProfileCustomer
 D:\WinformC#\DO_AN_PBL3\DO_AN_PBL3\bin\Debug\PagedList.dll
 D:\WinformC#\DO_AN_PBL3\DO_AN_PBL3\bin\Debug\PagedList.xml
 D:\WinformC#\DO_AN_PBL3\DO_AN_PBL3\obj\Debug\DO_AN_PBL3.View.FormChangeAccount.resources
+<<<<<<< HEAD
+D:\WinformC#\DO_AN_PBL3\DO_AN_PBL3\obj\Debug\DO_AN_PBL3.View.FormDetailsRevenue.resources
+=======
 C:\Users\OS\Source\Repos\QuanLyTraSua\DO_AN_PBL3\obj\Debug\DO_AN_PBL3.csprojAssemblyReference.cache
 C:\Users\OS\Source\Repos\QuanLyTraSua\DO_AN_PBL3\obj\Debug\DO_AN_PBL3.View.BILL.resources
 C:\Users\OS\Source\Repos\QuanLyTraSua\DO_AN_PBL3\obj\Debug\DO_AN_PBL3.View.DetailTable.resources
@@ -60,3 +63,4 @@ C:\Users\OS\Source\Repos\QuanLyTraSua\DO_AN_PBL3\bin\Debug\EntityFramework.xml
 C:\Users\OS\Source\Repos\QuanLyTraSua\DO_AN_PBL3\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\OS\Source\Repos\QuanLyTraSua\DO_AN_PBL3\bin\Debug\PagedList.xml
 C:\Users\OS\Source\Repos\QuanLyTraSua\DO_AN_PBL3\obj\Debug\DO_AN_PBL3.csproj.CopyComplete
+>>>>>>> ThanhThan

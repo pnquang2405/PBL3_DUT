@@ -73,6 +73,46 @@ namespace DO_AN_PBL3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1f1052cf5ba72a54f4c26eed377cb053 {
+            get {
+                object obj = ResourceManager.GetObject("1f1052cf5ba72a54f4c26eed377cb053", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1f1052cf5ba72a54f4c26eed377cb0531 {
+            get {
+                object obj = ResourceManager.GetObject("1f1052cf5ba72a54f4c26eed377cb0531", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _213546905_2008953632586378_8966842786501645288_n {
+            get {
+                object obj = ResourceManager.GetObject("213546905_2008953632586378_8966842786501645288_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _262a4cb4a4bc6470690d75e272206d7b {
+            get {
+                object obj = ResourceManager.GetObject("262a4cb4a4bc6470690d75e272206d7b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _lock {
             get {
                 object obj = ResourceManager.GetObject("lock", resourceCulture);
@@ -96,6 +136,26 @@ namespace DO_AN_PBL3.Properties {
         internal static System.Drawing.Bitmap anh {
             get {
                 object obj = ResourceManager.GetObject("anh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap f737a03d3688997263a766a60f70dd60 {
+            get {
+                object obj = ResourceManager.GetObject("f737a03d3688997263a766a60f70dd60", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap f737a03d3688997263a766a60f70dd601 {
+            get {
+                object obj = ResourceManager.GetObject("f737a03d3688997263a766a60f70dd601", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -216,6 +276,16 @@ namespace DO_AN_PBL3.Properties {
         internal static System.Drawing.Bitmap proFile {
             get {
                 object obj = ResourceManager.GetObject("proFile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled {
+            get {
+                object obj = ResourceManager.GetObject("Untitled", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

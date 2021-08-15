@@ -45,76 +45,70 @@ namespace DO_AN_PBL3.View
             this.rbMale = new System.Windows.Forms.RadioButton();
             this.btnResetPass = new System.Windows.Forms.Button();
             this.dgvStaff = new System.Windows.Forms.DataGridView();
+            this.cbbview = new System.Windows.Forms.ComboBox();
             this.Gender.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
             this.SuspendLayout();
             // 
             // txtTenNV
             // 
-            this.txtTenNV.Location = new System.Drawing.Point(168, 49);
-            this.txtTenNV.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenNV.Location = new System.Drawing.Point(126, 40);
             this.txtTenNV.Name = "txtTenNV";
-            this.txtTenNV.Size = new System.Drawing.Size(167, 22);
+            this.txtTenNV.Size = new System.Drawing.Size(126, 20);
             this.txtTenNV.TabIndex = 14;
             // 
             // btnDelStaff
             // 
-            this.btnDelStaff.Location = new System.Drawing.Point(388, 412);
-            this.btnDelStaff.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelStaff.Location = new System.Drawing.Point(216, 334);
             this.btnDelStaff.Name = "btnDelStaff";
-            this.btnDelStaff.Size = new System.Drawing.Size(124, 32);
+            this.btnDelStaff.Size = new System.Drawing.Size(68, 26);
             this.btnDelStaff.TabIndex = 18;
-            this.btnDelStaff.Text = "Xóa";
+            this.btnDelStaff.Text = "Del";
             this.btnDelStaff.UseVisualStyleBackColor = true;
             this.btnDelStaff.Click += new System.EventHandler(this.btnDelStaff_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 53);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(22, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 17);
+            this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Họ tên";
+            this.label1.Text = "Full Name";
             // 
             // btnEditStaff
             // 
-            this.btnEditStaff.Location = new System.Drawing.Point(212, 412);
-            this.btnEditStaff.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditStaff.Location = new System.Drawing.Point(117, 335);
             this.btnEditStaff.Name = "btnEditStaff";
-            this.btnEditStaff.Size = new System.Drawing.Size(124, 32);
+            this.btnEditStaff.Size = new System.Drawing.Size(74, 26);
             this.btnEditStaff.TabIndex = 17;
-            this.btnEditStaff.Text = "Sửa ";
+            this.btnEditStaff.Text = "Edit";
             this.btnEditStaff.UseVisualStyleBackColor = true;
             this.btnEditStaff.Click += new System.EventHandler(this.btnEditStaff_Click);
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(168, 110);
-            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(126, 89);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(167, 22);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(126, 20);
             this.txtPhoneNumber.TabIndex = 15;
             // 
             // btnAddStaff
             // 
-            this.btnAddStaff.Location = new System.Drawing.Point(29, 412);
-            this.btnAddStaff.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddStaff.Location = new System.Drawing.Point(22, 335);
             this.btnAddStaff.Name = "btnAddStaff";
-            this.btnAddStaff.Size = new System.Drawing.Size(124, 32);
+            this.btnAddStaff.Size = new System.Drawing.Size(78, 26);
             this.btnAddStaff.TabIndex = 12;
-            this.btnAddStaff.Text = "Thêm";
+            this.btnAddStaff.Text = "Add";
             this.btnAddStaff.UseVisualStyleBackColor = true;
             this.btnAddStaff.Click += new System.EventHandler(this.BtnAddStaff_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 113);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(22, 92);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 17);
+            this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 13;
             this.label2.Text = "Phone Number";
             // 
@@ -122,11 +116,9 @@ namespace DO_AN_PBL3.View
             // 
             this.Gender.Controls.Add(this.rbFeMale);
             this.Gender.Controls.Add(this.rbMale);
-            this.Gender.Location = new System.Drawing.Point(491, 38);
-            this.Gender.Margin = new System.Windows.Forms.Padding(4);
+            this.Gender.Location = new System.Drawing.Point(368, 31);
             this.Gender.Name = "Gender";
-            this.Gender.Padding = new System.Windows.Forms.Padding(4);
-            this.Gender.Size = new System.Drawing.Size(155, 92);
+            this.Gender.Size = new System.Drawing.Size(116, 75);
             this.Gender.TabIndex = 16;
             this.Gender.TabStop = false;
             this.Gender.Text = "Gender";
@@ -134,10 +126,9 @@ namespace DO_AN_PBL3.View
             // rbFeMale
             // 
             this.rbFeMale.AutoSize = true;
-            this.rbFeMale.Location = new System.Drawing.Point(11, 64);
-            this.rbFeMale.Margin = new System.Windows.Forms.Padding(4);
+            this.rbFeMale.Location = new System.Drawing.Point(8, 52);
             this.rbFeMale.Name = "rbFeMale";
-            this.rbFeMale.Size = new System.Drawing.Size(75, 21);
+            this.rbFeMale.Size = new System.Drawing.Size(60, 17);
             this.rbFeMale.TabIndex = 1;
             this.rbFeMale.TabStop = true;
             this.rbFeMale.Text = "FeMale";
@@ -146,10 +137,9 @@ namespace DO_AN_PBL3.View
             // rbMale
             // 
             this.rbMale.AutoSize = true;
-            this.rbMale.Location = new System.Drawing.Point(11, 23);
-            this.rbMale.Margin = new System.Windows.Forms.Padding(4);
+            this.rbMale.Location = new System.Drawing.Point(8, 19);
             this.rbMale.Name = "rbMale";
-            this.rbMale.Size = new System.Drawing.Size(59, 21);
+            this.rbMale.Size = new System.Drawing.Size(48, 17);
             this.rbMale.TabIndex = 0;
             this.rbMale.TabStop = true;
             this.rbMale.Text = "Male";
@@ -157,10 +147,9 @@ namespace DO_AN_PBL3.View
             // 
             // btnResetPass
             // 
-            this.btnResetPass.Location = new System.Drawing.Point(567, 412);
-            this.btnResetPass.Margin = new System.Windows.Forms.Padding(4);
+            this.btnResetPass.Location = new System.Drawing.Point(308, 335);
             this.btnResetPass.Name = "btnResetPass";
-            this.btnResetPass.Size = new System.Drawing.Size(124, 32);
+            this.btnResetPass.Size = new System.Drawing.Size(69, 26);
             this.btnResetPass.TabIndex = 20;
             this.btnResetPass.Text = "ResetPass";
             this.btnResetPass.UseVisualStyleBackColor = true;
@@ -194,7 +183,8 @@ namespace DO_AN_PBL3.View
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvStaff.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvStaff.EnableHeadersVisualStyles = false;
-            this.dgvStaff.Location = new System.Drawing.Point(32, 175);
+            this.dgvStaff.Location = new System.Drawing.Point(24, 142);
+            this.dgvStaff.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvStaff.Name = "dgvStaff";
             this.dgvStaff.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -205,19 +195,30 @@ namespace DO_AN_PBL3.View
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvStaff.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvStaff.RowHeadersVisible = false;
             this.dgvStaff.RowHeadersWidth = 4;
             this.dgvStaff.RowTemplate.Height = 24;
             this.dgvStaff.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStaff.Size = new System.Drawing.Size(661, 209);
+            this.dgvStaff.Size = new System.Drawing.Size(496, 170);
             this.dgvStaff.TabIndex = 21;
             this.dgvStaff.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStaff_CellClick);
             // 
+            // cbbview
+            // 
+            this.cbbview.FormattingEnabled = true;
+            this.cbbview.Location = new System.Drawing.Point(399, 339);
+            this.cbbview.Name = "cbbview";
+            this.cbbview.Size = new System.Drawing.Size(121, 21);
+            this.cbbview.TabIndex = 22;
+            this.cbbview.SelectedIndexChanged += new System.EventHandler(this.ModeView);
+            // 
             // FormStaff
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(720, 475);
+            this.ClientSize = new System.Drawing.Size(540, 386);
+            this.Controls.Add(this.cbbview);
             this.Controls.Add(this.dgvStaff);
             this.Controls.Add(this.btnResetPass);
             this.Controls.Add(this.txtTenNV);
@@ -229,7 +230,6 @@ namespace DO_AN_PBL3.View
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Gender);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormStaff";
@@ -256,5 +256,6 @@ namespace DO_AN_PBL3.View
         private System.Windows.Forms.RadioButton rbMale;
         private System.Windows.Forms.Button btnResetPass;
         private System.Windows.Forms.DataGridView dgvStaff;
+        private System.Windows.Forms.ComboBox cbbview;
     }
 }

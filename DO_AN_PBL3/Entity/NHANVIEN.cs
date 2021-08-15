@@ -26,6 +26,7 @@ namespace DO_AN_PBL3.Entity
         public string PhoneNumber { get; set; }
         public bool Phanquyen { get; set; }
         public string password { get; set; }
+        public int tinhtrang { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HOA_DON> HOA_DON { get; set; }

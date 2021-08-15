@@ -121,11 +121,20 @@
   <data name="logOut" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logOut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iconshutdown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconshutdown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="lock" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="f737a03d3688997263a766a60f70dd60" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\f737a03d3688997263a766a60f70dd60.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="anh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\anh.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconsearch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconsearch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="213546905_2008953632586378_8966842786501645288_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\213546905_2008953632586378_8966842786501645288_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mau-decal-dan-ly-tra-sua-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mau-decal-dan-ly-tra-sua-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,8 +142,11 @@
   <data name="logo-dep" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo-dep.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="anh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\anh.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="administrator-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\administrator-32.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,14 +157,20 @@
   <data name="fullscreenicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fullscreenicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconsearch" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconsearch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Untitled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Untitled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1f1052cf5ba72a54f4c26eed377cb0531" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1f1052cf5ba72a54f4c26eed377cb0531.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="262a4cb4a4bc6470690d75e272206d7b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\262a4cb4a4bc6470690d75e272206d7b.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fullscreen (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fullscreen (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconshutdown" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconshutdown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logoWindown" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logoWindown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,7 +184,10 @@
   <data name="proFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\proFile.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="administrator-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\administrator-32.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1f1052cf5ba72a54f4c26eed377cb053" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1f1052cf5ba72a54f4c26eed377cb053.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="f737a03d3688997263a766a60f70dd601" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\f737a03d3688997263a766a60f70dd601.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

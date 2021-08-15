@@ -36,7 +36,7 @@ namespace DO_AN_PBL3.DAL
         public bool Login_DAL(string username, string password)
         {
             NHANVIEN s = db.NHANVIENs.FirstOrDefault(p=> p.PhoneNumber == username);
-            if (s == null) return false;
+            if (s == null || s.tinhtrang == -1) return false;
             return s.password == password;
         }
 

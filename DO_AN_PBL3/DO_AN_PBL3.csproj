@@ -121,9 +121,6 @@
     <Compile Include="Entity\NHANVIEN.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entity\sysdiagram.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Interface\IGeneral.cs" />
     <Compile Include="View\BILL.cs">
       <SubType>Form</SubType>
@@ -363,6 +360,13 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\f737a03d3688997263a766a60f70dd601.jpg" />
+    <None Include="Resources\1f1052cf5ba72a54f4c26eed377cb0531.jpg" />
+    <None Include="Resources\Untitled.png" />
+    <None Include="Resources\262a4cb4a4bc6470690d75e272206d7b.jpg" />
+    <None Include="Resources\1f1052cf5ba72a54f4c26eed377cb053.jpg" />
+    <None Include="Resources\f737a03d3688997263a766a60f70dd60.jpg" />
+    <None Include="Resources\213546905_2008953632586378_8966842786501645288_n.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

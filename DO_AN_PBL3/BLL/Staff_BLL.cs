@@ -31,23 +31,19 @@ namespace DO_AN_PBL3.BLL
             return DAL.Staff_DAL.Instance.GetList();
         }
 
-        public void AddStaff_BLL(NHANVIEN nv)
+        public bool AddStaff_BLL(NHANVIEN nv)
         {
-            DAL.Staff_DAL.Instance.Add(nv);
+            return DAL.Staff_DAL.Instance.Add(nv);
         }
-        public void EditStaff_BLL(NHANVIEN before, NHANVIEN after)
+        public bool EditStaff_BLL(NHANVIEN after)
         {
-            DAL.Staff_DAL.Instance.Update(before, after);
+            return DAL.Staff_DAL.Instance.Update(after);
         }
         public NHANVIEN Staff_ID_BLL(int id)
         {
             return DAL.Staff_DAL.Instance.Staff_ID_DAL(id);
         }
-        public void DelStaff_BLL(NHANVIEN nv)
-        {
-            DAL.Staff_DAL.Instance.Delete(nv);
-        }
-       
+   
         public int getID_BLL(string phonenumber)
         {
             return Staff_DAL.Instance.getID_DAL(phonenumber);

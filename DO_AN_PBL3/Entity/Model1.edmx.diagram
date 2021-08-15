@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="062513e0c91446209a4b0b854c782244" Name="Diagram1">
+      <Diagram DiagramId="6960f6b19fe3485ab3f507308e30044a" Name="Diagram1">
         <EntityTypeShape EntityType="QuanLyQuanTSModel.BAN" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyQuanTSModel.CHI_TIET_HOA_DON" Width="1.5" PointX="7.5" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyQuanTSModel.HANGHOA" Width="1.5" PointX="5.25" PointY="13.5" IsExpanded="true" />
@@ -14,15 +14,14 @@
         <EntityTypeShape EntityType="QuanLyQuanTSModel.Loai_HANGHOA" Width="1.5" PointX="3" PointY="14" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyQuanTSModel.LOAI_KHACH_HANG" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyQuanTSModel.NHANVIEN" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyQuanTSModel.sysdiagram" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
-        <AssociationConnector Association="QuanLyQuanTSModel.FK__BAN__ID_KV__2EDAF651" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyQuanTSModel.FK__HOA_DON__ID_BAN__32AB8735" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyQuanTSModel.FK__CHI_TIET___ID_HD__3864608B" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyQuanTSModel.FK__CHI_TIET___ID_HH__395884C4" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyQuanTSModel.FK__HANGHOA__ID_LHH__282DF8C2" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyQuanTSModel.FK__HOA_DON__ID_KH__3493CFA7" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyQuanTSModel.FK__HOA_DON__ID_NV__339FAB6E" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyQuanTSModel.FK__KHACHHANG__ID_LK__22751F6C" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyQuanTSModel.FK__BAN__ID_KV__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyQuanTSModel.FK__HOA_DON__ID_BAN__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyQuanTSModel.FK__CHI_TIET___ID_HD__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyQuanTSModel.FK__CHI_TIET___ID_HH__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyQuanTSModel.FK__HANGHOA__ID_LHH__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyQuanTSModel.FK__HOA_DON__ID_KH__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyQuanTSModel.FK__HOA_DON__ID_NV__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyQuanTSModel.FK__KHACHHANG__ID_LK__2A4B4B5E" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -42,14 +42,12 @@ namespace DO_AN_PBL3.DAL
 
                     newStaff.Entry(temp).State = System.Data.Entity.EntityState.Added;
                     newStaff.SaveChanges();
-                    MessageBox.Show("Thành Công");
                     return true;
                 }
 
             }
             catch (Exception)
             {
-                MessageBox.Show("Lỗi");
                 return false;
             }
 
@@ -59,26 +57,6 @@ namespace DO_AN_PBL3.DAL
             NHANVIEN nv = db.NHANVIENs.First(p => p.PhoneNumber == user);
             nv.Ten_NV = name;
             Sync();
-        }
-
-        public bool Delete(NHANVIEN temp)
-        {
-            try
-            {
-                using (var newStaff = new PBL3_QLTraSuaEntities())
-                {
-
-                    newStaff.Entry(temp).State = System.Data.Entity.EntityState.Deleted;
-                    newStaff.SaveChanges();
-                    MessageBox.Show("Thành Công");
-                    return true;
-                }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Lỗi");
-                return false;
-            }
         }
 
         public NHANVIEN Staff_ID_DAL(int id)
@@ -123,26 +101,25 @@ namespace DO_AN_PBL3.DAL
             db.SaveChanges();
         }
 
-        public bool Update(NHANVIEN before, NHANVIEN after)    //NHANVIEN before
+        public bool Update(NHANVIEN after)    //NHANVIEN before
         {
             try
             {
                 using (PBL3_QLTraSuaEntities db = new PBL3_QLTraSuaEntities())  //var newStaff = new PBL3_QLTraSuaEntities()
                 {
+                    NHANVIEN before = db.NHANVIENs.First(p => p.ID_NV == after.ID_NV);
 
                     before = db.NHANVIENs.Where(p => p.ID_NV.Equals(before.ID_NV)).SingleOrDefault();
                     before.Ten_NV = after.Ten_NV;
                     before.PhoneNumber = after.PhoneNumber;
                     before.Gender = after.Gender;
+                    before.tinhtrang = after.tinhtrang;
                     db.SaveChanges();
-
-                    MessageBox.Show("Thành Công");
                     return true;
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show("Lỗi ");
                 return false;
             }
 

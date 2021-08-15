@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace DO_AN_PBL3.View
 {
     public partial class TableTach : Form
@@ -31,6 +33,8 @@ namespace DO_AN_PBL3.View
             flpTable.Controls.Clear();
             List<BAN> tableList = Table_BLL.Instance.GetTable();
 
+
+
             foreach (BAN item in tableList)
             {
                 Button btn = new Button() { Width = 68, Height = 68, BackColor = Color.Gray, ForeColor = Color.White };
@@ -39,14 +43,18 @@ namespace DO_AN_PBL3.View
                 btn.Tag = item;
                 btn.Click += Btn_Click;
 
+
+
                 flpTable.Controls.Add(btn);
             }
+
+
 
         }
         private void Btn_Click(object sender, EventArgs e)
         {
             BAN table = (sender as Button).Tag as BAN;
-            if (table.ID_BAN == idban )
+            if (table.ID_BAN == idban)
             {
                 MessageBox.Show("Khong hop le");
             }
@@ -59,25 +67,37 @@ namespace DO_AN_PBL3.View
                 newIDBAN = table.ID_BAN;
             }
 
+
+
         }
 
+
+
         private void btnLuu_Click(object sender, EventArgs e)
-        {    /// tach ban
+        { /// tach ban
             if (listhh != null)
             {
                 List<BillInfo> listBillInfo = BillInfo_BLL.Instance.GetList(Table_BLL.Instance.gettable(idban));
+
+
 
                 for (int i = 0; i < listBillInfo.Count; i++)
                 {
                     listBillInfo[i].SoLuong = listBillInfo[i].SoLuong - listhh[i].SoLuong;
 
+
+
                     if (listBillInfo[i].SoLuong <= 0)
                     {
                         CHI_TIET_HOA_DON_BLL.Instance.delete(HOA_DON_BLL.Instance.GetIdByTable(idban), listBillInfo[i].MatHang, listBillInfo[i].SoLuong);
 
+
+
                     }
                     else CHI_TIET_HOA_DON_BLL.Instance.update(HOA_DON_BLL.Instance.GetIdByTable(idban), listBillInfo[i].MatHang, listBillInfo[i].SoLuong);
                 }
+
+
 
                 if (BillInfo_BLL.Instance.GetList(Table_BLL.Instance.gettable(idban)).Count <= 0)
                 {
@@ -98,17 +118,17 @@ namespace DO_AN_PBL3.View
                     BAN ban = Table_BLL.Instance.gettable(idban);
                     Table_BLL.Instance.updateID_chuyen(idban, newIDBAN);
                     List<BAN> listban = Table_BLL.Instance.GetTable();
-                    foreach(BAN item in listban)
+                    foreach (BAN item in listban)
                     {
                         if (item.ID_ban_chuyen == idban)
                             Table_BLL.Instance.updateID_chuyen(item.ID_BAN, newIDBAN);
-                    }    
+                    }
                 }
                 else
                 {
                     Table_BLL.Instance.update(idban, true);
                 }
-              
+
                 for (int i = 0; i < listhh.Count; i++)
                 {
                     CHI_TIET_HOA_DON_BLL.Instance.delete(HOA_DON_BLL.Instance.GetIdByTable(idban), listhh[i].MatHang, listhh[i].SoLuong);
@@ -143,6 +163,8 @@ namespace DO_AN_PBL3.View
             }
             this.Dispose();
         }
+
+
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
